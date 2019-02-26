@@ -24,7 +24,7 @@
 }
 
 /* image fits the central div as fully as possible */
-.central-container> .img {
+.central-container>.img {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -40,10 +40,10 @@
     background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-icon.png?v=c78bd457575a') no-repeat;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-icon.png?v=c78bd457575a') no-repeat;
     height: 200px; */
-    
+
 }
 
-.central-container > .activity-info {
+.central-container>.activity-info {
     position: absolute;
     display: grid;
     height: 100%;
@@ -55,19 +55,21 @@
 
 .name {
     grid-area: name;
-    whitespace: normal;
 }
 
 .categories {
     grid-area: categories;
     color: white;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    align-self : end; /* bottom of area */
+    align-self: end;
+    /* bottom of area */
     position: relative;
-    overflow: hidden; /* keep categories on page even when font is large */
+    overflow: hidden;
+    /* keep categories on page even when font is large */
 }
 
-.name, .categories {
+.name,
+.categories {
     margin: 3%;
 }
 
@@ -76,7 +78,8 @@
     grid-area: left-container;
 }
 
-.left-container, .right-container {
+.left-container,
+.right-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -87,7 +90,8 @@
     justify-content: center;
 }
 
-.left-box, .right-box {
+.left-box,
+.right-box {
     width: 100%;
     height: 60%;
     background-size: cover;
@@ -108,7 +112,8 @@
     grid-area: arrows;
 }
 
-.arrows, .chill-level {
+.arrows,
+.chill-level {
     /* center horiztonally + vertically */
     justify-self: center;
     align-self: center;
