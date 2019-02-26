@@ -10,6 +10,11 @@
         '.          .       .'
         'left-container    central-container    right-container'
         '.          .     .';
+    color: white;
+}
+
+.red {
+    color: red;
 }
 
 .central-container {
@@ -66,8 +71,16 @@
 
 .left-container {
     grid-area: left-container;
+}
+
+.left-container, .right-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+}
+
+.right-box {
+    display: flex;
     justify-content: center;
 }
 
@@ -85,23 +98,29 @@
 }
 
 .chill-level {
-    grid-area: chill-level
+    grid-area: chill-level;
 }
 
 .arrows {
     grid-area: arrows;
 }
 
+.arrows, .chill-level {
+    /* center horiztonally + vertically */
+    justify-self: center;
+    align-self: center;
+}
+
 
 
 .right-container {
     grid-area: right-container;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .right-box {
     background-image: url('../imgs/left-image.jpg');
 }
 
+.refresh {
+    align-self: center;
+}
