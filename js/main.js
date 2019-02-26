@@ -30,6 +30,9 @@ let currentArr = arr1;
 let currentArrLevel = 1;
 let allArrs = [arr1, arr2];
 
+let bottomImgs = ['imgs/beach.jpg', 'imgs/read.jpg', 'imgs/stargazing.jpg', 'imgs/library.jpg', 
+                  'imgs/boxing.jpg', 'imgs/gym.jpg']
+
 let chillLevelArr = ['low', 'medium', 'high'];
 let vws = ['3vw', '4vw', '5vw', '6vw', '7vw', '8vw'];
 let fontWeight = ['normal', 'bold'];
@@ -39,7 +42,6 @@ let colours = ['#ff0000', '#ffffff', '#e6e600', '#6d77e8', '#479949', '#895289']
 let letterSpacing = ['1px', '2px', '3px', '4px', '5px', '6px', '7px', '8px', '9px', '10px'];
 let lineHeight = ['1', '1.2', '1.4'];
 let justifyAlignSelf = ['left', 'center', 'end'];
-
 
 let fonts = ['Roboto', 'Helvetica', 'Raleway', 'Chonburi', 'Inconsolata',
   'Anton', 'Josefin Sans', 'Lobster', 'Pacifico', 'Nova Flat'
@@ -55,6 +57,7 @@ let up = document.querySelector('.up');
 let down = document.querySelector('.down');
 let chillLevel = document.querySelector('.chill-level');
 let chillLevelWord = document.querySelector('.chill-level-word');
+let emptyBoxBottom = document.querySelectorAll('.empty-box-bottom');
 
 let x = 0;
 

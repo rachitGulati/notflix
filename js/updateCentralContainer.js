@@ -7,7 +7,6 @@ let updateCentralContainer = () => {
     console.log(currentArr);
   }
 
-  // img.src = currentArr[x].media;
   img.style.background = `linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 1) 100%), url('${currentArr[x].media}')`;
   img.style.backgroundSize = "cover";
   name.innerHTML = currentArr[x].name;

@@ -173,6 +173,7 @@ body {
 .empty-box-bottom {
     height: 9vh;
     margin: 1px;
+    background-size: cover;
 }
 
 .empty-box-bottom:first-child {
