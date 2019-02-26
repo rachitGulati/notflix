@@ -34,7 +34,7 @@ let bottomImgs = ['imgs/beach.jpg', 'imgs/read.jpg', 'imgs/stargazing.jpg', 'img
                   'imgs/boxing.jpg', 'imgs/gym.jpg']
 
 let chillLevelArr = ['low', 'medium', 'high'];
-let vws = ['3vw', '4vw', '5vw', '6vw', '7vw', '8vw'];
+let vws = ['3vw', '4vw', '5vw', '6vw'];
 let fontWeight = ['normal', 'bold'];
 let fontStyle = ['normal', 'italic'];
 let fontVariant = ['normal', 'small-caps'];
