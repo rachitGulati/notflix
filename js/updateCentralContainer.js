@@ -25,8 +25,6 @@ let updateCentralContainer = () => {
   name.style.justifySelf = justifyAlignSelf[Math.floor(Math.random() * justifyAlignSelf.length)];
   name.style.alignSelf = justifyAlignSelf[Math.floor(Math.random() * justifyAlignSelf.length)];
 
-
-
   categories.innerHTML = currentArr[x].categories.toString().replace(/,/g, ' ⸰ ');
   x++;
 

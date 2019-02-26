@@ -2,11 +2,12 @@ body {
     overflow: hidden;
     /* stop ability to scroll down */
     margin: 0px;
+    background-color: #141414;
 }
 
 .main-container {
     display: grid;
-    height: 92vh;
+    height: 95vh;
     width: 100%;
     grid-auto-flow: dense;
     grid-gap: 3px;
