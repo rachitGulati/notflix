@@ -1,6 +1,12 @@
+body {
+    overflow: hidden;
+    /* stop ability to scroll down */
+    margin: 0px;
+}
+
 .main-container {
     display: grid;
-    height: 90vh;
+    height: 92vh;
     width: 100%;
     grid-auto-flow: dense;
     grid-gap: 3px;
@@ -10,6 +16,10 @@
         '.     .     .   .    .'
         'left left-container    central-container    right-container right';
     color: white;
+}
+
+.empty-box-container {
+    border-left: none;
 }
 
 
@@ -93,7 +103,7 @@
 .left-container,
 .right-container,
 .empty-box-container-left,
-.empty-box-container-right  {
+.empty-box-container-right {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -149,4 +159,26 @@
 
 .empty-box {
     background-color: black;
+}
+
+.bottom-container {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 0.5fr;
+    width: 101%;
+    height: 9vh;
+    margin-top: 5px;
+    justify-content: space-between
+}
+
+.empty-box-bottom {
+    height: 9vh;
+    margin: 1px;
+}
+
+.empty-box-bottom:first-child {
+    margin-left: 0px;
+}
+
+.empty-box-bottom:last-child {
+    margin-right: 0px;
 }
