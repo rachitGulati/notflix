@@ -1,16 +1,24 @@
 .main-container {
     display: grid;
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     grid-auto-flow: dense;
     grid-gap: 10px;
-    grid-template-columns: 0.5fr 0.9fr 0.5fr;
-    grid-template-rows: 0.5fr 1fr 0.5fr;
+    grid-template-columns: 0.5fr 0.5fr 0.9fr 0.5fr 0.5fr;
+    grid-template-rows: 1fr 0.7fr;
     grid-template-areas:
-        '.          .       .'
-        'left-container    central-container    right-container'
-        '.          .     .';
+        '.     .     .   .    .'
+        'left left-container    central-container    right-container right';
     color: white;
+}
+
+
+.empty-box-container-left {
+    grid-area: left;
+}
+
+.empty-box-container-right {
+    grid-area: right;
 }
 
 .red {
@@ -51,6 +59,10 @@
     grid-template-rows: 1fr 0.5fr;
     grid-template-areas: 'name'
         'categories';
+    /* stop word from overflowing div - instead, break word + hyphenate */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
 }
 
 .name {
@@ -79,7 +91,9 @@
 }
 
 .left-container,
-.right-container {
+.right-container,
+.empty-box-container-left,
+.empty-box-container-right  {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -91,7 +105,9 @@
 }
 
 .left-box,
-.right-box {
+.right-box,
+.empty-box-left,
+.empty-box-right {
     width: 100%;
     height: 60%;
     background-size: cover;
@@ -119,8 +135,6 @@
     align-self: center;
 }
 
-
-
 .right-container {
     grid-area: right-container;
 }
@@ -131,4 +145,8 @@
 
 .refresh {
     align-self: center;
+}
+
+.empty-box {
+    background-color: black;
 }

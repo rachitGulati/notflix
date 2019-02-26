@@ -37,7 +37,7 @@ let fontStyle = ['normal', 'italic'];
 let fontVariant = ['normal', 'small-caps'];
 let colours = ['#ff0000', '#ffffff', '#e6e600', '#000066', '#003300', '#660066'];
 let letterSpacing = ['1px', '2px', '3px', '4px', '5px', '6px', '7px', '8px', '9px', '10px'];
-let lineHeight = ['1', '1.2', '1.4', '1.6', '1.8', '2'];
+let lineHeight = ['1', '1.2', '1.4'];
 let justifyAlignSelf = ['left', 'center', 'end'];
 
 
