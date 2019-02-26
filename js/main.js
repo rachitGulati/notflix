@@ -27,7 +27,7 @@ let activity12 = new Activity('library', 'imgs/library.jpg', 'google.co.uk/relat
 let arr1 = [activity1, activity2, activity3, activity4, activity5, activity6];
 let arr2 = [activity7, activity8, activity9, activity10, activity11, activity12];
 let currentArr = arr1;
-let currentArrLevel = 0;
+let currentArrLevel = 1;
 let allArrs = [arr1, arr2];
 
 let chillLevelArr = ['low', 'medium', 'high'];
@@ -54,6 +54,7 @@ let categories = document.querySelector('.categories');
 let up = document.querySelector('.up');
 let down = document.querySelector('.down');
 let chillLevel = document.querySelector('.chill-level');
+let chillLevelWord = document.querySelector('.chill-level-word');
 
 let x = 0;
 

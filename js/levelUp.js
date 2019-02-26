@@ -1,8 +1,8 @@
 let levelUp = () => {
-    if (currentArrLevel < 1) {
+    if (currentArrLevel < 2) {
       currentArrLevel++;
       currentArr = allArrs[currentArrLevel]; 
-      chillLevel.innerHTML = `${chillLevelArr[currentArrLevel]}`;
+      chillLevelWord.innerHTML = `${chillLevelArr[currentArrLevel]}`;
     }
     else {
       console.log('no higher level');
