@@ -8,7 +8,8 @@ body {
 }
 
 a,
-button {
+button, 
+.link {
     cursor: pointer;
 }
 
@@ -48,6 +49,7 @@ button {
 .tag-line {
     grid-area: tag-line;
     font-size: 5vw;
+    align-self: end;
 }
 
 
@@ -63,6 +65,7 @@ button {
     font-weight: 700;
     color: white;
     margin-top: 0px;
+    transition: 0.3s;
 }
 
 .learn-more-btn:hover {
@@ -250,7 +253,7 @@ button {
 }
 
 .right-box {
-    background-image: url('../imgs/left-image.jpg');
+    background-image: url('../imgs/beachChill.jpg');
 }
 
 .refresh {
@@ -260,6 +263,14 @@ button {
 
 .empty-box {
     background-color: black;
+}
+
+.empty-box-right {
+    background-image: url('../imgs/ferris-wheel.jpg');
+}
+
+.empty-box-left {
+    background-image: url('../imgs/house.jpg');
 }
 
 .bottom-container {
@@ -276,6 +287,7 @@ button {
     margin: 2px;
     background-size: cover;
 }
+
 
 .empty-box-bottom:first-child {
     margin-left: 0px;
