@@ -3,7 +3,8 @@ body {
     /* stop ability to scroll down */
     margin: 0px;
     background-color: #141414;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
 }
 
 .background-image {
@@ -15,18 +16,36 @@ body {
     background-size: cover;
 }
 
+.top-container {
+    height: 55vh;
+    width: 100%;
+}
+
+.logo {
+    font-size: 2.5vw;
+    font-weight: bold;
+}
+
+.tag-line {
+    font-size: 5vw;
+}
+
+.logo,
+.tag-line {
+    padding: 3%;
+}
+
 .main-container {
     display: grid;
-    height: 95vh;
+    height: 40vh;
     width: 100%;
     grid-auto-flow: dense;
     grid-gap: 3px;
     grid-template-columns: 0.3fr 0.5fr 0.9fr 0.5fr 0.3fr;
-    grid-template-rows: 1fr 0.7fr;
+
     grid-template-areas:
-        '.     .     .   .    .'
+
         'left left-container    central-container    right-container right';
-    color: white;
 }
 
 .empty-box-container {
