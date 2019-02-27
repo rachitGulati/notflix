@@ -7,7 +7,7 @@ body {
 }
 
 .background-image {
-    z-index:-1;
+    z-index: -1;
     position: absolute;
     height: 75%;
     width: 100%;
@@ -72,7 +72,7 @@ body {
 
 }
 
-.central-container > .activity-info {
+.central-container>.activity-info {
     position: absolute;
     display: grid;
     height: 100%;
@@ -156,13 +156,20 @@ body {
 
 .chill-level-amount {
     font-size: 2.4vw;
-    margin-top: 0px;  
-    font-weight: bold;  
+    margin-top: 0px;
+    font-weight: bold;
 }
 
 
 .arrows {
     grid-area: arrows;
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 'arrowUp'
+        'arrowDown';
+    grid-row-gap: 10%;
 }
 
 .arrows,
@@ -170,6 +177,20 @@ body {
     /* center horiztonally + vertically */
     justify-self: center;
     align-self: center;
+}
+
+.up,
+.down {
+    width: 40%;
+}
+
+.up {
+    grid-area: arrowUp;
+    align-self: end;
+}
+
+.down {
+    grid-area: arrowDown;
 }
 
 .right-container {

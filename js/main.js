@@ -30,8 +30,9 @@ let currentArr = arr1;
 let currentArrLevel = 1;
 let allArrs = [arr1, arr2];
 
-let bottomImgs = ['imgs/beach.jpg', 'imgs/read.jpg', 'imgs/stargazing.jpg', 'imgs/library.jpg', 
-                  'imgs/boxing.jpg', 'imgs/gym.jpg', 'imgs/hiking.jpg'];
+let bottomImgs = ['imgs/beach.jpg', 'imgs/read.jpg', 'imgs/stargazing.jpg', 'imgs/library.jpg',
+  'imgs/boxing.jpg', 'imgs/gym.jpg', 'imgs/hiking.jpg'
+];
 
 let chillLevelArr = ['LOW', 'MEDIUM', 'HIGH'];
 let vws = ['3vw', '4vw', '5vw', '6vw'];
