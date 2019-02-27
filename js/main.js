@@ -31,9 +31,9 @@ let currentArrLevel = 1;
 let allArrs = [arr1, arr2];
 
 let bottomImgs = ['imgs/beach.jpg', 'imgs/read.jpg', 'imgs/stargazing.jpg', 'imgs/library.jpg', 
-                  'imgs/boxing.jpg', 'imgs/gym.jpg']
+                  'imgs/boxing.jpg', 'imgs/gym.jpg', 'imgs/hiking.jpg'];
 
-let chillLevelArr = ['low', 'medium', 'high'];
+let chillLevelArr = ['LOW', 'MEDIUM', 'HIGH'];
 let vws = ['3vw', '4vw', '5vw', '6vw'];
 let fontWeight = ['normal', 'bold'];
 let fontStyle = ['normal', 'italic'];
@@ -56,7 +56,7 @@ let categories = document.querySelector('.categories');
 let up = document.querySelector('.up');
 let down = document.querySelector('.down');
 let chillLevel = document.querySelector('.chill-level');
-let chillLevelWord = document.querySelector('.chill-level-word');
+let chillLevelWord = document.querySelector('.chill-level-amount');
 let emptyBoxBottom = document.querySelectorAll('.empty-box-bottom');
 
 let x = 0;

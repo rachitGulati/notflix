@@ -3,6 +3,16 @@ body {
     /* stop ability to scroll down */
     margin: 0px;
     background-color: #141414;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.background-image {
+    z-index:-1;
+    position: absolute;
+    height: 75%;
+    width: 100%;
+    background-image: url(../imgs/astronomy.jpg);
+    background-size: cover;
 }
 
 .main-container {
@@ -136,6 +146,21 @@ body {
     grid-area: chill-level;
 }
 
+.chill-level-name {
+    font-size: 2vw;
+    margin-bottom: 0px;
+    top: 3%;
+    margin-top: 35%;
+    line-height: 0.7;
+}
+
+.chill-level-amount {
+    font-size: 2.4vw;
+    margin-top: 0px;  
+    font-weight: bold;  
+}
+
+
 .arrows {
     grid-area: arrows;
 }
@@ -165,8 +190,8 @@ body {
 
 .bottom-container {
     display: grid;
-    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 0.5fr;
-    width: 101%;
+    grid-template-columns: 0.3fr 1fr 1fr 1fr 1fr 1fr 0.3fr;
+    width: 100%;
     height: 9vh;
     margin-top: 5px;
     justify-content: space-between
