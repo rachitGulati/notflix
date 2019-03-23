@@ -63,18 +63,27 @@ let rightContainer = document.querySelector('.right-container');
 let img = document.querySelector('.img');
 let name = document.querySelector('.name');
 let categories = document.querySelector('.categories');
-let up = document.querySelector('.up');
-let down = document.querySelector('.down');
+let up = document.querySelectorAll('.up');
+let down = document.querySelectorAll('.down');
 let chillLevel = document.querySelector('.chill-level');
-let chillLevelWord = document.querySelector('.chill-level-amount');
+let chillLevelWord = document.querySelectorAll('.chill-level-amount');
 let emptyBoxBottom = document.querySelectorAll('.empty-box-bottom');
-let refresh = document.querySelector('.refresh');
+let refresh = document.querySelectorAll('.refresh');
 let tagLine = document.querySelector('.tag-line');
 
 let x = 0;
 
 
-refresh.addEventListener('click', updateCentralContainer);
-up.addEventListener('click', levelUp);
-down.addEventListener('click', levelDown);
-  
+refresh.forEach(refresh => refresh.addEventListener('click', updateCentralContainer));
+up.forEach(up => up.addEventListener('click', levelUp));
+down.forEach(down => down.addEventListener('click', levelDown));
+
+
+// if (window.matchMedia("(min-width: 480px)").matches) {
+//   console.log('update level');
+//   updateLevel();
+// }
+// else {
+//   console.log('update level');
+//   updateLevel();
+// }

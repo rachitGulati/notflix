@@ -362,6 +362,14 @@ width: 99%;    }
     .name {
         font-size: 12vw;
     }
+
+    .chill-level-name {
+        font-size: 4vw;
+    }
+
+    .chill-level-amount {
+        font-size: 4.4vw;
+    }
 }
 
 /* iPads (portrait and landscape) ----------- */
@@ -375,6 +383,11 @@ width: 99%;    }
 
     .empty-box-container-left, .empty-box-container-right {
         display: none;
+    }
+
+    .learn-more-btn {
+        width: 22%;
+        font-size: 2.3vw;
     }
 
 
