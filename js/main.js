@@ -70,6 +70,9 @@ let chillLevelWord = document.querySelectorAll('.chill-level-amount');
 let emptyBoxBottom = document.querySelectorAll('.empty-box-bottom');
 let refresh = document.querySelectorAll('.refresh');
 let tagLine = document.querySelector('.tag-line');
+let activityInfo = document.querySelector('.activity-info');
+let activityInfoA = document.querySelector('.activity-info-a');
+
 
 let x = 0;
 

@@ -10,6 +10,12 @@ let updateCentralContainer = () => {
   img.style.background = `url('${currentArr[x].media}')`;
   img.style.backgroundSize = "cover";
   name.innerHTML = currentArr[x].name;
+  
+  let str = name.innerHTML;
+  str = str.replace(/ /g, '+');
+  activityInfoA.setAttribute('href', `https://www.google.com/search?q=${str}+near+me`);
+
+
 
   // var rand = myArray[Math.floor(Math.random() * myArray.length)];
 
