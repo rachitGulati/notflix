@@ -8,9 +8,21 @@ body {
 }
 
 a,
-button, 
+button,
 .link {
     cursor: pointer;
+}
+
+#preloader {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #927777;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
 .background-image {
@@ -104,7 +116,7 @@ button,
 .central-container {
     grid-area: central-container;
     position: relative;
-    /* to get copy over image */
+    border: 1px solid black;
 }
 
 /* image fits the central div as fully as possible */
@@ -295,4 +307,80 @@ button,
 
 .empty-box-bottom:last-child {
     margin-right: 0px;
+}
+
+
+/* MEDIA QUERIES */
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width : 100px) and (max-width : 480px) {
+
+    .top-container {
+        height: 30vh;
+    }
+
+    .main-container {
+        grid-template-columns: 0.001fr 1fr 0.001fr;
+
+        grid-template-areas:
+            '. central-container .'
+    }
+
+    .central-container {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .empty-box-container-left, .empty-box-container-right, .right-container, .left-container {
+        display: none;
+    }
+
+    .bottom-container > div:nth-child(-n+7) {
+        display: none;
+    }
+
+    .bottom-container > .left-box, .right-box {
+        height: 200%;
+width: 99%;    }
+
+    .bottom-container {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        'left-container right-container';
+    }
+
+    .logo {
+        font-size: 6.5vw;
+    }
+
+    .learn-more-btn {
+        width: 30%;
+        font-size: 3.3vw;
+    }
+
+    .name {
+        font-size: 12vw;
+    }
+}
+
+/* iPads (portrait and landscape) ----------- */
+/* remove side images */
+@media only screen and (min-width : 480px) and (max-width : 800px) {
+    .main-container {
+        grid-template-columns: 0.5fr 0.9fr 0.5fr;
+        grid-template-areas:
+            'left-container    central-container    right-container';
+    }
+
+    .empty-box-container-left, .empty-box-container-right {
+        display: none;
+    }
+
+
+
+    .bottom-container {
+        grid-template-columns: 0.3fr 1fr 1fr 1fr 0.3fr;
+    }
+
 }

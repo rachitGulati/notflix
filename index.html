@@ -17,9 +17,21 @@
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Anton|Chonburi|Inconsolata|Josefin+Sans|Lobster|Nova+Flat|Pacifico|Raleway|Roboto"
         rel="stylesheet">
+    <!-- tweenlite -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+    <!-- timelinemax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.1/TimelineMax.min.js"></script>
 </head>
 
-<body onload="updateCentralContainer(); fillBottomBoxes();">
+<body onload="updateCentralContainer(); fillBottomBoxes(); loadingScreen();">
+
+    <!-- preloading screen -->
+    <!-- <div id="preloader">
+        <div class="txt">
+            <div class="logo red notflix">NOTFLIX</div>
+        </div>
+    </div> -->
+
     <div class="background-image"></div>
     <div class="top-container">
         <div class="logo red">NOTFLIX</div>
@@ -67,13 +79,27 @@
         <div class="empty-box empty-box-bottom"></div>
         <div class="empty-box empty-box-bottom"></div>
         <div class="empty-box empty-box-bottom"></div>
+        <div class="left-box">
+            <div class="chill-level">
+                <p class="chill-level-name">CHILL LVL</p>
+                <p class="red chill-level-amount">MEDIUM</p>
+            </div>
+            <div class="arrows">
+                <img class="up link" src="imgs/arrowUp.png">
+                <img class="down link" src="imgs/arrowDown.png">
+            </div>
+        </div>
+        <div class="right-box">
+            <img class="refresh link" src="imgs/refresh.png">
+        </div>
     </div>
-    <script src="js/fillBottomBoxes.js"></script>
-    <script src="js/updateCentralContainer.js"></script>
     <script src="js/levelUp.js"></script>
     <script src="js/levelDown.js"></script>
-    <script src="js/shuffle.js"></script>
+    <script src="js/updateCentralContainer.js"></script>
+    <script src="js/loadingScreen.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/fillBottomBoxes.js"></script>
+    <script src="js/shuffle.js"></script>
 </body>
 
 </html>

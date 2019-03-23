@@ -69,6 +69,7 @@ let chillLevel = document.querySelector('.chill-level');
 let chillLevelWord = document.querySelector('.chill-level-amount');
 let emptyBoxBottom = document.querySelectorAll('.empty-box-bottom');
 let refresh = document.querySelector('.refresh');
+let tagLine = document.querySelector('.tag-line');
 
 let x = 0;
 
@@ -76,3 +77,4 @@ let x = 0;
 refresh.addEventListener('click', updateCentralContainer);
 up.addEventListener('click', levelUp);
 down.addEventListener('click', levelDown);
+  
