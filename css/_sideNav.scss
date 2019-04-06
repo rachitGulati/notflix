@@ -5,12 +5,14 @@
     left: 0;
     background-color: #141414;
     overflow-x: hidden;
+    margin: auto;
     /* Disable horizontal scroll */
     padding-top: 60px;
     transition: 0.5s;
     /* 0.5 second transition effect to slide in the sidenav */
     > p {
-      padding: 0 50px;
+      margin: auto;
+      margin-top: 100px;
     }
     a {
       padding: 8px 8px 8px 32px;
