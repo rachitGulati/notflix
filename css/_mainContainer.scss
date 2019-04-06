@@ -102,7 +102,7 @@
     font-size: 2vw;
     margin-bottom: 0px;
     top: 3%;
-    margin-top: 35%;
+    margin-top: 30%;
     line-height: 0.7;
 }
 
@@ -131,7 +131,15 @@
 
 .up,
 .down {
-    width: 40%;
+    width: 60%;
+}
+
+.up,
+.down,
+.refresh {
+    height: auto;
+    transition: all .2s;
+    fill: white;
 }
 
 .up {
@@ -153,8 +161,12 @@
 
 .refresh {
     align-self: center;
-    width: 15%;
+    width: 20%;
 }
+
+.refresh:hover, .up:hover, .down:hover {
+    fill: red;
+  }
 
 .empty-box {
     background-color: black;
