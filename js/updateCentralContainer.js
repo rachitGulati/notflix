@@ -2,11 +2,11 @@ import Activity from "./Activity.js";
 import * as activities from "./activities.js";
 import * as fontsStyling from "./fonts-styling.js";
 import shuffle from "./shuffle.js";
+import { currentArr } from "./levelChange.js";
 
 let img = document.querySelector(".img");
-let arr1 = [activities.lvl1activity1, activities.lvl1activity2, activities.lvl1activity3, activities.lvl1activity4, activities.lvl1activity5, activities.lvl1activity6];
+// let arr1 = [activities.lvl1activity1, activities.lvl1activity2, activities.lvl1activity3, activities.lvl1activity4, activities.lvl1activity5, activities.lvl1activity6];
 let x = 0;
-let currentArr = arr1;
 let name = document.querySelector(".name");
 let activityInfoA = document.querySelector(".activity-info-a");
 let categories = document.querySelector(".categories");
@@ -22,7 +22,6 @@ export default function updateCentralContainer() {
 	img.style.background = `url('${currentArr[x].media}')`;
 	img.style.backgroundSize = "cover";
 	name.innerHTML = currentArr[x].name;
-	console.log(img.style);
   
 	let str = name.innerHTML;
 	str = str.replace(/ /g, "+");

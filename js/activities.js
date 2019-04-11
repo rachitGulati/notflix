@@ -6,6 +6,12 @@ import gymImage from "../imgs/gym.jpg";
 import hikingImage from "../imgs/hiking.jpg";
 import basketballImage from "../imgs/basketball.jpg";
 
+export let arr1 = [lvl1activity1, lvl1activity2, lvl1activity3, lvl1activity4, lvl1activity5, lvl1activity6];
+export let arr2 = [lvl2activity1, lvl2activity2, lvl2activity3, lvl2activity4, lvl2activity5, lvl2activity6];
+export let arr3 = [lvl3activity1, lvl3activity2, lvl3activity3, lvl3activity4, lvl3activity5, lvl3activity6];
+export let chillLevelArr = ["LOW", "MEDIUM", "HIGH"];
+export let allArrs = [arr1, arr2, arr3];
+
 
 // Level 1
 export let lvl1activity1 = new Activity("surfing", surfingImage, "google.co.uk/related", 1, ["extreme sports", "water sports"]);

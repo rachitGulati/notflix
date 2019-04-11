@@ -157,7 +157,7 @@ module.exports = "/basketball.c504d923.jpg";
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.lvl3activity6 = exports.lvl3activity5 = exports.lvl3activity4 = exports.lvl3activity3 = exports.lvl3activity2 = exports.lvl3activity1 = exports.lvl2activity6 = exports.lvl2activity5 = exports.lvl2activity4 = exports.lvl2activity3 = exports.lvl2activity2 = exports.lvl2activity1 = exports.lvl1activity6 = exports.lvl1activity5 = exports.lvl1activity4 = exports.lvl1activity3 = exports.lvl1activity2 = exports.lvl1activity1 = void 0;
+exports.lvl3activity6 = exports.lvl3activity5 = exports.lvl3activity4 = exports.lvl3activity3 = exports.lvl3activity2 = exports.lvl3activity1 = exports.lvl2activity6 = exports.lvl2activity5 = exports.lvl2activity4 = exports.lvl2activity3 = exports.lvl2activity2 = exports.lvl2activity1 = exports.lvl1activity6 = exports.lvl1activity5 = exports.lvl1activity4 = exports.lvl1activity3 = exports.lvl1activity2 = exports.lvl1activity1 = exports.allArrs = exports.chillLevelArr = exports.arr3 = exports.arr2 = exports.arr1 = void 0;
 
 var _Activity = _interopRequireDefault(require("./Activity.js"));
 
@@ -175,7 +175,17 @@ var _basketball = _interopRequireDefault(require("../imgs/basketball.jpg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// Level 1
+var arr1 = [lvl1activity1, lvl1activity2, lvl1activity3, lvl1activity4, lvl1activity5, lvl1activity6];
+exports.arr1 = arr1;
+var arr2 = [lvl2activity1, lvl2activity2, lvl2activity3, lvl2activity4, lvl2activity5, lvl2activity6];
+exports.arr2 = arr2;
+var arr3 = [lvl3activity1, lvl3activity2, lvl3activity3, lvl3activity4, lvl3activity5, lvl3activity6];
+exports.arr3 = arr3;
+var chillLevelArr = ["LOW", "MEDIUM", "HIGH"];
+exports.chillLevelArr = chillLevelArr;
+var allArrs = [arr1, arr2, arr3]; // Level 1
+
+exports.allArrs = allArrs;
 var lvl1activity1 = new _Activity.default("surfing", _beach.default, "google.co.uk/related", 1, ["extreme sports", "water sports"]);
 exports.lvl1activity1 = lvl1activity1;
 var lvl1activity2 = new _Activity.default("table tennis", _tabletennis.default, "google.co.uk/related", 5, ["pillow sports", "indoors"]);
@@ -263,7 +273,51 @@ function shuffle(array) {
 
   return array;
 }
-},{}],"js/updateCentralContainer.js":[function(require,module,exports) {
+},{}],"js/levelChange.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.levelUp = levelUp;
+exports.levelDown = levelDown;
+exports.currentArr = exports.currentArrLevel = void 0;
+
+var _activities = require("./activities.js");
+
+var _index = require("./index.js");
+
+var currentArrLevel = 1;
+exports.currentArrLevel = currentArrLevel;
+var currentArr = _activities.arr1;
+exports.currentArr = currentArr;
+
+function levelUp() {
+  if (currentArrLevel < 2) {
+    exports.currentArrLevel = currentArrLevel = currentArrLevel + 1;
+    exports.currentArr = currentArr = _activities.allArrs[currentArrLevel];
+
+    _index.chillLevelWord.forEach(function (clw) {
+      return clw.innerHTML = "".concat(_activities.chillLevelArr[currentArrLevel]);
+    });
+  } else {
+    console.log('no higher level');
+  }
+}
+
+function levelDown() {
+  if (currentArrLevel > 0) {
+    exports.currentArrLevel = currentArrLevel = currentArrLevel - 1;
+    exports.currentArr = currentArr = _activities.allArrs[currentArrLevel];
+
+    _index.chillLevelWord.forEach(function (clw) {
+      return clw.innerHTML = "".concat(_activities.chillLevelArr[currentArrLevel]);
+    });
+  } else {
+    console.log("no lower level");
+  }
+}
+},{"./activities.js":"js/activities.js","./index.js":"js/index.js"}],"js/updateCentralContainer.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -279,29 +333,29 @@ var fontsStyling = _interopRequireWildcard(require("./fonts-styling.js"));
 
 var _shuffle = _interopRequireDefault(require("./shuffle.js"));
 
+var _levelChange = require("./levelChange.js");
+
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var img = document.querySelector(".img");
-var arr1 = [activities.lvl1activity1, activities.lvl1activity2, activities.lvl1activity3, activities.lvl1activity4, activities.lvl1activity5, activities.lvl1activity6];
+var img = document.querySelector(".img"); // let arr1 = [activities.lvl1activity1, activities.lvl1activity2, activities.lvl1activity3, activities.lvl1activity4, activities.lvl1activity5, activities.lvl1activity6];
+
 var x = 0;
-var currentArr = arr1;
 var name = document.querySelector(".name");
 var activityInfoA = document.querySelector(".activity-info-a");
 var categories = document.querySelector(".categories");
 
 function updateCentralContainer() {
   // if we have reached the end of the array, shuffle the array and start again
-  if (x == currentArr.length) {
-    (0, _shuffle.default)(currentArr);
+  if (x == _levelChange.currentArr.length) {
+    (0, _shuffle.default)(_levelChange.currentArr);
     x = 0;
   }
 
-  img.style.background = "url('".concat(currentArr[x].media, "')");
+  img.style.background = "url('".concat(_levelChange.currentArr[x].media, "')");
   img.style.backgroundSize = "cover";
-  name.innerHTML = currentArr[x].name;
-  console.log(img.style);
+  name.innerHTML = _levelChange.currentArr[x].name;
   var str = name.innerHTML;
   str = str.replace(/ /g, "+");
   activityInfoA.setAttribute("href", "https://www.google.com/search?q=".concat(str, "+near+me")); // var rand = myArray[Math.floor(Math.random() * myArray.length)];
@@ -317,50 +371,10 @@ function updateCentralContainer() {
   name.style.lineHeight = fontsStyling.lineHeight[Math.floor(Math.random() * fontsStyling.lineHeight.length)];
   name.style.justifySelf = fontsStyling.justifyAlignSelf[Math.floor(Math.random() * fontsStyling.justifyAlignSelf.length)];
   name.style.alignSelf = fontsStyling.justifyAlignSelf[Math.floor(Math.random() * fontsStyling.justifyAlignSelf.length)];
-  categories.innerHTML = currentArr[x].categories.toString().replace(/,/g, " ⸰ ");
+  categories.innerHTML = _levelChange.currentArr[x].categories.toString().replace(/,/g, " ⸰ ");
   x++;
 }
-},{"./Activity.js":"js/Activity.js","./activities.js":"js/activities.js","./fonts-styling.js":"js/fonts-styling.js","./shuffle.js":"js/shuffle.js"}],"js/levelUp.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = levelUp;
-
-function levelUp() {
-  if (currentArrLevel < 2) {
-    currentArrLevel++;
-    currentArr = allArrs[currentArrLevel];
-    chillLevelWord.forEach(function (clw) {
-      return clw.innerHTML = "".concat(chillLevelArr[currentArrLevel]);
-    });
-  } else {
-    console.log('no higher level');
-  }
-} // let updateLevel = () => {
-//   chillLevelWord.innerHTML = `${chillLevelArr[currentArrLevel]}`;
-// }
-},{}],"js/levelDown.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = levelDown;
-
-function levelDown() {
-  if (currentArrLevel > 0) {
-    currentArrLevel--;
-    currentArr = allArrs[currentArrLevel];
-    chillLevelWord.forEach(function (clw) {
-      return clw.innerHTML = "".concat(chillLevelArr[currentArrLevel]);
-    });
-  } else {
-    console.log("no lower level");
-  }
-}
-},{}],"js/fillBottomBoxes.js":[function(require,module,exports) {
+},{"./Activity.js":"js/Activity.js","./activities.js":"js/activities.js","./fonts-styling.js":"js/fonts-styling.js","./shuffle.js":"js/shuffle.js","./levelChange.js":"js/levelChange.js"}],"js/fillBottomBoxes.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -462,11 +476,14 @@ function closeNav() {
 },{}],"js/index.js":[function(require,module,exports) {
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.chillLevelWord = void 0;
+
 var _updateCentralContainer = _interopRequireDefault(require("./updateCentralContainer.js"));
 
-var _levelUp = _interopRequireDefault(require("./levelUp.js"));
-
-var _levelDown = _interopRequireDefault(require("./levelDown.js"));
+var _levelChange = require("./levelChange.js");
 
 var _fillBottomBoxes = _interopRequireDefault(require("./fillBottomBoxes.js"));
 
@@ -476,76 +493,23 @@ var _nav = require("./nav.js");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var Activity = function Activity(name, media, link, chillLevel, categories, font) {
-  _classCallCheck(this, Activity);
-
-  this.name = name;
-  this.media = media;
-  this.link = link;
-  this.chillLevel = chillLevel;
-  this.categories = categories;
-  this.font = font;
-}; // Level 1
-
-
-var lvl1activity1 = new Activity("surfing", "imgs/beach.jpg", "google.co.uk/related", 1, ["extreme sports", "water sports"]);
-var lvl1activity2 = new Activity("table tennis", "imgs/tabletennis.jpg", "google.co.uk/related", 5, ["pillow sports", "indoors"]);
-var lvl1activity3 = new Activity("boxing", "imgs/boxing.jpg", "google.co.uk/related", 1, ["extreme sports", "water sports"]);
-var lvl1activity4 = new Activity("gym", "imgs/gym.jpg", "google.co.uk/related", 5, ["pillow sports", "indoors"]);
-var lvl1activity5 = new Activity("hiking", "imgs/hiking.jpg", "google.co.uk/related", 1, ["extreme sports", "water sports"]);
-var lvl1activity6 = new Activity("basketball", "imgs/basketball.jpg", "google.co.uk/related", 5, ["pillow sports", "indoors"]); // Level 2
-
-var lvl2activity1 = new Activity("meditating", "imgs/meditate.jpg", "google.co.uk/related", 1, ["extreme sports", "water sports"]);
-var lvl2activity2 = new Activity("sleeping", "imgs/sleep.jpg", "google.co.uk/related", 5, ["pillow sports", "indoors"]);
-var lvl2activity3 = new Activity("reading", "imgs/read.jpg", "google.co.uk/related", 1, ["extreme sports", "water sports"]);
-var lvl2activity4 = new Activity("theatre", "imgs/theatre.jpg", "google.co.uk/related", 5, ["pillow sports", "indoors"]);
-var lvl2activity5 = new Activity("stargazing", "imgs/stargazing.jpg", "google.co.uk/related", 1, ["extreme sports", "water sports"]);
-var lvl2activity6 = new Activity("library", "imgs/library.jpg", "google.co.uk/related", 5, ["pillow sports", "indoors"]); // Level 3 
-
-var lvl3activity1 = new Activity("meditating", "imgs/meditate.jpg", "google.co.uk/related", 1, ["extreme sports", "water sports"]);
-var lvl3activity2 = new Activity("sleeping", "imgs/sleep.jpg", "google.co.uk/related", 5, ["pillow sports", "indoors"]);
-var lvl3activity3 = new Activity("reading", "imgs/read.jpg", "google.co.uk/related", 1, ["extreme sports", "water sports"]);
-var lvl3activity4 = new Activity("theatre", "imgs/theatre.jpg", "google.co.uk/related", 5, ["pillow sports", "indoors"]);
-var lvl3activity5 = new Activity("stargazing", "imgs/stargazing.jpg", "google.co.uk/related", 1, ["extreme sports", "water sports"]);
-var lvl3activity6 = new Activity("library", "imgs/library.jpg", "google.co.uk/related", 5, ["pillow sports", "indoors"]);
-var arr1 = [lvl1activity1, lvl1activity2, lvl1activity3, lvl1activity4, lvl1activity5, lvl1activity6];
-var arr2 = [lvl2activity1, lvl2activity2, lvl2activity3, lvl2activity4, lvl2activity5, lvl2activity6];
-var arr3 = [lvl3activity1, lvl3activity2, lvl3activity3, lvl3activity4, lvl3activity5, lvl3activity6];
-var currentArr = arr1;
-var currentArrLevel = 1;
-var allArrs = [arr1, arr2, arr3];
 var bottomImgs = ["imgs/beach.jpg", "imgs/read.jpg", "imgs/stargazing.jpg", "imgs/library.jpg", "imgs/boxing.jpg", "imgs/gym.jpg", "imgs/hiking.jpg"];
-var chillLevelArr = ["LOW", "MEDIUM", "HIGH"];
-var vws = ["3vw", "4vw", "5vw", "6vw"];
-var fontWeight = ["normal", "bold"];
-var fontStyle = ["normal", "italic"];
-var fontVariant = ["normal", "small-caps"];
-var colours = ["#ff0000", "#ffffff", "#e6e600", "#6d77e8", "#479949", "#895289"];
-var letterSpacing = ["1px", "2px", "3px", "4px", "5px", "6px", "7px", "8px", "9px", "10px"];
-var lineHeight = ["1", "1.2", "1.4"];
-var justifyAlignSelf = ["left", "center", "end"];
-var fonts = ["Roboto", "Helvetica", "Raleway", "Chonburi", "Inconsolata", "Anton", "Josefin Sans", "Lobster", "Pacifico", "Nova Flat"];
 var leftContainer = document.querySelector(".left-container");
 var centralContainer = document.querySelector(".central-container");
 var rightContainer = document.querySelector(".right-container");
-var img = document.querySelector(".img");
-var name = document.querySelector(".name");
 var categories = document.querySelector(".categories");
 var up = document.querySelectorAll(".up");
 var down = document.querySelectorAll(".down");
 var chillLevel = document.querySelector(".chill-level");
 var chillLevelWord = document.querySelectorAll(".chill-level-amount");
+exports.chillLevelWord = chillLevelWord;
 var emptyBoxBottom = document.querySelectorAll(".empty-box-bottom");
 var refresh = document.querySelectorAll(".refresh");
 var tagLine = document.querySelector(".tag-line");
 var activityInfo = document.querySelector(".activity-info");
-var activityInfoA = document.querySelector(".activity-info-a");
 var body = document.getElementsByTagName("BODY")[0];
 var closeBtn = document.querySelector(".closebtn");
 var openBtn = document.querySelector(".learn-more-btn");
-console.log(body);
 body.addEventListener("load", function () {
   return (0, _updateCentralContainer.default)();
 });
@@ -561,15 +525,14 @@ openBtn.addEventListener("click", function () {
 closeBtn.addEventListener("click", function () {
   return (0, _nav.closeNav)();
 });
-var x = 0;
 refresh.forEach(function (refresh) {
   return refresh.addEventListener("click", _updateCentralContainer.default);
 });
 up.forEach(function (up) {
-  return up.addEventListener("click", _levelUp.default);
+  return up.addEventListener("click", _levelChange.levelUp);
 });
 down.forEach(function (down) {
-  return down.addEventListener("click", _levelDown.default);
+  return down.addEventListener("click", _levelChange.levelDown);
 }); // if (window.matchMedia("(min-width: 480px)").matches) {
 //   console.log('update level');
 //   updateLevel();
@@ -578,7 +541,7 @@ down.forEach(function (down) {
 //   console.log('update level');
 //   updateLevel();
 // }
-},{"./updateCentralContainer.js":"js/updateCentralContainer.js","./levelUp.js":"js/levelUp.js","./levelDown.js":"js/levelDown.js","./fillBottomBoxes.js":"js/fillBottomBoxes.js","./loadingScreen.js":"js/loadingScreen.js","./nav.js":"js/nav.js"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./updateCentralContainer.js":"js/updateCentralContainer.js","./levelChange.js":"js/levelChange.js","./fillBottomBoxes.js":"js/fillBottomBoxes.js","./loadingScreen.js":"js/loadingScreen.js","./nav.js":"js/nav.js"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -606,7 +569,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58546" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55352" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
