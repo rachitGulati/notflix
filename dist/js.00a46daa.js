@@ -151,13 +151,25 @@ module.exports = "/gym.5c929283.jpg";
 module.exports = "/hiking.bccd355f.jpg";
 },{}],"imgs/basketball.jpg":[function(require,module,exports) {
 module.exports = "/basketball.c504d923.jpg";
+},{}],"imgs/meditate.jpg":[function(require,module,exports) {
+module.exports = "/meditate.1d029eb0.jpg";
+},{}],"imgs/sleep.jpg":[function(require,module,exports) {
+module.exports = "/sleep.0c87020b.jpg";
+},{}],"imgs/read.jpg":[function(require,module,exports) {
+module.exports = "/read.01b8d2ba.jpg";
+},{}],"imgs/theatre.jpg":[function(require,module,exports) {
+module.exports = "/theatre.9dab0659.jpg";
+},{}],"imgs/stargazing.jpg":[function(require,module,exports) {
+module.exports = "/stargazing.6e86685b.jpg";
+},{}],"imgs/library.jpg":[function(require,module,exports) {
+module.exports = "/library.564c57b4.jpg";
 },{}],"js/activities.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.lvl3activity6 = exports.lvl3activity5 = exports.lvl3activity4 = exports.lvl3activity3 = exports.lvl3activity2 = exports.lvl3activity1 = exports.lvl2activity6 = exports.lvl2activity5 = exports.lvl2activity4 = exports.lvl2activity3 = exports.lvl2activity2 = exports.lvl2activity1 = exports.lvl1activity6 = exports.lvl1activity5 = exports.lvl1activity4 = exports.lvl1activity3 = exports.lvl1activity2 = exports.lvl1activity1 = exports.allArrs = exports.chillLevelArr = exports.arr3 = exports.arr2 = exports.arr1 = void 0;
+exports.allArrs = exports.chillLevelArr = exports.arr3 = exports.arr2 = exports.arr1 = exports.lvl3activity6 = exports.lvl3activity5 = exports.lvl3activity4 = exports.lvl3activity3 = exports.lvl3activity2 = exports.lvl3activity1 = exports.lvl2activity6 = exports.lvl2activity5 = exports.lvl2activity4 = exports.lvl2activity3 = exports.lvl2activity2 = exports.lvl2activity1 = exports.lvl1activity6 = exports.lvl1activity5 = exports.lvl1activity4 = exports.lvl1activity3 = exports.lvl1activity2 = exports.lvl1activity1 = void 0;
 
 var _Activity = _interopRequireDefault(require("./Activity.js"));
 
@@ -173,19 +185,21 @@ var _hiking = _interopRequireDefault(require("../imgs/hiking.jpg"));
 
 var _basketball = _interopRequireDefault(require("../imgs/basketball.jpg"));
 
+var _meditate = _interopRequireDefault(require("../imgs/meditate.jpg"));
+
+var _sleep = _interopRequireDefault(require("../imgs/sleep.jpg"));
+
+var _read = _interopRequireDefault(require("../imgs/read.jpg"));
+
+var _theatre = _interopRequireDefault(require("../imgs/theatre.jpg"));
+
+var _stargazing = _interopRequireDefault(require("../imgs/stargazing.jpg"));
+
+var _library = _interopRequireDefault(require("../imgs/library.jpg"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var arr1 = [lvl1activity1, lvl1activity2, lvl1activity3, lvl1activity4, lvl1activity5, lvl1activity6];
-exports.arr1 = arr1;
-var arr2 = [lvl2activity1, lvl2activity2, lvl2activity3, lvl2activity4, lvl2activity5, lvl2activity6];
-exports.arr2 = arr2;
-var arr3 = [lvl3activity1, lvl3activity2, lvl3activity3, lvl3activity4, lvl3activity5, lvl3activity6];
-exports.arr3 = arr3;
-var chillLevelArr = ["LOW", "MEDIUM", "HIGH"];
-exports.chillLevelArr = chillLevelArr;
-var allArrs = [arr1, arr2, arr3]; // Level 1
-
-exports.allArrs = allArrs;
+// Level 1
 var lvl1activity1 = new _Activity.default("surfing", _beach.default, "google.co.uk/related", 1, ["extreme sports", "water sports"]);
 exports.lvl1activity1 = lvl1activity1;
 var lvl1activity2 = new _Activity.default("table tennis", _tabletennis.default, "google.co.uk/related", 5, ["pillow sports", "indoors"]);
@@ -212,19 +226,29 @@ exports.lvl2activity5 = lvl2activity5;
 var lvl2activity6 = new _Activity.default("library", "imgs/library.jpg", "google.co.uk/related", 5, ["pillow sports", "indoors"]); // Level 3 
 
 exports.lvl2activity6 = lvl2activity6;
-var lvl3activity1 = new _Activity.default("meditating", "imgs/meditate.jpg", "google.co.uk/related", 1, ["extreme sports", "water sports"]);
+var lvl3activity1 = new _Activity.default("meditating", _meditate.default, "google.co.uk/related", 1, ["extreme sports", "water sports"]);
 exports.lvl3activity1 = lvl3activity1;
-var lvl3activity2 = new _Activity.default("sleeping", "imgs/sleep.jpg", "google.co.uk/related", 5, ["pillow sports", "indoors"]);
+var lvl3activity2 = new _Activity.default("sleeping", _sleep.default, "google.co.uk/related", 5, ["pillow sports", "indoors"]);
 exports.lvl3activity2 = lvl3activity2;
-var lvl3activity3 = new _Activity.default("reading", "imgs/read.jpg", "google.co.uk/related", 1, ["extreme sports", "water sports"]);
+var lvl3activity3 = new _Activity.default("reading", _read.default, "google.co.uk/related", 1, ["extreme sports", "water sports"]);
 exports.lvl3activity3 = lvl3activity3;
-var lvl3activity4 = new _Activity.default("theatre", "imgs/theatre.jpg", "google.co.uk/related", 5, ["pillow sports", "indoors"]);
+var lvl3activity4 = new _Activity.default("theatre", _theatre.default, "google.co.uk/related", 5, ["pillow sports", "indoors"]);
 exports.lvl3activity4 = lvl3activity4;
-var lvl3activity5 = new _Activity.default("stargazing", "imgs/stargazing.jpg", "google.co.uk/related", 1, ["extreme sports", "water sports"]);
+var lvl3activity5 = new _Activity.default("stargazing", _stargazing.default, "google.co.uk/related", 1, ["extreme sports", "water sports"]);
 exports.lvl3activity5 = lvl3activity5;
-var lvl3activity6 = new _Activity.default("library", "imgs/library.jpg", "google.co.uk/related", 5, ["pillow sports", "indoors"]);
+var lvl3activity6 = new _Activity.default("library", _library.default, "google.co.uk/related", 5, ["pillow sports", "indoors"]);
 exports.lvl3activity6 = lvl3activity6;
-},{"./Activity.js":"js/Activity.js","../imgs/boxing.jpg":"imgs/boxing.jpg","../imgs/beach.jpg":"imgs/beach.jpg","../imgs/tabletennis.jpg":"imgs/tabletennis.jpg","../imgs/gym.jpg":"imgs/gym.jpg","../imgs/hiking.jpg":"imgs/hiking.jpg","../imgs/basketball.jpg":"imgs/basketball.jpg"}],"js/fonts-styling.js":[function(require,module,exports) {
+var arr1 = [lvl1activity1, lvl1activity2, lvl1activity3, lvl1activity4, lvl1activity5, lvl1activity6];
+exports.arr1 = arr1;
+var arr2 = [lvl2activity1, lvl2activity2, lvl2activity3, lvl2activity4, lvl2activity5, lvl2activity6];
+exports.arr2 = arr2;
+var arr3 = [lvl3activity1, lvl3activity2, lvl3activity3, lvl3activity4, lvl3activity5, lvl3activity6];
+exports.arr3 = arr3;
+var chillLevelArr = ["LOW", "MEDIUM", "HIGH"];
+exports.chillLevelArr = chillLevelArr;
+var allArrs = [arr1, arr2, arr3];
+exports.allArrs = allArrs;
+},{"./Activity.js":"js/Activity.js","../imgs/boxing.jpg":"imgs/boxing.jpg","../imgs/beach.jpg":"imgs/beach.jpg","../imgs/tabletennis.jpg":"imgs/tabletennis.jpg","../imgs/gym.jpg":"imgs/gym.jpg","../imgs/hiking.jpg":"imgs/hiking.jpg","../imgs/basketball.jpg":"imgs/basketball.jpg","../imgs/meditate.jpg":"imgs/meditate.jpg","../imgs/sleep.jpg":"imgs/sleep.jpg","../imgs/read.jpg":"imgs/read.jpg","../imgs/theatre.jpg":"imgs/theatre.jpg","../imgs/stargazing.jpg":"imgs/stargazing.jpg","../imgs/library.jpg":"imgs/library.jpg"}],"js/fonts-styling.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -301,7 +325,7 @@ function levelUp() {
       return clw.innerHTML = "".concat(_activities.chillLevelArr[currentArrLevel]);
     });
   } else {
-    console.log('no higher level');
+    console.log("no higher level");
   }
 }
 

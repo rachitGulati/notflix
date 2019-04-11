@@ -9,8 +9,8 @@ export function levelUp() {
 		currentArrLevel++;
 		currentArr = allArrs[currentArrLevel];
 		chillLevelWord.forEach(clw => clw.innerHTML = `${chillLevelArr[currentArrLevel]}`);
-	} else {
-		console.log('no higher level');
+    	} else {
+		console.log("no higher level");
 	}
 }
 
