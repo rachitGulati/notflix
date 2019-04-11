@@ -4,10 +4,6 @@ import fillBottomBoxes from "./fillBottomBoxes.js";
 import loadingScreen from "./loadingScreen.js";
 import { openNav, closeNav } from "./nav.js";
 
-export let bottomImgs = ["imgs/beach.jpg", "imgs/read.jpg", "imgs/stargazing.jpg", "imgs/library.jpg",
-	"imgs/boxing.jpg", "imgs/gym.jpg", "imgs/hiking.jpg"
-];
-
 let leftContainer = document.querySelector(".left-container");
 let centralContainer = document.querySelector(".central-container");
 let rightContainer = document.querySelector(".right-container");
@@ -33,13 +29,3 @@ closeBtn.addEventListener("click", () => closeNav());
 refresh.forEach(refresh => refresh.addEventListener("click", updateCentralContainer));
 up.forEach(up => up.addEventListener("click", levelUp));
 down.forEach(down => down.addEventListener("click", levelDown));
-
-
-// if (window.matchMedia("(min-width: 480px)").matches) {
-//   console.log('update level');
-//   updateLevel();
-// }
-// else {
-//   console.log('update level');
-//   updateLevel();
-// }

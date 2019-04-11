@@ -117,7 +117,56 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/Activity.js":[function(require,module,exports) {
+})({"js/fonts-styling.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.justifyAlignSelf = exports.lineHeight = exports.letterSpacing = exports.colours = exports.fontVariant = exports.fontStyle = exports.fontWeight = exports.vws = exports.fonts = void 0;
+var fonts = ["Roboto", "Helvetica", "Raleway", "Chonburi", "Inconsolata", "Anton", "Josefin Sans", "Lobster", "Pacifico", "Nova Flat"];
+exports.fonts = fonts;
+var vws = ["3vw", "4vw", "5vw", "6vw"];
+exports.vws = vws;
+var fontWeight = ["normal", "bold"];
+exports.fontWeight = fontWeight;
+var fontStyle = ["normal", "italic"];
+exports.fontStyle = fontStyle;
+var fontVariant = ["normal", "small-caps"];
+exports.fontVariant = fontVariant;
+var colours = ["#ff0000", "#ffffff", "#e6e600", "#6d77e8", "#479949", "#895289"];
+exports.colours = colours;
+var letterSpacing = ["1px", "2px", "3px", "4px", "5px", "6px", "7px", "8px", "9px", "10px"];
+exports.letterSpacing = letterSpacing;
+var lineHeight = ["1", "1.2", "1.4"];
+exports.lineHeight = lineHeight;
+var justifyAlignSelf = ["left", "center", "end"];
+exports.justifyAlignSelf = justifyAlignSelf;
+},{}],"js/shuffle.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = shuffle;
+
+function shuffle(array) {
+  var currentIndex = array.length;
+  var temporaryValue, randomIndex; // While there remain elements to shuffle...
+
+  while (0 !== currentIndex) {
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1; // And swap it with the current element.
+
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+},{}],"js/Activity.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -248,56 +297,7 @@ var chillLevelArr = ["LOW", "MEDIUM", "HIGH"];
 exports.chillLevelArr = chillLevelArr;
 var allArrs = [arr1, arr2, arr3];
 exports.allArrs = allArrs;
-},{"./Activity.js":"js/Activity.js","../imgs/boxing.jpg":"imgs/boxing.jpg","../imgs/beach.jpg":"imgs/beach.jpg","../imgs/tabletennis.jpg":"imgs/tabletennis.jpg","../imgs/gym.jpg":"imgs/gym.jpg","../imgs/hiking.jpg":"imgs/hiking.jpg","../imgs/basketball.jpg":"imgs/basketball.jpg","../imgs/meditate.jpg":"imgs/meditate.jpg","../imgs/sleep.jpg":"imgs/sleep.jpg","../imgs/read.jpg":"imgs/read.jpg","../imgs/theatre.jpg":"imgs/theatre.jpg","../imgs/stargazing.jpg":"imgs/stargazing.jpg","../imgs/library.jpg":"imgs/library.jpg"}],"js/fonts-styling.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.justifyAlignSelf = exports.lineHeight = exports.letterSpacing = exports.colours = exports.fontVariant = exports.fontStyle = exports.fontWeight = exports.vws = exports.fonts = void 0;
-var fonts = ["Roboto", "Helvetica", "Raleway", "Chonburi", "Inconsolata", "Anton", "Josefin Sans", "Lobster", "Pacifico", "Nova Flat"];
-exports.fonts = fonts;
-var vws = ["3vw", "4vw", "5vw", "6vw"];
-exports.vws = vws;
-var fontWeight = ["normal", "bold"];
-exports.fontWeight = fontWeight;
-var fontStyle = ["normal", "italic"];
-exports.fontStyle = fontStyle;
-var fontVariant = ["normal", "small-caps"];
-exports.fontVariant = fontVariant;
-var colours = ["#ff0000", "#ffffff", "#e6e600", "#6d77e8", "#479949", "#895289"];
-exports.colours = colours;
-var letterSpacing = ["1px", "2px", "3px", "4px", "5px", "6px", "7px", "8px", "9px", "10px"];
-exports.letterSpacing = letterSpacing;
-var lineHeight = ["1", "1.2", "1.4"];
-exports.lineHeight = lineHeight;
-var justifyAlignSelf = ["left", "center", "end"];
-exports.justifyAlignSelf = justifyAlignSelf;
-},{}],"js/shuffle.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = shuffle;
-
-function shuffle(array) {
-  var currentIndex = array.length;
-  var temporaryValue, randomIndex; // While there remain elements to shuffle...
-
-  while (0 !== currentIndex) {
-    // Pick a remaining element...
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex -= 1; // And swap it with the current element.
-
-    temporaryValue = array[currentIndex];
-    array[currentIndex] = array[randomIndex];
-    array[randomIndex] = temporaryValue;
-  }
-
-  return array;
-}
-},{}],"js/levelChange.js":[function(require,module,exports) {
+},{"./Activity.js":"js/Activity.js","../imgs/boxing.jpg":"imgs/boxing.jpg","../imgs/beach.jpg":"imgs/beach.jpg","../imgs/tabletennis.jpg":"imgs/tabletennis.jpg","../imgs/gym.jpg":"imgs/gym.jpg","../imgs/hiking.jpg":"imgs/hiking.jpg","../imgs/basketball.jpg":"imgs/basketball.jpg","../imgs/meditate.jpg":"imgs/meditate.jpg","../imgs/sleep.jpg":"imgs/sleep.jpg","../imgs/read.jpg":"imgs/read.jpg","../imgs/theatre.jpg":"imgs/theatre.jpg","../imgs/stargazing.jpg":"imgs/stargazing.jpg","../imgs/library.jpg":"imgs/library.jpg"}],"js/levelChange.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -349,20 +349,18 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = updateCentralContainer;
 
-var _Activity = _interopRequireDefault(require("./Activity.js"));
-
-var activities = _interopRequireWildcard(require("./activities.js"));
-
 var fontsStyling = _interopRequireWildcard(require("./fonts-styling.js"));
 
 var _shuffle = _interopRequireDefault(require("./shuffle.js"));
 
 var _levelChange = require("./levelChange.js");
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+// import Activity from "./Activity.js";
+// import * as activities from "./activities.js";
 var img = document.querySelector(".img"); // let arr1 = [activities.lvl1activity1, activities.lvl1activity2, activities.lvl1activity3, activities.lvl1activity4, activities.lvl1activity5, activities.lvl1activity6];
 
 var x = 0;
@@ -398,7 +396,7 @@ function updateCentralContainer() {
   categories.innerHTML = _levelChange.currentArr[x].categories.toString().replace(/,/g, " ⸰ ");
   x++;
 }
-},{"./Activity.js":"js/Activity.js","./activities.js":"js/activities.js","./fonts-styling.js":"js/fonts-styling.js","./shuffle.js":"js/shuffle.js","./levelChange.js":"js/levelChange.js"}],"js/fillBottomBoxes.js":[function(require,module,exports) {
+},{"./fonts-styling.js":"js/fonts-styling.js","./shuffle.js":"js/shuffle.js","./levelChange.js":"js/levelChange.js"}],"js/fillBottomBoxes.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -11403,7 +11401,7 @@ function closeNav() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.emptyBoxBottom = exports.chillLevelWord = exports.bottomImgs = void 0;
+exports.emptyBoxBottom = exports.chillLevelWord = void 0;
 
 var _updateCentralContainer = _interopRequireDefault(require("./updateCentralContainer.js"));
 
@@ -11417,8 +11415,6 @@ var _nav = require("./nav.js");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var bottomImgs = ["imgs/beach.jpg", "imgs/read.jpg", "imgs/stargazing.jpg", "imgs/library.jpg", "imgs/boxing.jpg", "imgs/gym.jpg", "imgs/hiking.jpg"];
-exports.bottomImgs = bottomImgs;
 var leftContainer = document.querySelector(".left-container");
 var centralContainer = document.querySelector(".central-container");
 var rightContainer = document.querySelector(".right-container");
@@ -11453,14 +11449,7 @@ up.forEach(function (up) {
 });
 down.forEach(function (down) {
   return down.addEventListener("click", _levelChange.levelDown);
-}); // if (window.matchMedia("(min-width: 480px)").matches) {
-//   console.log('update level');
-//   updateLevel();
-// }
-// else {
-//   console.log('update level');
-//   updateLevel();
-// }
+});
 },{"./updateCentralContainer.js":"js/updateCentralContainer.js","./levelChange.js":"js/levelChange.js","./fillBottomBoxes.js":"js/fillBottomBoxes.js","./loadingScreen.js":"js/loadingScreen.js","./nav.js":"js/nav.js"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

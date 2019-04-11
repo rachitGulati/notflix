@@ -1,5 +1,5 @@
-import Activity from "./Activity.js";
-import * as activities from "./activities.js";
+// import Activity from "./Activity.js";
+// import * as activities from "./activities.js";
 import * as fontsStyling from "./fonts-styling.js";
 import shuffle from "./shuffle.js";
 import { currentArr } from "./levelChange.js";
