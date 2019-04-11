@@ -1,5 +1,5 @@
 /* Set the width of the side navigation to 250px */
-let openNav = () => {
+export function openNav() {
 	if (window.matchMedia("(max-width: 500px)").matches) {
 		document.getElementById("side-nav").style.width = "100%";
 		// document.querySelector("side-nav-p").style.width = "70vh";
@@ -26,10 +26,10 @@ let openNav = () => {
 		document.querySelectorAll(".side-nav-p").forEach(x => x.style.width = "350px");
 
 	}
-};
+}
 
 
 /* Set the width of the side navigation to 0 */
-let closeNav = () => {
+export function closeNav() {
 	document.getElementById("side-nav").style.width = "0";
-};
+}

@@ -17,28 +17,28 @@
 // }
 
 
-function loadingScreen() {
+export default function loadingScreen() {
 
-    let tl = new TimelineMax();
+	let tl = new TimelineMax();
 
-    tl.from(".notflix", 1.5, {
-            y: "100%",
-            opacity: 0
-        })
-        .to(".notflix", 1.2, {
-            scale: 1.2, 
-            ease: Power2.easeInOut, 
-            transformOrigin:"center",
-            repeat:3, 
-            yoyo:true
-        })
-        .to(".notflix", 1.5, {
-            y: "100%",
-            opacity: 0
-        })
-        .to("#preloader", 1, {
-            y:"100%",
-            ease: Power2.easeInOut
-        })
+	tl.from(".notflix", 1.5, {
+		y: "100%",
+		opacity: 0
+	})
+		.to(".notflix", 1.2, {
+			scale: 1.2, 
+			ease: Power2.easeInOut, 
+			transformOrigin:"center",
+			repeat:3, 
+			yoyo:true
+		})
+		.to(".notflix", 1.5, {
+			y: "100%",
+			opacity: 0
+		})
+		.to("#preloader", 1, {
+			y:"100%",
+			ease: Power2.easeInOut
+		});
 
 }

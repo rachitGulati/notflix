@@ -1,4 +1,4 @@
-let levelUp = () => {
+export default function levelUp() {
   if (currentArrLevel < 2) {
     currentArrLevel++;
     currentArr = allArrs[currentArrLevel];

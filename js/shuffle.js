@@ -1,4 +1,4 @@
-let shuffle = (array) => {
+export default function shuffle(array) {
 
 	var currentIndex = array.length;
 	var temporaryValue, randomIndex;
@@ -17,4 +17,4 @@ let shuffle = (array) => {
 
 	return array;
 
-};
+}
