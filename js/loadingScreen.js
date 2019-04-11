@@ -1,3 +1,5 @@
+import { TimelineMax } from "gsap";
+
 // let loadingScreen = () => {
 
 // //     let action = new TimelineMax({repeat:3, repeatDelay:1})
