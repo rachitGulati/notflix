@@ -1,3 +1,15 @@
+import { emptyBoxBottom } from "./index.js";
+import meditatingImage from "../imgs/meditate.jpg";
+import sleepingImage from "../imgs/sleep.jpg";
+import readingImage from "../imgs/read.jpg";
+import theatreImage from "../imgs/theatre.jpg";
+import stargazingImage from "../imgs/stargazing.jpg";
+import libraryImage from "../imgs/library.jpg";
+import hikingImage from "../imgs/hiking.jpg";
+
+let bottomImgs = [meditatingImage, sleepingImage, readingImage, theatreImage, stargazingImage, libraryImage, hikingImage];
+let num;
+
 export default function fillBottomBoxes() {
 	emptyBoxBottom.forEach( (box) => {
 		// get random number from the length of the array

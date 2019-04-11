@@ -20,7 +20,7 @@ import { TimelineMax } from "gsap";
 
 
 export default function loadingScreen() {
-
+    console.log('loading started!');
 	let tl = new TimelineMax();
 
 	tl.from(".notflix", 1.5, {
@@ -42,5 +42,5 @@ export default function loadingScreen() {
 			y:"100%",
 			ease: Power2.easeInOut
 		});
-
+        console.log('loading ended!');
 }

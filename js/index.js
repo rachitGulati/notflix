@@ -4,7 +4,7 @@ import fillBottomBoxes from "./fillBottomBoxes.js";
 import loadingScreen from "./loadingScreen.js";
 import { openNav, closeNav } from "./nav.js";
 
-let bottomImgs = ["imgs/beach.jpg", "imgs/read.jpg", "imgs/stargazing.jpg", "imgs/library.jpg",
+export let bottomImgs = ["imgs/beach.jpg", "imgs/read.jpg", "imgs/stargazing.jpg", "imgs/library.jpg",
 	"imgs/boxing.jpg", "imgs/gym.jpg", "imgs/hiking.jpg"
 ];
 
@@ -16,7 +16,7 @@ let up = document.querySelectorAll(".up");
 let down = document.querySelectorAll(".down");
 let chillLevel = document.querySelector(".chill-level");
 export let chillLevelWord = document.querySelectorAll(".chill-level-amount");
-let emptyBoxBottom = document.querySelectorAll(".empty-box-bottom");
+export let emptyBoxBottom = document.querySelectorAll(".empty-box-bottom");
 let refresh = document.querySelectorAll(".refresh");
 let tagLine = document.querySelector(".tag-line");
 let activityInfo = document.querySelector(".activity-info");
@@ -24,9 +24,9 @@ let body = document.getElementsByTagName("BODY")[0];
 let closeBtn = document.querySelector(".closebtn");
 let openBtn = document.querySelector(".learn-more-btn");
 
-body.addEventListener("load", () => updateCentralContainer());
-body.addEventListener("load", () => fillBottomBoxes());
-body.addEventListener("load", () => loadingScreen());
+body.addEventListener("load", updateCentralContainer());
+body.addEventListener("load", fillBottomBoxes());
+body.addEventListener("load", loadingScreen());
 openBtn.addEventListener("click", () => openNav());
 closeBtn.addEventListener("click", () => closeNav());
     

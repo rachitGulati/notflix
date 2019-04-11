@@ -406,8 +406,29 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = fillBottomBoxes;
 
+var _index = require("./index.js");
+
+var _meditate = _interopRequireDefault(require("../imgs/meditate.jpg"));
+
+var _sleep = _interopRequireDefault(require("../imgs/sleep.jpg"));
+
+var _read = _interopRequireDefault(require("../imgs/read.jpg"));
+
+var _theatre = _interopRequireDefault(require("../imgs/theatre.jpg"));
+
+var _stargazing = _interopRequireDefault(require("../imgs/stargazing.jpg"));
+
+var _library = _interopRequireDefault(require("../imgs/library.jpg"));
+
+var _hiking = _interopRequireDefault(require("../imgs/hiking.jpg"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var bottomImgs = [_meditate.default, _sleep.default, _read.default, _theatre.default, _stargazing.default, _library.default, _hiking.default];
+var num;
+
 function fillBottomBoxes() {
-  emptyBoxBottom.forEach(function (box) {
+  _index.emptyBoxBottom.forEach(function (box) {
     // get random number from the length of the array
     num = Math.floor(Math.random() * bottomImgs.length); // add image to background of box
 
@@ -416,7 +437,7 @@ function fillBottomBoxes() {
     bottomImgs.splice(num, 1);
   });
 }
-},{}],"node_modules/gsap/TweenLite.js":[function(require,module,exports) {
+},{"./index.js":"js/index.js","../imgs/meditate.jpg":"imgs/meditate.jpg","../imgs/sleep.jpg":"imgs/sleep.jpg","../imgs/read.jpg":"imgs/read.jpg","../imgs/theatre.jpg":"imgs/theatre.jpg","../imgs/stargazing.jpg":"imgs/stargazing.jpg","../imgs/library.jpg":"imgs/library.jpg","../imgs/hiking.jpg":"imgs/hiking.jpg"}],"node_modules/gsap/TweenLite.js":[function(require,module,exports) {
 var global = arguments[3];
 "use strict";
 
@@ -11314,6 +11335,7 @@ var _gsap = require("gsap");
 //   });
 // }
 function loadingScreen() {
+  console.log('loading started!');
   var tl = new _gsap.TimelineMax();
   tl.from(".notflix", 1.5, {
     y: "100%",
@@ -11331,6 +11353,7 @@ function loadingScreen() {
     y: "100%",
     ease: Power2.easeInOut
   });
+  console.log('loading ended!');
 }
 },{"gsap":"node_modules/gsap/index.js"}],"js/nav.js":[function(require,module,exports) {
 "use strict";
@@ -11380,7 +11403,7 @@ function closeNav() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.chillLevelWord = void 0;
+exports.emptyBoxBottom = exports.chillLevelWord = exports.bottomImgs = void 0;
 
 var _updateCentralContainer = _interopRequireDefault(require("./updateCentralContainer.js"));
 
@@ -11395,6 +11418,7 @@ var _nav = require("./nav.js");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var bottomImgs = ["imgs/beach.jpg", "imgs/read.jpg", "imgs/stargazing.jpg", "imgs/library.jpg", "imgs/boxing.jpg", "imgs/gym.jpg", "imgs/hiking.jpg"];
+exports.bottomImgs = bottomImgs;
 var leftContainer = document.querySelector(".left-container");
 var centralContainer = document.querySelector(".central-container");
 var rightContainer = document.querySelector(".right-container");
@@ -11405,21 +11429,16 @@ var chillLevel = document.querySelector(".chill-level");
 var chillLevelWord = document.querySelectorAll(".chill-level-amount");
 exports.chillLevelWord = chillLevelWord;
 var emptyBoxBottom = document.querySelectorAll(".empty-box-bottom");
+exports.emptyBoxBottom = emptyBoxBottom;
 var refresh = document.querySelectorAll(".refresh");
 var tagLine = document.querySelector(".tag-line");
 var activityInfo = document.querySelector(".activity-info");
 var body = document.getElementsByTagName("BODY")[0];
 var closeBtn = document.querySelector(".closebtn");
 var openBtn = document.querySelector(".learn-more-btn");
-body.addEventListener("load", function () {
-  return (0, _updateCentralContainer.default)();
-});
-body.addEventListener("load", function () {
-  return (0, _fillBottomBoxes.default)();
-});
-body.addEventListener("load", function () {
-  return (0, _loadingScreen.default)();
-});
+body.addEventListener("load", (0, _updateCentralContainer.default)());
+body.addEventListener("load", (0, _fillBottomBoxes.default)());
+body.addEventListener("load", (0, _loadingScreen.default)());
 openBtn.addEventListener("click", function () {
   return (0, _nav.openNav)();
 });
@@ -11470,7 +11489,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62764" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63490" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
