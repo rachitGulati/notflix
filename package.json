@@ -1,1 +1,23 @@
-{}
+{
+  "dependencies": {
+    "gsap": "^2.1.2"
+  },
+  "name": "notflix",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshromanrogers/Notflix.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshromanrogers/Notflix/issues"
+  },
+  "homepage": "https://github.com/joshromanrogers/Notflix#readme",
+  "description": ""
+}
