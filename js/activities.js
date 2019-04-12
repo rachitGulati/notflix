@@ -1,4 +1,5 @@
 import Activity from "./Activity.js";
+import loadingScreen from "./loadingScreen.js";
 
 // high chill
 import meditatingImage from "../imgs/meditate.jpg";
@@ -37,11 +38,49 @@ import indoorClimbingImage from "../imgs/indoor-climbing.jpg";
 import boulderingImage from "../imgs/bouldering.jpg";
 import tennisImage from "../imgs/tennis.jpg";
 
-// kids chill
+// kids high chill
 import boringImage from "../imgs/boring.jpg";
+// import Image from "../imgs/.jpg";
+// import Image from "../imgs/.jpg";
+// import Image from "../imgs/.jpg";
+// import Image from "../imgs/.jpg";
+// import Image from "../imgs/.jpg";
+// import Image from "../imgs/.jpg";
+// import Image from "../imgs/.jpg";
+
+// // kids medium chill
+// import Image from "../imgs/.jpg";
+// import Image from "../imgs/.jpg";
+// import Image from "../imgs/.jpg";
+// import Image from "../imgs/.jpg";
+// import Image from "../imgs/.jpg";
+// import Image from "../imgs/.jpg";
+// import Image from "../imgs/.jpg";
+// import Image from "../imgs/.jpg";
+// import Image from "../imgs/.jpg";
+// import Image from "../imgs/.jpg";
+
+// // kids low chill
+// import Image from "../imgs/.jpg";
+// import Image from "../imgs/.jpg";
+// import Image from "../imgs/.jpg";
+// import Image from "../imgs/.jpg";
+// import Image from "../imgs/.jpg";
+// import Image from "../imgs/.jpg";
+// import Image from "../imgs/.jpg";
+// import Image from "../imgs/.jpg";
+// import Image from "../imgs/.jpg";
+// import Image from "../imgs/.jpg";
+// import Image from "../imgs/.jpg";
+// import Image from "../imgs/.jpg";
+// import Image from "../imgs/.jpg";
+
 
 import updateCentralContainer from "./updateCentralContainer.js";
 import { refresh } from "./levelChange.js";
+
+// background image
+import astronomyImage from "../imgs/astronomy.jpg";
 
 // high chill
 export let lvl3activity1 = new Activity("meditating", meditatingImage, "google.co.uk/related", 1, ["extreme sports", "water sports"]);
@@ -102,7 +141,6 @@ export let kidsLvl2activity8 = new Activity("mboring2", boringImage, "google.co.
 export let kidsLvl2activity9 = new Activity("mboring3", boringImage, "google.co.uk/related", 1, []);
 export let kidsLvl2activity10 = new Activity("mboring3", boringImage, "google.co.uk/related", 1, []);
 
-
 // kids low chill
 export let kidsLvl1activity1 = new Activity("lboring1", boringImage, "google.co.uk/related", 1, []);
 export let kidsLvl1activity2 = new Activity("lboring2", boringImage, "google.co.uk/related", 1, []);
@@ -140,20 +178,18 @@ export let allKidsArrs = [kidsArr1, kidsArr2, kidsArr3];
 function kidsToggle() {
     if(allArrs !== allKidsArrs) {
         allArrs = allKidsArrs;
+        backgroundImg.style.backgroundImage = `url(${runningImage})`;
     }
     else {
         allArrs = [arr1, arr2, arr3];
+        backgroundImg.style.backgroundImage = `url(${astronomyImage})`
     }
     refresh();
 
     updateCentralContainer();
 }
-
-// function bgToggle() {
-
-// }
+let backgroundImg = document.querySelector(".background-image");
 
 let kidsButton = document.querySelector(".kids");
-
 kidsButton.addEventListener("click", () => kidsToggle());
-// kidsButton.addEventListener("click", () => bgToggle());
+kidsButton.addEventListener("click", () => loadingScreen());
