@@ -12,13 +12,13 @@ let activityInfoA = document.querySelector(".activity-info-a");
 let categories = document.querySelector(".categories");
 
 export default function updateCentralContainer() {
-
+	console.log(x)
 	// if we have reached the end of the array, shuffle the array and start again
-	if (x == currentArr.length) {
-		shuffle(currentArr);
+	if (x >= currentArr.length) {
 		x = 0;
+		shuffle(currentArr);
+		
 	}
-
 	img.style.background = `url('${currentArr[x].media}')`;
 	img.style.backgroundSize = "cover";
 	name.innerHTML = currentArr[x].name;

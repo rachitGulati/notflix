@@ -20,6 +20,7 @@ let body = document.getElementsByTagName("BODY")[0];
 let closeBtn = document.querySelector(".closebtn");
 let openBtn = document.querySelector(".learn-more-btn");
 
+
 // on page load execute the loading screen, fill the activities container with an activity and fill up the bottom boxes.
 body.addEventListener("load", updateCentralContainer());
 body.addEventListener("load", fillBottomBoxes());

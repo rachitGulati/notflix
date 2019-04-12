@@ -37,6 +37,11 @@ import indoorClimbingImage from "../imgs/indoor-climbing.jpg";
 import boulderingImage from "../imgs/bouldering.jpg";
 import tennisImage from "../imgs/tennis.jpg";
 
+// kids chill
+import boringImage from "../imgs/boring.jpg";
+
+import updateCentralContainer from "./updateCentralContainer.js";
+import { refresh } from "./levelChange.js";
 
 // high chill
 export let lvl3activity1 = new Activity("meditating", meditatingImage, "google.co.uk/related", 1, ["extreme sports", "water sports"]);
@@ -75,6 +80,45 @@ export let lvl1activity11 = new Activity("indoor climbing", indoorClimbingImage,
 export let lvl1activity12 = new Activity("bouldering", boulderingImage, "google.co.uk/related", 1, []);
 export let lvl1activity13 = new Activity("tennis", tennisImage, "google.co.uk/related", 1, []);
 
+// kids high chill
+export let kidsLvl3activity1 = new Activity("hboring1", boringImage, "google.co.uk/related", 1, []);
+export let kidsLvl3activity2 = new Activity("hboring2", boringImage, "google.co.uk/related", 1, []);
+export let kidsLvl3activity3 = new Activity("hboring3", boringImage, "google.co.uk/related", 1, []);
+export let kidsLvl3activity4 = new Activity("hboring1", boringImage, "google.co.uk/related", 1, []);
+export let kidsLvl3activity5 = new Activity("hboring2", boringImage, "google.co.uk/related", 1, []);
+export let kidsLvl3activity6 = new Activity("hboring3", boringImage, "google.co.uk/related", 1, []);
+export let kidsLvl3activity7 = new Activity("hboring1", boringImage, "google.co.uk/related", 1, []);
+export let kidsLvl3activity8 = new Activity("hboring2", boringImage, "google.co.uk/related", 1, []);
+
+// kids medium chill
+export let kidsLvl2activity1 = new Activity("mboring1", boringImage, "google.co.uk/related", 1, []);
+export let kidsLvl2activity2 = new Activity("mboring2", boringImage, "google.co.uk/related", 1, []);
+export let kidsLvl2activity3 = new Activity("mboring3", boringImage, "google.co.uk/related", 1, []);
+export let kidsLvl2activity4 = new Activity("mboring1", boringImage, "google.co.uk/related", 1, []);
+export let kidsLvl2activity5 = new Activity("mboring2", boringImage, "google.co.uk/related", 1, []);
+export let kidsLvl2activity6 = new Activity("mboring3", boringImage, "google.co.uk/related", 1, []);
+export let kidsLvl2activity7 = new Activity("mboring1", boringImage, "google.co.uk/related", 1, []);
+export let kidsLvl2activity8 = new Activity("mboring2", boringImage, "google.co.uk/related", 1, []);
+export let kidsLvl2activity9 = new Activity("mboring3", boringImage, "google.co.uk/related", 1, []);
+export let kidsLvl2activity10 = new Activity("mboring3", boringImage, "google.co.uk/related", 1, []);
+
+
+// kids low chill
+export let kidsLvl1activity1 = new Activity("lboring1", boringImage, "google.co.uk/related", 1, []);
+export let kidsLvl1activity2 = new Activity("lboring2", boringImage, "google.co.uk/related", 1, []);
+export let kidsLvl1activity3 = new Activity("lboring3", boringImage, "google.co.uk/related", 1, []);
+export let kidsLvl1activity4 = new Activity("lboring1", boringImage, "google.co.uk/related", 1, []);
+export let kidsLvl1activity5 = new Activity("lboring2", boringImage, "google.co.uk/related", 1, []);
+export let kidsLvl1activity6 = new Activity("lboring3", boringImage, "google.co.uk/related", 1, []);
+export let kidsLvl1activity7 = new Activity("lboring1", boringImage, "google.co.uk/related", 1, []);
+export let kidsLvl1activity8 = new Activity("lboring2", boringImage, "google.co.uk/related", 1, []);
+export let kidsLvl1activity9 = new Activity("lboring3", boringImage, "google.co.uk/related", 1, []);
+export let kidsLvl1activity10 = new Activity("lboring1", boringImage, "google.co.uk/related", 1, []);
+export let kidsLvl1activity11 = new Activity("lboring2", boringImage, "google.co.uk/related", 1, []);
+export let kidsLvl1activity12 = new Activity("lboring3", boringImage, "google.co.uk/related", 1, []);
+export let kidsLvl1activity13 = new Activity("lboring3", boringImage, "google.co.uk/related", 1, []);
+
+
 
 export let arr1 = [lvl1activity1, lvl1activity2, lvl1activity3, lvl1activity4, lvl1activity5, lvl1activity6, 
     lvl1activity7, lvl1activity8, lvl1activity9, lvl1activity10, lvl1activity11, lvl1activity12, lvl1activity13];
@@ -83,3 +127,33 @@ export let arr2 = [lvl2activity1, lvl2activity2, lvl2activity3, lvl2activity4, l
 export let arr3 = [lvl3activity1, lvl3activity2, lvl3activity3, lvl3activity4, lvl3activity5, lvl3activity6, lvl3activity7, lvl3activity8];
 export let chillLevelArr = ["LOW", "MEDIUM", "HIGH"];
 export let allArrs = [arr1, arr2, arr3];
+
+export let kidsArr1 = [kidsLvl1activity1, kidsLvl1activity2, kidsLvl1activity3, kidsLvl1activity4, kidsLvl1activity5,
+     kidsLvl1activity6, kidsLvl1activity7, kidsLvl1activity8, kidsLvl1activity9, kidsLvl1activity10, kidsLvl1activity11, kidsLvl1activity12, kidsLvl1activity13];
+export let kidsArr2 = [kidsLvl2activity1, kidsLvl2activity2, kidsLvl2activity3, kidsLvl2activity4, kidsLvl2activity5, kidsLvl2activity6,
+    kidsLvl2activity7, kidsLvl2activity8, kidsLvl2activity9, kidsLvl2activity10];
+export let kidsArr3 = [kidsLvl3activity1, kidsLvl3activity2, kidsLvl3activity3, kidsLvl3activity4, kidsLvl3activity5, kidsLvl3activity6,
+     kidsLvl3activity7, kidsLvl3activity8];
+export let allKidsArrs = [kidsArr1, kidsArr2, kidsArr3];
+
+
+function kidsToggle() {
+    if(allArrs !== allKidsArrs) {
+        allArrs = allKidsArrs;
+    }
+    else {
+        allArrs = [arr1, arr2, arr3];
+    }
+    refresh();
+
+    updateCentralContainer();
+}
+
+// function bgToggle() {
+
+// }
+
+let kidsButton = document.querySelector(".kids");
+
+kidsButton.addEventListener("click", () => kidsToggle());
+// kidsButton.addEventListener("click", () => bgToggle());
