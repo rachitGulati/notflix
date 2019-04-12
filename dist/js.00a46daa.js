@@ -11320,25 +11320,12 @@ exports.default = loadingScreen;
 
 var _gsap = require("gsap");
 
-// let loadingScreen = () => {
-// //     let action = new TimelineMax({repeat:3, repeatDelay:1})
-// // .to('.notflix',0.1,{autoAlpha:1},1)
-// // .to('.notflix',0.5,{scale:2.5, ease: Power2.easeInOut, transformOrigin:"center", repeat:1, yoyo:true},1);
-//     // TweenMax.to('.notflix', 1, {
-//     //     scaleX: 2,
-//     //     scaleY: 2
-//     // });
-// TweenLite.from('.central-container', 1, {
-//    left: '100px',
-//   });
-// }
 function loadingScreen() {
-  console.log('loading started!');
   var tl = new _gsap.TimelineMax();
   tl.from(".notflix", 1.5, {
     y: "100%",
     opacity: 0
-  }).to(".notflix", 1.2, {
+  }).to(".notflix", 1, {
     scale: 1.2,
     ease: Power2.easeInOut,
     transformOrigin: "center",
@@ -11347,11 +11334,10 @@ function loadingScreen() {
   }).to(".notflix", 1.5, {
     y: "100%",
     opacity: 0
-  }).to("#preloader", 1, {
-    y: "100%",
+  }).to("#preloader", 1.5, {
+    y: "110%",
     ease: Power2.easeInOut
-  });
-  console.log('loading ended!');
+  }, "-=1.5");
 }
 },{"gsap":"node_modules/gsap/index.js"}],"js/nav.js":[function(require,module,exports) {
 "use strict";
@@ -11431,7 +11417,8 @@ var tagLine = document.querySelector(".tag-line");
 var activityInfo = document.querySelector(".activity-info");
 var body = document.getElementsByTagName("BODY")[0];
 var closeBtn = document.querySelector(".closebtn");
-var openBtn = document.querySelector(".learn-more-btn");
+var openBtn = document.querySelector(".learn-more-btn"); // on page load execute the loading screen, fill the activities container with an activity and fill up the bottom boxes.
+
 body.addEventListener("load", (0, _updateCentralContainer.default)());
 body.addEventListener("load", (0, _fillBottomBoxes.default)());
 body.addEventListener("load", (0, _loadingScreen.default)());
@@ -11478,7 +11465,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63490" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49674" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
