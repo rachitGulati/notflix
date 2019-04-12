@@ -188,18 +188,6 @@ var Activity = function Activity(name, media, link, chillLevel, categories, font
 };
 
 exports.default = Activity;
-},{}],"imgs/boxing.jpg":[function(require,module,exports) {
-module.exports = "/boxing.66a7a7f8.jpg";
-},{}],"imgs/beach.jpg":[function(require,module,exports) {
-module.exports = "/beach.c402afdc.jpg";
-},{}],"imgs/tabletennis.jpg":[function(require,module,exports) {
-module.exports = "/tabletennis.d21ed894.jpg";
-},{}],"imgs/gym.jpg":[function(require,module,exports) {
-module.exports = "/gym.5c929283.jpg";
-},{}],"imgs/hiking.jpg":[function(require,module,exports) {
-module.exports = "/hiking.bccd355f.jpg";
-},{}],"imgs/basketball.jpg":[function(require,module,exports) {
-module.exports = "/basketball.c504d923.jpg";
 },{}],"imgs/meditate.jpg":[function(require,module,exports) {
 module.exports = "/meditate.1d029eb0.jpg";
 },{}],"imgs/sleep.jpg":[function(require,module,exports) {
@@ -212,27 +200,65 @@ module.exports = "/theatre.9dab0659.jpg";
 module.exports = "/stargazing.6e86685b.jpg";
 },{}],"imgs/library.jpg":[function(require,module,exports) {
 module.exports = "/library.564c57b4.jpg";
+},{}],"imgs/painting.jpg":[function(require,module,exports) {
+module.exports = "/painting.13aa7602.jpg";
+},{}],"imgs/drawing.jpg":[function(require,module,exports) {
+module.exports = "/drawing.71a197c6.jpg";
+},{}],"imgs/outdoor-concert.jpg":[function(require,module,exports) {
+module.exports = "/outdoor-concert.0d7e2f6e.jpg";
+},{}],"imgs/plan-a-trip.jpg":[function(require,module,exports) {
+module.exports = "/plan-a-trip.28948cea.jpg";
+},{}],"imgs/golf.jpg":[function(require,module,exports) {
+module.exports = "/golf.a53a507c.jpg";
+},{}],"imgs/botanical-garden.jpg":[function(require,module,exports) {
+module.exports = "/botanical-garden.e617b749.jpg";
+},{}],"imgs/exhibition-opening.jpg":[function(require,module,exports) {
+module.exports = "/exhibition-opening.a7c259fc.jpg";
+},{}],"imgs/art-fair.jpg":[function(require,module,exports) {
+module.exports = "/art-fair.c534a62a.jpg";
+},{}],"imgs/art-class.jpg":[function(require,module,exports) {
+module.exports = "/art-class.91d18436.jpg";
+},{}],"imgs/museum-late.jpg":[function(require,module,exports) {
+module.exports = "/museum-late.0a56c4ce.jpg";
+},{}],"imgs/museum.jpg":[function(require,module,exports) {
+module.exports = "/museum.d91012a4.jpg";
+},{}],"imgs/camping.jpg":[function(require,module,exports) {
+module.exports = "/camping.38416a46.jpg";
+},{}],"imgs/boxing.jpg":[function(require,module,exports) {
+module.exports = "/boxing.66a7a7f8.jpg";
+},{}],"imgs/beach.jpg":[function(require,module,exports) {
+module.exports = "/beach.c402afdc.jpg";
+},{}],"imgs/tabletennis.jpg":[function(require,module,exports) {
+module.exports = "/tabletennis.d21ed894.jpg";
+},{}],"imgs/gym.jpg":[function(require,module,exports) {
+module.exports = "/gym.5c929283.jpg";
+},{}],"imgs/hiking.jpg":[function(require,module,exports) {
+module.exports = "/hiking.bccd355f.jpg";
+},{}],"imgs/basketball.jpg":[function(require,module,exports) {
+module.exports = "/basketball.c504d923.jpg";
+},{}],"imgs/running.jpg":[function(require,module,exports) {
+module.exports = "/running.cec098d9.jpg";
+},{}],"imgs/rock-climbing.jpg":[function(require,module,exports) {
+module.exports = "/rock-climbing.74769932.jpg";
+},{}],"imgs/road-trip.jpg":[function(require,module,exports) {
+module.exports = "/road-trip.048aa3ef.jpg";
+},{}],"imgs/canoeing.jpg":[function(require,module,exports) {
+module.exports = "/canoeing.c0e373e8.jpg";
+},{}],"imgs/indoor-climbing.jpg":[function(require,module,exports) {
+module.exports = "/indoor-climbing.2755a770.jpg";
+},{}],"imgs/bouldering.jpg":[function(require,module,exports) {
+module.exports = "/bouldering.b10ae420.jpg";
+},{}],"imgs/tennis.jpg":[function(require,module,exports) {
+module.exports = "/tennis.7c00b3d1.jpg";
 },{}],"js/activities.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.allArrs = exports.chillLevelArr = exports.arr3 = exports.arr2 = exports.arr1 = exports.lvl3activity6 = exports.lvl3activity5 = exports.lvl3activity4 = exports.lvl3activity3 = exports.lvl3activity2 = exports.lvl3activity1 = exports.lvl2activity6 = exports.lvl2activity5 = exports.lvl2activity4 = exports.lvl2activity3 = exports.lvl2activity2 = exports.lvl2activity1 = exports.lvl1activity6 = exports.lvl1activity5 = exports.lvl1activity4 = exports.lvl1activity3 = exports.lvl1activity2 = exports.lvl1activity1 = void 0;
+exports.allArrs = exports.chillLevelArr = exports.arr3 = exports.arr2 = exports.arr1 = exports.lvl1activity13 = exports.lvl1activity12 = exports.lvl1activity11 = exports.lvl1activity10 = exports.lvl1activity9 = exports.lvl1activity8 = exports.lvl1activity7 = exports.lvl1activity6 = exports.lvl1activity5 = exports.lvl1activity4 = exports.lvl1activity3 = exports.lvl1activity2 = exports.lvl1activity1 = exports.lvl2activity10 = exports.lvl2activity9 = exports.lvl2activity8 = exports.lvl2activity7 = exports.lvl2activity6 = exports.lvl2activity5 = exports.lvl2activity4 = exports.lvl2activity3 = exports.lvl2activity2 = exports.lvl2activity1 = exports.lvl3activity8 = exports.lvl3activity7 = exports.lvl3activity6 = exports.lvl3activity5 = exports.lvl3activity4 = exports.lvl3activity3 = exports.lvl3activity2 = exports.lvl3activity1 = void 0;
 
 var _Activity = _interopRequireDefault(require("./Activity.js"));
-
-var _boxing = _interopRequireDefault(require("../imgs/boxing.jpg"));
-
-var _beach = _interopRequireDefault(require("../imgs/beach.jpg"));
-
-var _tabletennis = _interopRequireDefault(require("../imgs/tabletennis.jpg"));
-
-var _gym = _interopRequireDefault(require("../imgs/gym.jpg"));
-
-var _hiking = _interopRequireDefault(require("../imgs/hiking.jpg"));
-
-var _basketball = _interopRequireDefault(require("../imgs/basketball.jpg"));
 
 var _meditate = _interopRequireDefault(require("../imgs/meditate.jpg"));
 
@@ -246,35 +272,62 @@ var _stargazing = _interopRequireDefault(require("../imgs/stargazing.jpg"));
 
 var _library = _interopRequireDefault(require("../imgs/library.jpg"));
 
+var _painting = _interopRequireDefault(require("../imgs/painting.jpg"));
+
+var _drawing = _interopRequireDefault(require("../imgs/drawing.jpg"));
+
+var _outdoorConcert = _interopRequireDefault(require("../imgs/outdoor-concert.jpg"));
+
+var _planATrip = _interopRequireDefault(require("../imgs/plan-a-trip.jpg"));
+
+var _golf = _interopRequireDefault(require("../imgs/golf.jpg"));
+
+var _botanicalGarden = _interopRequireDefault(require("../imgs/botanical-garden.jpg"));
+
+var _exhibitionOpening = _interopRequireDefault(require("../imgs/exhibition-opening.jpg"));
+
+var _artFair = _interopRequireDefault(require("../imgs/art-fair.jpg"));
+
+var _artClass = _interopRequireDefault(require("../imgs/art-class.jpg"));
+
+var _museumLate = _interopRequireDefault(require("../imgs/museum-late.jpg"));
+
+var _museum = _interopRequireDefault(require("../imgs/museum.jpg"));
+
+var _camping = _interopRequireDefault(require("../imgs/camping.jpg"));
+
+var _boxing = _interopRequireDefault(require("../imgs/boxing.jpg"));
+
+var _beach = _interopRequireDefault(require("../imgs/beach.jpg"));
+
+var _tabletennis = _interopRequireDefault(require("../imgs/tabletennis.jpg"));
+
+var _gym = _interopRequireDefault(require("../imgs/gym.jpg"));
+
+var _hiking = _interopRequireDefault(require("../imgs/hiking.jpg"));
+
+var _basketball = _interopRequireDefault(require("../imgs/basketball.jpg"));
+
+var _running = _interopRequireDefault(require("../imgs/running.jpg"));
+
+var _rockClimbing = _interopRequireDefault(require("../imgs/rock-climbing.jpg"));
+
+var _roadTrip = _interopRequireDefault(require("../imgs/road-trip.jpg"));
+
+var _canoeing = _interopRequireDefault(require("../imgs/canoeing.jpg"));
+
+var _indoorClimbing = _interopRequireDefault(require("../imgs/indoor-climbing.jpg"));
+
+var _bouldering = _interopRequireDefault(require("../imgs/bouldering.jpg"));
+
+var _tennis = _interopRequireDefault(require("../imgs/tennis.jpg"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// Level 1
-var lvl1activity1 = new _Activity.default("surfing", _beach.default, "google.co.uk/related", 1, ["extreme sports", "water sports"]);
-exports.lvl1activity1 = lvl1activity1;
-var lvl1activity2 = new _Activity.default("table tennis", _tabletennis.default, "google.co.uk/related", 5, ["pillow sports", "indoors"]);
-exports.lvl1activity2 = lvl1activity2;
-var lvl1activity3 = new _Activity.default("boxing", _boxing.default, "google.co.uk/related", 1, ["extreme sports", "water sports"]);
-exports.lvl1activity3 = lvl1activity3;
-var lvl1activity4 = new _Activity.default("gym", _gym.default, "google.co.uk/related", 5, ["pillow sports", "indoors"]);
-exports.lvl1activity4 = lvl1activity4;
-var lvl1activity5 = new _Activity.default("hiking", _hiking.default, "google.co.uk/related", 1, ["extreme sports", "water sports"]);
-exports.lvl1activity5 = lvl1activity5;
-var lvl1activity6 = new _Activity.default("basketball", _basketball.default, "google.co.uk/related", 5, ["pillow sports", "indoors"]); // Level 2
-
-exports.lvl1activity6 = lvl1activity6;
-var lvl2activity1 = new _Activity.default("meditating", "imgs/meditate.jpg", "google.co.uk/related", 1, ["extreme sports", "water sports"]);
-exports.lvl2activity1 = lvl2activity1;
-var lvl2activity2 = new _Activity.default("sleeping", "imgs/sleep.jpg", "google.co.uk/related", 5, ["pillow sports", "indoors"]);
-exports.lvl2activity2 = lvl2activity2;
-var lvl2activity3 = new _Activity.default("reading", "imgs/read.jpg", "google.co.uk/related", 1, ["extreme sports", "water sports"]);
-exports.lvl2activity3 = lvl2activity3;
-var lvl2activity4 = new _Activity.default("theatre", "imgs/theatre.jpg", "google.co.uk/related", 5, ["pillow sports", "indoors"]);
-exports.lvl2activity4 = lvl2activity4;
-var lvl2activity5 = new _Activity.default("stargazing", "imgs/stargazing.jpg", "google.co.uk/related", 1, ["extreme sports", "water sports"]);
-exports.lvl2activity5 = lvl2activity5;
-var lvl2activity6 = new _Activity.default("library", "imgs/library.jpg", "google.co.uk/related", 5, ["pillow sports", "indoors"]); // Level 3 
-
-exports.lvl2activity6 = lvl2activity6;
+// high chill
+// medium chill
+// low chill
+// high chill
 var lvl3activity1 = new _Activity.default("meditating", _meditate.default, "google.co.uk/related", 1, ["extreme sports", "water sports"]);
 exports.lvl3activity1 = lvl3activity1;
 var lvl3activity2 = new _Activity.default("sleeping", _sleep.default, "google.co.uk/related", 5, ["pillow sports", "indoors"]);
@@ -287,17 +340,69 @@ var lvl3activity5 = new _Activity.default("stargazing", _stargazing.default, "go
 exports.lvl3activity5 = lvl3activity5;
 var lvl3activity6 = new _Activity.default("library", _library.default, "google.co.uk/related", 5, ["pillow sports", "indoors"]);
 exports.lvl3activity6 = lvl3activity6;
-var arr1 = [lvl1activity1, lvl1activity2, lvl1activity3, lvl1activity4, lvl1activity5, lvl1activity6];
+var lvl3activity7 = new _Activity.default("painting", _painting.default, "google.co.uk/related", 5, ["pillow sports", "indoors"]);
+exports.lvl3activity7 = lvl3activity7;
+var lvl3activity8 = new _Activity.default("drawing", _drawing.default, "google.co.uk/related", 5, ["pillow sports", "indoors"]); // medium chill
+
+exports.lvl3activity8 = lvl3activity8;
+var lvl2activity1 = new _Activity.default("outdoor concert", _outdoorConcert.default, "google.co.uk/related", 1, []);
+exports.lvl2activity1 = lvl2activity1;
+var lvl2activity2 = new _Activity.default("plan a trip", _planATrip.default, "google.co.uk/related", 1, []);
+exports.lvl2activity2 = lvl2activity2;
+var lvl2activity3 = new _Activity.default("golf", _golf.default, "google.co.uk/related", 1, []);
+exports.lvl2activity3 = lvl2activity3;
+var lvl2activity4 = new _Activity.default("botanical garden", _botanicalGarden.default, "google.co.uk/related", 1, []);
+exports.lvl2activity4 = lvl2activity4;
+var lvl2activity5 = new _Activity.default("exhibition opening", _exhibitionOpening.default, "google.co.uk/related", 1, []);
+exports.lvl2activity5 = lvl2activity5;
+var lvl2activity6 = new _Activity.default("art fair", _artFair.default, "google.co.uk/related", 1, []);
+exports.lvl2activity6 = lvl2activity6;
+var lvl2activity7 = new _Activity.default("art class", _artClass.default, "google.co.uk/related", 1, []);
+exports.lvl2activity7 = lvl2activity7;
+var lvl2activity8 = new _Activity.default("museum late", _museumLate.default, "google.co.uk/related", 1, []);
+exports.lvl2activity8 = lvl2activity8;
+var lvl2activity9 = new _Activity.default("museum", _museum.default, "google.co.uk/related", 1, []);
+exports.lvl2activity9 = lvl2activity9;
+var lvl2activity10 = new _Activity.default("camping", _camping.default, "google.co.uk/related", 1, []); // low chill
+
+exports.lvl2activity10 = lvl2activity10;
+var lvl1activity1 = new _Activity.default("boxing", _boxing.default, "google.co.uk/related", 1, []);
+exports.lvl1activity1 = lvl1activity1;
+var lvl1activity2 = new _Activity.default("surfing", _beach.default, "google.co.uk/related", 1, []);
+exports.lvl1activity2 = lvl1activity2;
+var lvl1activity3 = new _Activity.default("table tennis", _tabletennis.default, "google.co.uk/related", 1, []);
+exports.lvl1activity3 = lvl1activity3;
+var lvl1activity4 = new _Activity.default("gym", _gym.default, "google.co.uk/related", 1, []);
+exports.lvl1activity4 = lvl1activity4;
+var lvl1activity5 = new _Activity.default("hiking", _hiking.default, "google.co.uk/related", 1, []);
+exports.lvl1activity5 = lvl1activity5;
+var lvl1activity6 = new _Activity.default("basketball", _basketball.default, "google.co.uk/related", 1, []);
+exports.lvl1activity6 = lvl1activity6;
+var lvl1activity7 = new _Activity.default("running", _running.default, "google.co.uk/related", 1, []);
+exports.lvl1activity7 = lvl1activity7;
+var lvl1activity8 = new _Activity.default("rock climbing", _rockClimbing.default, "google.co.uk/related", 1, []);
+exports.lvl1activity8 = lvl1activity8;
+var lvl1activity9 = new _Activity.default("road trip", _roadTrip.default, "google.co.uk/related", 1, []);
+exports.lvl1activity9 = lvl1activity9;
+var lvl1activity10 = new _Activity.default("canoeing", _canoeing.default, "google.co.uk/related", 1, []);
+exports.lvl1activity10 = lvl1activity10;
+var lvl1activity11 = new _Activity.default("indoor climbing", _indoorClimbing.default, "google.co.uk/related", 1, []);
+exports.lvl1activity11 = lvl1activity11;
+var lvl1activity12 = new _Activity.default("bouldering", _bouldering.default, "google.co.uk/related", 1, []);
+exports.lvl1activity12 = lvl1activity12;
+var lvl1activity13 = new _Activity.default("tennis", _tennis.default, "google.co.uk/related", 1, []);
+exports.lvl1activity13 = lvl1activity13;
+var arr1 = [lvl1activity1, lvl1activity2, lvl1activity3, lvl1activity4, lvl1activity5, lvl1activity6, lvl1activity7, lvl1activity8, lvl1activity9, lvl1activity10, lvl1activity11, lvl1activity12, lvl1activity13];
 exports.arr1 = arr1;
-var arr2 = [lvl2activity1, lvl2activity2, lvl2activity3, lvl2activity4, lvl2activity5, lvl2activity6];
+var arr2 = [lvl2activity1, lvl2activity2, lvl2activity3, lvl2activity4, lvl2activity5, lvl2activity6, lvl2activity7, lvl2activity8, lvl2activity9, lvl2activity10];
 exports.arr2 = arr2;
-var arr3 = [lvl3activity1, lvl3activity2, lvl3activity3, lvl3activity4, lvl3activity5, lvl3activity6];
+var arr3 = [lvl3activity1, lvl3activity2, lvl3activity3, lvl3activity4, lvl3activity5, lvl3activity6, lvl3activity7, lvl3activity8];
 exports.arr3 = arr3;
 var chillLevelArr = ["LOW", "MEDIUM", "HIGH"];
 exports.chillLevelArr = chillLevelArr;
 var allArrs = [arr1, arr2, arr3];
 exports.allArrs = allArrs;
-},{"./Activity.js":"js/Activity.js","../imgs/boxing.jpg":"imgs/boxing.jpg","../imgs/beach.jpg":"imgs/beach.jpg","../imgs/tabletennis.jpg":"imgs/tabletennis.jpg","../imgs/gym.jpg":"imgs/gym.jpg","../imgs/hiking.jpg":"imgs/hiking.jpg","../imgs/basketball.jpg":"imgs/basketball.jpg","../imgs/meditate.jpg":"imgs/meditate.jpg","../imgs/sleep.jpg":"imgs/sleep.jpg","../imgs/read.jpg":"imgs/read.jpg","../imgs/theatre.jpg":"imgs/theatre.jpg","../imgs/stargazing.jpg":"imgs/stargazing.jpg","../imgs/library.jpg":"imgs/library.jpg"}],"js/levelChange.js":[function(require,module,exports) {
+},{"./Activity.js":"js/Activity.js","../imgs/meditate.jpg":"imgs/meditate.jpg","../imgs/sleep.jpg":"imgs/sleep.jpg","../imgs/read.jpg":"imgs/read.jpg","../imgs/theatre.jpg":"imgs/theatre.jpg","../imgs/stargazing.jpg":"imgs/stargazing.jpg","../imgs/library.jpg":"imgs/library.jpg","../imgs/painting.jpg":"imgs/painting.jpg","../imgs/drawing.jpg":"imgs/drawing.jpg","../imgs/outdoor-concert.jpg":"imgs/outdoor-concert.jpg","../imgs/plan-a-trip.jpg":"imgs/plan-a-trip.jpg","../imgs/golf.jpg":"imgs/golf.jpg","../imgs/botanical-garden.jpg":"imgs/botanical-garden.jpg","../imgs/exhibition-opening.jpg":"imgs/exhibition-opening.jpg","../imgs/art-fair.jpg":"imgs/art-fair.jpg","../imgs/art-class.jpg":"imgs/art-class.jpg","../imgs/museum-late.jpg":"imgs/museum-late.jpg","../imgs/museum.jpg":"imgs/museum.jpg","../imgs/camping.jpg":"imgs/camping.jpg","../imgs/boxing.jpg":"imgs/boxing.jpg","../imgs/beach.jpg":"imgs/beach.jpg","../imgs/tabletennis.jpg":"imgs/tabletennis.jpg","../imgs/gym.jpg":"imgs/gym.jpg","../imgs/hiking.jpg":"imgs/hiking.jpg","../imgs/basketball.jpg":"imgs/basketball.jpg","../imgs/running.jpg":"imgs/running.jpg","../imgs/rock-climbing.jpg":"imgs/rock-climbing.jpg","../imgs/road-trip.jpg":"imgs/road-trip.jpg","../imgs/canoeing.jpg":"imgs/canoeing.jpg","../imgs/indoor-climbing.jpg":"imgs/indoor-climbing.jpg","../imgs/bouldering.jpg":"imgs/bouldering.jpg","../imgs/tennis.jpg":"imgs/tennis.jpg"}],"js/levelChange.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -313,7 +418,7 @@ var _index = require("./index.js");
 
 var currentArrLevel = 1;
 exports.currentArrLevel = currentArrLevel;
-var currentArr = _activities.arr1;
+var currentArr = _activities.arr2;
 exports.currentArr = currentArr;
 
 function levelUp() {
@@ -324,8 +429,6 @@ function levelUp() {
     _index.chillLevelWord.forEach(function (clw) {
       return clw.innerHTML = "".concat(_activities.chillLevelArr[currentArrLevel]);
     });
-  } else {
-    console.log("no higher level");
   }
 }
 
@@ -337,8 +440,6 @@ function levelDown() {
     _index.chillLevelWord.forEach(function (clw) {
       return clw.innerHTML = "".concat(_activities.chillLevelArr[currentArrLevel]);
     });
-  } else {
-    console.log("no lower level");
   }
 }
 },{"./activities.js":"js/activities.js","./index.js":"js/index.js"}],"js/updateCentralContainer.js":[function(require,module,exports) {
@@ -11387,7 +11488,7 @@ function closeNav() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.emptyBoxBottom = exports.chillLevelWord = void 0;
+exports.emptyBoxBottom = exports.chillLevelWord = exports.down = exports.up = void 0;
 
 var _updateCentralContainer = _interopRequireDefault(require("./updateCentralContainer.js"));
 
@@ -11406,7 +11507,9 @@ var centralContainer = document.querySelector(".central-container");
 var rightContainer = document.querySelector(".right-container");
 var categories = document.querySelector(".categories");
 var up = document.querySelectorAll(".up");
+exports.up = up;
 var down = document.querySelectorAll(".down");
+exports.down = down;
 var chillLevel = document.querySelector(".chill-level");
 var chillLevelWord = document.querySelectorAll(".chill-level-amount");
 exports.chillLevelWord = chillLevelWord;
@@ -11465,7 +11568,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49674" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57928" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

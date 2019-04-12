@@ -1,17 +1,15 @@
-import { chillLevelArr, arr1, arr2, arr3, allArrs } from "./activities.js";
+import { chillLevelArr, arr2, allArrs } from "./activities.js";
 import { chillLevelWord } from "./index.js";
 
 export let currentArrLevel = 1;
-export let currentArr = arr1;
+export let currentArr = arr2;
 
 export function levelUp() {
 	if (currentArrLevel < 2) {
 		currentArrLevel++;
 		currentArr = allArrs[currentArrLevel];
 		chillLevelWord.forEach(clw => clw.innerHTML = `${chillLevelArr[currentArrLevel]}`);
-    	} else {
-		console.log("no higher level");
-	}
+    	}
 }
 
 export function levelDown() {
@@ -19,8 +17,5 @@ export function levelDown() {
 		currentArrLevel--;
 		currentArr = allArrs[currentArrLevel];
 		chillLevelWord.forEach(clw => clw.innerHTML = `${chillLevelArr[currentArrLevel]}`);
-
-	} else {
-		console.log("no lower level");
 	}
 }
