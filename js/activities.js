@@ -75,6 +75,8 @@ import boringImage from "../imgs/boring.jpg";
 // import Image from "../imgs/.jpg";
 // import Image from "../imgs/.jpg";
 
+// kids bg
+import kidsBgImage from "../imgs/kidsImgs/kids-bg.jpg"
 
 import updateCentralContainer from "./updateCentralContainer.js";
 import { refresh } from "./levelChange.js";
@@ -178,7 +180,8 @@ export let allKidsArrs = [kidsArr1, kidsArr2, kidsArr3];
 function kidsToggle() {
     if(allArrs !== allKidsArrs) {
         allArrs = allKidsArrs;
-        backgroundImg.style.backgroundImage = `url(${runningImage})`;
+        backgroundImg.style.backgroundImage = `url(${kidsBgImage})`;
+        kidsButton.innerHTML = "main";
     }
     else {
         allArrs = [arr1, arr2, arr3];

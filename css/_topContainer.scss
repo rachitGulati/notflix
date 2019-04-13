@@ -23,6 +23,20 @@
     font-weight: bold;
 }
 
+.kids {
+    position: absolute;
+    right: 50px;
+    border: none;
+    background-color: transparent;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+    &:hover {
+        color: red;
+    }
+}
+
 .tag-line {
     grid-area: tag-line;
     font-size: 5vw;
