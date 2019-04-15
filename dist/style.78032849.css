@@ -86,7 +86,7 @@ button,
   width: 100%;
   height: 75%;
   z-index: -1;
-  background-image: url(/astronomy.f1ef19fb.jpg);
+  background-image: url(/bg-image.f1995949.jpg);
   background-size: cover;
 }
 
@@ -502,6 +502,10 @@ button,
   }
   .sidenav a {
     font-size: 18px;
+  }
+  .kids {
+    right: 25px;
+    margin-top: 4%;
   }
 }
 

@@ -11257,8 +11257,8 @@ module.exports = "/skateboarding.9c0a1fc7.jpg";
 module.exports = "/swimming.82d7b3f0.jpg";
 },{}],"imgs/kidsImgs/kids-bg.jpg":[function(require,module,exports) {
 module.exports = "/kids-bg.d6f47e86.jpg";
-},{}],"imgs/astronomy.jpg":[function(require,module,exports) {
-module.exports = "/astronomy.f1ef19fb.jpg";
+},{}],"imgs/bg-image.jpg":[function(require,module,exports) {
+module.exports = "/bg-image.f1995949.jpg";
 },{}],"js/activities.js":[function(require,module,exports) {
 "use strict";
 
@@ -11391,7 +11391,7 @@ var _updateCentralContainer = _interopRequireDefault(require("./updateCentralCon
 
 var _levelChange = require("./levelChange.js");
 
-var _astronomy = _interopRequireDefault(require("../imgs/astronomy.jpg"));
+var _bgImage = _interopRequireDefault(require("../imgs/bg-image.jpg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11565,13 +11565,14 @@ function kidsToggle() {
     kidsButton.innerHTML = "main";
   } else {
     exports.allArrs = allArrs = [arr1, arr2, arr3];
-    backgroundImg.style.backgroundImage = "url(".concat(_astronomy.default, ")");
+    backgroundImg.style.backgroundImage = "url(".concat(_bgImage.default, ")");
+    kidsButton.innerHTML = "kids";
   }
 
   (0, _levelChange.refresh)();
   (0, _updateCentralContainer.default)();
 } // () => setTimeout(kidsToggle(), 5000));
-},{"./Activity.js":"js/Activity.js","./changingScreen.js":"js/changingScreen.js","../imgs/meditate.jpg":"imgs/meditate.jpg","../imgs/sleep.jpg":"imgs/sleep.jpg","../imgs/read.jpg":"imgs/read.jpg","../imgs/theatre.jpg":"imgs/theatre.jpg","../imgs/stargazing.jpg":"imgs/stargazing.jpg","../imgs/library.jpg":"imgs/library.jpg","../imgs/painting.jpg":"imgs/painting.jpg","../imgs/drawing.jpg":"imgs/drawing.jpg","../imgs/outdoor-concert.jpg":"imgs/outdoor-concert.jpg","../imgs/plan-a-trip.jpg":"imgs/plan-a-trip.jpg","../imgs/golf.jpg":"imgs/golf.jpg","../imgs/botanical-garden.jpg":"imgs/botanical-garden.jpg","../imgs/exhibition-opening.jpg":"imgs/exhibition-opening.jpg","../imgs/art-fair.jpg":"imgs/art-fair.jpg","../imgs/art-class.jpg":"imgs/art-class.jpg","../imgs/museum-late.jpg":"imgs/museum-late.jpg","../imgs/museum.jpg":"imgs/museum.jpg","../imgs/camping.jpg":"imgs/camping.jpg","../imgs/boxing.jpg":"imgs/boxing.jpg","../imgs/beach.jpg":"imgs/beach.jpg","../imgs/tabletennis.jpg":"imgs/tabletennis.jpg","../imgs/gym.jpg":"imgs/gym.jpg","../imgs/hiking.jpg":"imgs/hiking.jpg","../imgs/basketball.jpg":"imgs/basketball.jpg","../imgs/running.jpg":"imgs/running.jpg","../imgs/rock-climbing.jpg":"imgs/rock-climbing.jpg","../imgs/road-trip.jpg":"imgs/road-trip.jpg","../imgs/canoeing.jpg":"imgs/canoeing.jpg","../imgs/indoor-climbing.jpg":"imgs/indoor-climbing.jpg","../imgs/bouldering.jpg":"imgs/bouldering.jpg","../imgs/tennis.jpg":"imgs/tennis.jpg","../imgs/kidsImgs/drawing.jpg":"imgs/kidsImgs/drawing.jpg","../imgs/kidsImgs/food.jpg":"imgs/kidsImgs/food.jpg","../imgs/kidsImgs/guitar.jpg":"imgs/kidsImgs/guitar.jpg","../imgs/kidsImgs/hairstyle.jpg":"imgs/kidsImgs/hairstyle.jpg","../imgs/kidsImgs/painting.jpg":"imgs/kidsImgs/painting.jpg","../imgs/kidsImgs/photography.jpg":"imgs/kidsImgs/photography.jpg","../imgs/kidsImgs/story.jpg":"imgs/kidsImgs/story.jpg","../imgs/kidsImgs/baking.jpg":"imgs/kidsImgs/baking.jpg","../imgs/kidsImgs/explore-nature.jpg":"imgs/kidsImgs/explore-nature.jpg","../imgs/kidsImgs/fancy-dress.jpg":"imgs/kidsImgs/fancy-dress.jpg","../imgs/kidsImgs/gardening.jpg":"imgs/kidsImgs/gardening.jpg","../imgs/kidsImgs/pet.jpg":"imgs/kidsImgs/pet.jpg","../imgs/kidsImgs/science-experiment.jpg":"imgs/kidsImgs/science-experiment.jpg","../imgs/kidsImgs/super-power.jpg":"imgs/kidsImgs/super-power.jpg","../imgs/kidsImgs/adventure-park.jpg":"imgs/kidsImgs/adventure-park.jpg","../imgs/kidsImgs/beach-adventure.jpg":"imgs/kidsImgs/beach-adventure.jpg","../imgs/kidsImgs/beach-sports.jpg":"imgs/kidsImgs/beach-sports.jpg","../imgs/kidsImgs/bike-adventure.jpg":"imgs/kidsImgs/bike-adventure.jpg","../imgs/kidsImgs/bouldering.jpg":"imgs/kidsImgs/bouldering.jpg","../imgs/kidsImgs/dance-class.jpg":"imgs/kidsImgs/dance-class.jpg","../imgs/kidsImgs/football.jpg":"imgs/kidsImgs/football.jpg","../imgs/kidsImgs/ice-hockey.jpg":"imgs/kidsImgs/ice-hockey.jpg","../imgs/kidsImgs/ice-skating.jpg":"imgs/kidsImgs/ice-skating.jpg","../imgs/kidsImgs/outdoor-pool.jpg":"imgs/kidsImgs/outdoor-pool.jpg","../imgs/kidsImgs/skateboarding.jpg":"imgs/kidsImgs/skateboarding.jpg","../imgs/kidsImgs/swimming.jpg":"imgs/kidsImgs/swimming.jpg","../imgs/kidsImgs/kids-bg.jpg":"imgs/kidsImgs/kids-bg.jpg","./updateCentralContainer.js":"js/updateCentralContainer.js","./levelChange.js":"js/levelChange.js","../imgs/astronomy.jpg":"imgs/astronomy.jpg"}],"js/levelChange.js":[function(require,module,exports) {
+},{"./Activity.js":"js/Activity.js","./changingScreen.js":"js/changingScreen.js","../imgs/meditate.jpg":"imgs/meditate.jpg","../imgs/sleep.jpg":"imgs/sleep.jpg","../imgs/read.jpg":"imgs/read.jpg","../imgs/theatre.jpg":"imgs/theatre.jpg","../imgs/stargazing.jpg":"imgs/stargazing.jpg","../imgs/library.jpg":"imgs/library.jpg","../imgs/painting.jpg":"imgs/painting.jpg","../imgs/drawing.jpg":"imgs/drawing.jpg","../imgs/outdoor-concert.jpg":"imgs/outdoor-concert.jpg","../imgs/plan-a-trip.jpg":"imgs/plan-a-trip.jpg","../imgs/golf.jpg":"imgs/golf.jpg","../imgs/botanical-garden.jpg":"imgs/botanical-garden.jpg","../imgs/exhibition-opening.jpg":"imgs/exhibition-opening.jpg","../imgs/art-fair.jpg":"imgs/art-fair.jpg","../imgs/art-class.jpg":"imgs/art-class.jpg","../imgs/museum-late.jpg":"imgs/museum-late.jpg","../imgs/museum.jpg":"imgs/museum.jpg","../imgs/camping.jpg":"imgs/camping.jpg","../imgs/boxing.jpg":"imgs/boxing.jpg","../imgs/beach.jpg":"imgs/beach.jpg","../imgs/tabletennis.jpg":"imgs/tabletennis.jpg","../imgs/gym.jpg":"imgs/gym.jpg","../imgs/hiking.jpg":"imgs/hiking.jpg","../imgs/basketball.jpg":"imgs/basketball.jpg","../imgs/running.jpg":"imgs/running.jpg","../imgs/rock-climbing.jpg":"imgs/rock-climbing.jpg","../imgs/road-trip.jpg":"imgs/road-trip.jpg","../imgs/canoeing.jpg":"imgs/canoeing.jpg","../imgs/indoor-climbing.jpg":"imgs/indoor-climbing.jpg","../imgs/bouldering.jpg":"imgs/bouldering.jpg","../imgs/tennis.jpg":"imgs/tennis.jpg","../imgs/kidsImgs/drawing.jpg":"imgs/kidsImgs/drawing.jpg","../imgs/kidsImgs/food.jpg":"imgs/kidsImgs/food.jpg","../imgs/kidsImgs/guitar.jpg":"imgs/kidsImgs/guitar.jpg","../imgs/kidsImgs/hairstyle.jpg":"imgs/kidsImgs/hairstyle.jpg","../imgs/kidsImgs/painting.jpg":"imgs/kidsImgs/painting.jpg","../imgs/kidsImgs/photography.jpg":"imgs/kidsImgs/photography.jpg","../imgs/kidsImgs/story.jpg":"imgs/kidsImgs/story.jpg","../imgs/kidsImgs/baking.jpg":"imgs/kidsImgs/baking.jpg","../imgs/kidsImgs/explore-nature.jpg":"imgs/kidsImgs/explore-nature.jpg","../imgs/kidsImgs/fancy-dress.jpg":"imgs/kidsImgs/fancy-dress.jpg","../imgs/kidsImgs/gardening.jpg":"imgs/kidsImgs/gardening.jpg","../imgs/kidsImgs/pet.jpg":"imgs/kidsImgs/pet.jpg","../imgs/kidsImgs/science-experiment.jpg":"imgs/kidsImgs/science-experiment.jpg","../imgs/kidsImgs/super-power.jpg":"imgs/kidsImgs/super-power.jpg","../imgs/kidsImgs/adventure-park.jpg":"imgs/kidsImgs/adventure-park.jpg","../imgs/kidsImgs/beach-adventure.jpg":"imgs/kidsImgs/beach-adventure.jpg","../imgs/kidsImgs/beach-sports.jpg":"imgs/kidsImgs/beach-sports.jpg","../imgs/kidsImgs/bike-adventure.jpg":"imgs/kidsImgs/bike-adventure.jpg","../imgs/kidsImgs/bouldering.jpg":"imgs/kidsImgs/bouldering.jpg","../imgs/kidsImgs/dance-class.jpg":"imgs/kidsImgs/dance-class.jpg","../imgs/kidsImgs/football.jpg":"imgs/kidsImgs/football.jpg","../imgs/kidsImgs/ice-hockey.jpg":"imgs/kidsImgs/ice-hockey.jpg","../imgs/kidsImgs/ice-skating.jpg":"imgs/kidsImgs/ice-skating.jpg","../imgs/kidsImgs/outdoor-pool.jpg":"imgs/kidsImgs/outdoor-pool.jpg","../imgs/kidsImgs/skateboarding.jpg":"imgs/kidsImgs/skateboarding.jpg","../imgs/kidsImgs/swimming.jpg":"imgs/kidsImgs/swimming.jpg","../imgs/kidsImgs/kids-bg.jpg":"imgs/kidsImgs/kids-bg.jpg","./updateCentralContainer.js":"js/updateCentralContainer.js","./levelChange.js":"js/levelChange.js","../imgs/bg-image.jpg":"imgs/bg-image.jpg"}],"js/levelChange.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -11878,7 +11879,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61397" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54106" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

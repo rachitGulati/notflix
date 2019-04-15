@@ -82,7 +82,7 @@ import updateCentralContainer from "./updateCentralContainer.js";
 import { refresh } from "./levelChange.js";
 
 // background image
-import astronomyImage from "../imgs/astronomy.jpg";
+import bgImage from "../imgs/bg-image.jpg";
 
 // high chill
 export let lvl3activity1 = new Activity("meditating", meditatingImage, "google.co.uk/related", ["self care"]);
@@ -195,7 +195,8 @@ function kidsToggle() {
     }
     else {
         allArrs = [arr1, arr2, arr3];
-        backgroundImg.style.backgroundImage = `url(${astronomyImage})`
+        backgroundImg.style.backgroundImage = `url(${bgImage})`;
+        kidsButton.innerHTML = "kids";
     }
     refresh();
 
