@@ -176,13 +176,12 @@ exports.default = void 0;
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var Activity = function Activity(name, media, link, chillLevel, categories, font) {
+var Activity = function Activity(name, media, link, categories, font) {
   _classCallCheck(this, Activity);
 
   this.name = name;
   this.media = media;
   this.link = link;
-  this.chillLevel = chillLevel;
   this.categories = categories;
   this.font = font;
 };
@@ -11063,53 +11062,85 @@ var _EasePack = require("./EasePack.js");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
-},{"./TweenLite.js":"node_modules/gsap/TweenLite.js","./TimelineLite.js":"node_modules/gsap/TimelineLite.js","./TimelineMax.js":"node_modules/gsap/TimelineMax.js","./TweenMax.js":"node_modules/gsap/TweenMax.js","./CSSPlugin.js":"node_modules/gsap/CSSPlugin.js","./AttrPlugin.js":"node_modules/gsap/AttrPlugin.js","./RoundPropsPlugin.js":"node_modules/gsap/RoundPropsPlugin.js","./DirectionalRotationPlugin.js":"node_modules/gsap/DirectionalRotationPlugin.js","./BezierPlugin.js":"node_modules/gsap/BezierPlugin.js","./EasePack.js":"node_modules/gsap/EasePack.js"}],"js/loadingScreen.js":[function(require,module,exports) {
+},{"./TweenLite.js":"node_modules/gsap/TweenLite.js","./TimelineLite.js":"node_modules/gsap/TimelineLite.js","./TimelineMax.js":"node_modules/gsap/TimelineMax.js","./TweenMax.js":"node_modules/gsap/TweenMax.js","./CSSPlugin.js":"node_modules/gsap/CSSPlugin.js","./AttrPlugin.js":"node_modules/gsap/AttrPlugin.js","./RoundPropsPlugin.js":"node_modules/gsap/RoundPropsPlugin.js","./DirectionalRotationPlugin.js":"node_modules/gsap/DirectionalRotationPlugin.js","./BezierPlugin.js":"node_modules/gsap/BezierPlugin.js","./EasePack.js":"node_modules/gsap/EasePack.js"}],"js/changingScreen.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = loadingScreen;
+exports.default = changingScreen;
 
 var _gsap = require("gsap");
 
-function loadingScreen() {
-  console.log('loading screen');
-  var tl = new _gsap.TimelineMax();
-  tl.set("#preloader", {
-    css: {
-      zIndex: 1,
-      opacity: 1
-    }
-  }).set(".notflix", {
-    css: {
-      zIndex: 1,
-      opacity: 1
-    }
-  }).from(".notflix", 1.5, {
-    y: "100%",
+function changingScreen() {
+  console.log('changing screen');
+  var tlChanging = new _gsap.TimelineMax();
+  tlChanging.set(".changing", {
+    zIndex: 10
+  });
+  tlChanging.from(".changing", 0.3, {
+    opacity: 0
+  }).to(".changing", 0.3, {
     opacity: 1
-  }).to(".notflix", 1, {
+  });
+  tlChanging.from(".notflixCha", 1.5, {
+    y: "100%"
+  }, "-0.5").to(".notflixCha", 1, {
     scale: 1.2,
     ease: Power2.easeInOut,
     transformOrigin: "center",
     repeat: 3,
     yoyo: true
-  }).to(".notflix", 1.5, {
+  }).to(".notflixCha", 1.5, {
     y: "100%",
     opacity: 0
-  }).to("#preloader", 1.5, {
+  }).to(".changing", 1.5, {
     y: "110%",
-    ease: Power2.easeInOut,
-    opacity: 0
-  }, "-=1.5").set("#preloader", {
-    css: {
-      zIndex: -1
-    }
-  }).set("#preloader", {
-    clearProps: "transform"
-  }); // .set(".notflix", {clearProps:"y"});
-}
+    ease: Power2.easeInOut
+  }, "-=1.5"); // resets all properties so we can reuse the animation
+
+  tlChanging.set(".changing", {
+    clearProps: "all"
+  });
+  tlChanging.set(".notflixCha", {
+    clearProps: "all"
+  });
+} // import { TimelineMax } from "gsap";
+// export default function loadingScreen() {
+// 	console.log('loading screen');
+// 	let tl = new TimelineMax();
+// 	tl.set("#preloader", {
+// 			css: {zIndex:1, opacity:1}
+// 		})
+// 	.set(".notflix", {
+// 		css: {zIndex: 1, opacity:1}
+// 	})
+// 	.from(".notflix", 1.5, {
+// 		y: "100%",
+// 		opacity: 1
+// 	})
+// 		.to(".notflix", 1, {
+// 			scale: 1.2, 
+// 			ease: Power2.easeInOut, 
+// 			transformOrigin:"center",
+// 			repeat:3, 
+// 			yoyo:true
+// 		})
+// 		.to(".notflix", 1.5, {
+// 			y: "100%",
+// 			opacity: 0
+// 		})
+// 		.to("#preloader", 1.5, {
+// 			y:"110%",
+// 			ease: Power2.easeInOut,
+// 			opacity: 0,
+// 		}, "-=1.5")
+// 		.set("#preloader", {
+// 			css: {zIndex:-1}
+// 		})
+// 		.set("#preloader", {clearProps:"transform"})
+// 		// .set(".notflix", {clearProps:"y"});
+// }
 },{"gsap":"node_modules/gsap/index.js"}],"imgs/meditate.jpg":[function(require,module,exports) {
 module.exports = "/meditate.1d029eb0.jpg";
 },{}],"imgs/sleep.jpg":[function(require,module,exports) {
@@ -11172,8 +11203,58 @@ module.exports = "/indoor-climbing.2755a770.jpg";
 module.exports = "/bouldering.b10ae420.jpg";
 },{}],"imgs/tennis.jpg":[function(require,module,exports) {
 module.exports = "/tennis.7c00b3d1.jpg";
-},{}],"imgs/boring.jpg":[function(require,module,exports) {
-module.exports = "/boring.41f47c11.jpg";
+},{}],"imgs/kidsImgs/drawing.jpg":[function(require,module,exports) {
+module.exports = "/drawing.2d745fb4.jpg";
+},{}],"imgs/kidsImgs/food.jpg":[function(require,module,exports) {
+module.exports = "/food.f62b59ca.jpg";
+},{}],"imgs/kidsImgs/guitar.jpg":[function(require,module,exports) {
+module.exports = "/guitar.8152eade.jpg";
+},{}],"imgs/kidsImgs/hairstyle.jpg":[function(require,module,exports) {
+module.exports = "/hairstyle.511be9a4.jpg";
+},{}],"imgs/kidsImgs/painting.jpg":[function(require,module,exports) {
+module.exports = "/painting.20d18d7a.jpg";
+},{}],"imgs/kidsImgs/photography.jpg":[function(require,module,exports) {
+module.exports = "/photography.caca01bb.jpg";
+},{}],"imgs/kidsImgs/story.jpg":[function(require,module,exports) {
+module.exports = "/story.e2759de1.jpg";
+},{}],"imgs/kidsImgs/baking.jpg":[function(require,module,exports) {
+module.exports = "/baking.1276101d.jpg";
+},{}],"imgs/kidsImgs/explore-nature.jpg":[function(require,module,exports) {
+module.exports = "/explore-nature.0cc03e09.jpg";
+},{}],"imgs/kidsImgs/fancy-dress.jpg":[function(require,module,exports) {
+module.exports = "/fancy-dress.ebb3663c.jpg";
+},{}],"imgs/kidsImgs/gardening.jpg":[function(require,module,exports) {
+module.exports = "/gardening.c121e8c4.jpg";
+},{}],"imgs/kidsImgs/pet.jpg":[function(require,module,exports) {
+module.exports = "/pet.2fec9807.jpg";
+},{}],"imgs/kidsImgs/science-experiment.jpg":[function(require,module,exports) {
+module.exports = "/science-experiment.81662e38.jpg";
+},{}],"imgs/kidsImgs/super-power.jpg":[function(require,module,exports) {
+module.exports = "/super-power.74b02726.jpg";
+},{}],"imgs/kidsImgs/adventure-park.jpg":[function(require,module,exports) {
+module.exports = "/adventure-park.e1fa6633.jpg";
+},{}],"imgs/kidsImgs/beach-adventure.jpg":[function(require,module,exports) {
+module.exports = "/beach-adventure.08bcedb4.jpg";
+},{}],"imgs/kidsImgs/beach-sports.jpg":[function(require,module,exports) {
+module.exports = "/beach-sports.a1fd7e87.jpg";
+},{}],"imgs/kidsImgs/bike-adventure.jpg":[function(require,module,exports) {
+module.exports = "/bike-adventure.5a59d493.jpg";
+},{}],"imgs/kidsImgs/bouldering.jpg":[function(require,module,exports) {
+module.exports = "/bouldering.84e8bac5.jpg";
+},{}],"imgs/kidsImgs/dance-class.jpg":[function(require,module,exports) {
+module.exports = "/dance-class.9825454f.jpg";
+},{}],"imgs/kidsImgs/football.jpg":[function(require,module,exports) {
+module.exports = "/football.697b7334.jpg";
+},{}],"imgs/kidsImgs/ice-hockey.jpg":[function(require,module,exports) {
+module.exports = "/ice-hockey.102f8d32.jpg";
+},{}],"imgs/kidsImgs/ice-skating.jpg":[function(require,module,exports) {
+module.exports = "/ice-skating.0b2b8e43.jpg";
+},{}],"imgs/kidsImgs/outdoor-pool.jpg":[function(require,module,exports) {
+module.exports = "/outdoor-pool.2402c28a.jpg";
+},{}],"imgs/kidsImgs/skateboarding.jpg":[function(require,module,exports) {
+module.exports = "/skateboarding.9c0a1fc7.jpg";
+},{}],"imgs/kidsImgs/swimming.jpg":[function(require,module,exports) {
+module.exports = "/swimming.82d7b3f0.jpg";
 },{}],"imgs/kidsImgs/kids-bg.jpg":[function(require,module,exports) {
 module.exports = "/kids-bg.d6f47e86.jpg";
 },{}],"imgs/astronomy.jpg":[function(require,module,exports) {
@@ -11184,11 +11265,11 @@ module.exports = "/astronomy.f1ef19fb.jpg";
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.allKidsArrs = exports.kidsArr3 = exports.kidsArr2 = exports.kidsArr1 = exports.allArrs = exports.chillLevelArr = exports.arr3 = exports.arr2 = exports.arr1 = exports.kidsLvl1activity13 = exports.kidsLvl1activity12 = exports.kidsLvl1activity11 = exports.kidsLvl1activity10 = exports.kidsLvl1activity9 = exports.kidsLvl1activity8 = exports.kidsLvl1activity7 = exports.kidsLvl1activity6 = exports.kidsLvl1activity5 = exports.kidsLvl1activity4 = exports.kidsLvl1activity3 = exports.kidsLvl1activity2 = exports.kidsLvl1activity1 = exports.kidsLvl2activity10 = exports.kidsLvl2activity9 = exports.kidsLvl2activity8 = exports.kidsLvl2activity7 = exports.kidsLvl2activity6 = exports.kidsLvl2activity5 = exports.kidsLvl2activity4 = exports.kidsLvl2activity3 = exports.kidsLvl2activity2 = exports.kidsLvl2activity1 = exports.kidsLvl3activity8 = exports.kidsLvl3activity7 = exports.kidsLvl3activity6 = exports.kidsLvl3activity5 = exports.kidsLvl3activity4 = exports.kidsLvl3activity3 = exports.kidsLvl3activity2 = exports.kidsLvl3activity1 = exports.lvl1activity13 = exports.lvl1activity12 = exports.lvl1activity11 = exports.lvl1activity10 = exports.lvl1activity9 = exports.lvl1activity8 = exports.lvl1activity7 = exports.lvl1activity6 = exports.lvl1activity5 = exports.lvl1activity4 = exports.lvl1activity3 = exports.lvl1activity2 = exports.lvl1activity1 = exports.lvl2activity10 = exports.lvl2activity9 = exports.lvl2activity8 = exports.lvl2activity7 = exports.lvl2activity6 = exports.lvl2activity5 = exports.lvl2activity4 = exports.lvl2activity3 = exports.lvl2activity2 = exports.lvl2activity1 = exports.lvl3activity8 = exports.lvl3activity7 = exports.lvl3activity6 = exports.lvl3activity5 = exports.lvl3activity4 = exports.lvl3activity3 = exports.lvl3activity2 = exports.lvl3activity1 = void 0;
+exports.allKidsArrs = exports.kidsArr3 = exports.kidsArr2 = exports.kidsArr1 = exports.allArrs = exports.chillLevelArr = exports.arr3 = exports.arr2 = exports.arr1 = exports.kidsLvl1activity12 = exports.kidsLvl1activity11 = exports.kidsLvl1activity10 = exports.kidsLvl1activity9 = exports.kidsLvl1activity8 = exports.kidsLvl1activity7 = exports.kidsLvl1activity6 = exports.kidsLvl1activity5 = exports.kidsLvl1activity4 = exports.kidsLvl1activity3 = exports.kidsLvl1activity2 = exports.kidsLvl1activity1 = exports.kidsLvl2activity7 = exports.kidsLvl2activity6 = exports.kidsLvl2activity5 = exports.kidsLvl2activity4 = exports.kidsLvl2activity3 = exports.kidsLvl2activity2 = exports.kidsLvl2activity1 = exports.kidsLvl3activity7 = exports.kidsLvl3activity6 = exports.kidsLvl3activity5 = exports.kidsLvl3activity4 = exports.kidsLvl3activity3 = exports.kidsLvl3activity2 = exports.kidsLvl3activity1 = exports.lvl1activity13 = exports.lvl1activity12 = exports.lvl1activity11 = exports.lvl1activity10 = exports.lvl1activity9 = exports.lvl1activity8 = exports.lvl1activity7 = exports.lvl1activity6 = exports.lvl1activity5 = exports.lvl1activity4 = exports.lvl1activity3 = exports.lvl1activity2 = exports.lvl1activity1 = exports.lvl2activity10 = exports.lvl2activity9 = exports.lvl2activity8 = exports.lvl2activity7 = exports.lvl2activity6 = exports.lvl2activity5 = exports.lvl2activity4 = exports.lvl2activity3 = exports.lvl2activity2 = exports.lvl2activity1 = exports.lvl3activity8 = exports.lvl3activity7 = exports.lvl3activity6 = exports.lvl3activity5 = exports.lvl3activity4 = exports.lvl3activity3 = exports.lvl3activity2 = exports.lvl3activity1 = void 0;
 
 var _Activity = _interopRequireDefault(require("./Activity.js"));
 
-var _loadingScreen = _interopRequireDefault(require("./loadingScreen.js"));
+var _changingScreen = _interopRequireDefault(require("./changingScreen.js"));
 
 var _meditate = _interopRequireDefault(require("../imgs/meditate.jpg"));
 
@@ -11252,7 +11333,57 @@ var _bouldering = _interopRequireDefault(require("../imgs/bouldering.jpg"));
 
 var _tennis = _interopRequireDefault(require("../imgs/tennis.jpg"));
 
-var _boring = _interopRequireDefault(require("../imgs/boring.jpg"));
+var _drawing2 = _interopRequireDefault(require("../imgs/kidsImgs/drawing.jpg"));
+
+var _food = _interopRequireDefault(require("../imgs/kidsImgs/food.jpg"));
+
+var _guitar = _interopRequireDefault(require("../imgs/kidsImgs/guitar.jpg"));
+
+var _hairstyle = _interopRequireDefault(require("../imgs/kidsImgs/hairstyle.jpg"));
+
+var _painting2 = _interopRequireDefault(require("../imgs/kidsImgs/painting.jpg"));
+
+var _photography = _interopRequireDefault(require("../imgs/kidsImgs/photography.jpg"));
+
+var _story = _interopRequireDefault(require("../imgs/kidsImgs/story.jpg"));
+
+var _baking = _interopRequireDefault(require("../imgs/kidsImgs/baking.jpg"));
+
+var _exploreNature = _interopRequireDefault(require("../imgs/kidsImgs/explore-nature.jpg"));
+
+var _fancyDress = _interopRequireDefault(require("../imgs/kidsImgs/fancy-dress.jpg"));
+
+var _gardening = _interopRequireDefault(require("../imgs/kidsImgs/gardening.jpg"));
+
+var _pet = _interopRequireDefault(require("../imgs/kidsImgs/pet.jpg"));
+
+var _scienceExperiment = _interopRequireDefault(require("../imgs/kidsImgs/science-experiment.jpg"));
+
+var _superPower = _interopRequireDefault(require("../imgs/kidsImgs/super-power.jpg"));
+
+var _adventurePark = _interopRequireDefault(require("../imgs/kidsImgs/adventure-park.jpg"));
+
+var _beachAdventure = _interopRequireDefault(require("../imgs/kidsImgs/beach-adventure.jpg"));
+
+var _beachSports = _interopRequireDefault(require("../imgs/kidsImgs/beach-sports.jpg"));
+
+var _bikeAdventure = _interopRequireDefault(require("../imgs/kidsImgs/bike-adventure.jpg"));
+
+var _bouldering2 = _interopRequireDefault(require("../imgs/kidsImgs/bouldering.jpg"));
+
+var _danceClass = _interopRequireDefault(require("../imgs/kidsImgs/dance-class.jpg"));
+
+var _football = _interopRequireDefault(require("../imgs/kidsImgs/football.jpg"));
+
+var _iceHockey = _interopRequireDefault(require("../imgs/kidsImgs/ice-hockey.jpg"));
+
+var _iceSkating = _interopRequireDefault(require("../imgs/kidsImgs/ice-skating.jpg"));
+
+var _outdoorPool = _interopRequireDefault(require("../imgs/kidsImgs/outdoor-pool.jpg"));
+
+var _skateboarding = _interopRequireDefault(require("../imgs/kidsImgs/skateboarding.jpg"));
+
+var _swimming = _interopRequireDefault(require("../imgs/kidsImgs/swimming.jpg"));
 
 var _kidsBg = _interopRequireDefault(require("../imgs/kidsImgs/kids-bg.jpg"));
 
@@ -11268,170 +11399,140 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // medium chill
 // low chill
 // kids high chill
-// import Image from "../imgs/.jpg";
-// import Image from "../imgs/.jpg";
-// import Image from "../imgs/.jpg";
-// import Image from "../imgs/.jpg";
-// import Image from "../imgs/.jpg";
-// import Image from "../imgs/.jpg";
-// import Image from "../imgs/.jpg";
-// // kids medium chill
-// import Image from "../imgs/.jpg";
-// import Image from "../imgs/.jpg";
-// import Image from "../imgs/.jpg";
-// import Image from "../imgs/.jpg";
-// import Image from "../imgs/.jpg";
-// import Image from "../imgs/.jpg";
-// import Image from "../imgs/.jpg";
-// import Image from "../imgs/.jpg";
-// import Image from "../imgs/.jpg";
-// import Image from "../imgs/.jpg";
-// // kids low chill
-// import Image from "../imgs/.jpg";
-// import Image from "../imgs/.jpg";
-// import Image from "../imgs/.jpg";
-// import Image from "../imgs/.jpg";
-// import Image from "../imgs/.jpg";
-// import Image from "../imgs/.jpg";
-// import Image from "../imgs/.jpg";
-// import Image from "../imgs/.jpg";
-// import Image from "../imgs/.jpg";
-// import Image from "../imgs/.jpg";
-// import Image from "../imgs/.jpg";
-// import Image from "../imgs/.jpg";
-// import Image from "../imgs/.jpg";
+// import Image from "../imgs/kidsImgs/.jpg";
+// kids medium chill
+// import Image from "../imgs/kidsImgs/.jpg";
+// import Image from "../imgs/kidsImgs/.jpg";
+// import Image from "../imgs/kidsImgs/.jpg";
+// kids low chill
+// import Image from "../imgs/kidsImgs/.jpg";
 // kids bg
 // background image
 // high chill
-var lvl3activity1 = new _Activity.default("meditating", _meditate.default, "google.co.uk/related", 1, ["extreme sports", "water sports"]);
+var lvl3activity1 = new _Activity.default("meditating", _meditate.default, "google.co.uk/related", ["self care"]);
 exports.lvl3activity1 = lvl3activity1;
-var lvl3activity2 = new _Activity.default("sleeping", _sleep.default, "google.co.uk/related", 5, ["pillow sports", "indoors"]);
+var lvl3activity2 = new _Activity.default("sleeping", _sleep.default, "google.co.uk/related", ["pillow sports", "self care"]);
 exports.lvl3activity2 = lvl3activity2;
-var lvl3activity3 = new _Activity.default("reading", _read.default, "google.co.uk/related", 1, ["extreme sports", "water sports"]);
+var lvl3activity3 = new _Activity.default("reading", _read.default, "google.co.uk/related", ["educational"]);
 exports.lvl3activity3 = lvl3activity3;
-var lvl3activity4 = new _Activity.default("theatre", _theatre.default, "google.co.uk/related", 5, ["pillow sports", "indoors"]);
+var lvl3activity4 = new _Activity.default("theatre", _theatre.default, "google.co.uk/related", ["indoors", "educational"]);
 exports.lvl3activity4 = lvl3activity4;
-var lvl3activity5 = new _Activity.default("stargazing", _stargazing.default, "google.co.uk/related", 1, ["extreme sports", "water sports"]);
+var lvl3activity5 = new _Activity.default("stargazing", _stargazing.default, "google.co.uk/related", ["outdoors", "educational"]);
 exports.lvl3activity5 = lvl3activity5;
-var lvl3activity6 = new _Activity.default("library", _library.default, "google.co.uk/related", 5, ["pillow sports", "indoors"]);
+var lvl3activity6 = new _Activity.default("library", _library.default, "google.co.uk/related", ["educational", "indoors"]);
 exports.lvl3activity6 = lvl3activity6;
-var lvl3activity7 = new _Activity.default("painting", _painting.default, "google.co.uk/related", 5, ["pillow sports", "indoors"]);
+var lvl3activity7 = new _Activity.default("painting", _painting.default, "google.co.uk/related", ["educational", "self care"]);
 exports.lvl3activity7 = lvl3activity7;
-var lvl3activity8 = new _Activity.default("drawing", _drawing.default, "google.co.uk/related", 5, ["pillow sports", "indoors"]); // medium chill
+var lvl3activity8 = new _Activity.default("drawing", _drawing.default, "google.co.uk/related", ["educational", "self care"]); // medium chill
 
 exports.lvl3activity8 = lvl3activity8;
-var lvl2activity1 = new _Activity.default("outdoor concert", _outdoorConcert.default, "google.co.uk/related", 1, []);
+var lvl2activity1 = new _Activity.default("outdoor concert", _outdoorConcert.default, "google.co.uk/related", ["outdoors"]);
 exports.lvl2activity1 = lvl2activity1;
-var lvl2activity2 = new _Activity.default("plan a trip", _planATrip.default, "google.co.uk/related", 1, []);
+var lvl2activity2 = new _Activity.default("plan a trip", _planATrip.default, "google.co.uk/related", []);
 exports.lvl2activity2 = lvl2activity2;
-var lvl2activity3 = new _Activity.default("golf", _golf.default, "google.co.uk/related", 1, []);
+var lvl2activity3 = new _Activity.default("golf", _golf.default, "google.co.uk/related", ["sports", "outdoors"]);
 exports.lvl2activity3 = lvl2activity3;
-var lvl2activity4 = new _Activity.default("botanical garden", _botanicalGarden.default, "google.co.uk/related", 1, []);
+var lvl2activity4 = new _Activity.default("botanical garden", _botanicalGarden.default, "google.co.uk/related", ["outdoors", "self care", "educational"]);
 exports.lvl2activity4 = lvl2activity4;
-var lvl2activity5 = new _Activity.default("exhibition opening", _exhibitionOpening.default, "google.co.uk/related", 1, []);
+var lvl2activity5 = new _Activity.default("exhibition opening", _exhibitionOpening.default, "google.co.uk/related", ["creative", "social"]);
 exports.lvl2activity5 = lvl2activity5;
-var lvl2activity6 = new _Activity.default("art fair", _artFair.default, "google.co.uk/related", 1, []);
+var lvl2activity6 = new _Activity.default("art fair", _artFair.default, "google.co.uk/related", ["creative"]);
 exports.lvl2activity6 = lvl2activity6;
-var lvl2activity7 = new _Activity.default("art class", _artClass.default, "google.co.uk/related", 1, []);
+var lvl2activity7 = new _Activity.default("art class", _artClass.default, "google.co.uk/related", ["creative", "educational"]);
 exports.lvl2activity7 = lvl2activity7;
-var lvl2activity8 = new _Activity.default("museum late", _museumLate.default, "google.co.uk/related", 1, []);
+var lvl2activity8 = new _Activity.default("museum late", _museumLate.default, "google.co.uk/related", ["educational"]);
 exports.lvl2activity8 = lvl2activity8;
-var lvl2activity9 = new _Activity.default("museum", _museum.default, "google.co.uk/related", 1, []);
+var lvl2activity9 = new _Activity.default("museum", _museum.default, "google.co.uk/related", ["educational"]);
 exports.lvl2activity9 = lvl2activity9;
-var lvl2activity10 = new _Activity.default("camping", _camping.default, "google.co.uk/related", 1, []); // low chill
+var lvl2activity10 = new _Activity.default("camping", _camping.default, "google.co.uk/related", ["outdoors"]); // low chill
 
 exports.lvl2activity10 = lvl2activity10;
-var lvl1activity1 = new _Activity.default("boxing", _boxing.default, "google.co.uk/related", 1, []);
+var lvl1activity1 = new _Activity.default("boxing", _boxing.default, "google.co.uk/related", ["sports"]);
 exports.lvl1activity1 = lvl1activity1;
-var lvl1activity2 = new _Activity.default("surfing", _beach.default, "google.co.uk/related", 1, []);
+var lvl1activity2 = new _Activity.default("surfing", _beach.default, "google.co.uk/related", ["sports", "outdoors"]);
 exports.lvl1activity2 = lvl1activity2;
-var lvl1activity3 = new _Activity.default("table tennis", _tabletennis.default, "google.co.uk/related", 1, []);
+var lvl1activity3 = new _Activity.default("table tennis", _tabletennis.default, "google.co.uk/related", ["sports", "social"]);
 exports.lvl1activity3 = lvl1activity3;
-var lvl1activity4 = new _Activity.default("gym", _gym.default, "google.co.uk/related", 1, []);
+var lvl1activity4 = new _Activity.default("gym", _gym.default, "google.co.uk/related", ["sports", "self care"]);
 exports.lvl1activity4 = lvl1activity4;
-var lvl1activity5 = new _Activity.default("hiking", _hiking.default, "google.co.uk/related", 1, []);
+var lvl1activity5 = new _Activity.default("hiking", _hiking.default, "google.co.uk/related", ["sports", "sports"]);
 exports.lvl1activity5 = lvl1activity5;
-var lvl1activity6 = new _Activity.default("basketball", _basketball.default, "google.co.uk/related", 1, []);
+var lvl1activity6 = new _Activity.default("basketball", _basketball.default, "google.co.uk/related", ["sports"]);
 exports.lvl1activity6 = lvl1activity6;
-var lvl1activity7 = new _Activity.default("running", _running.default, "google.co.uk/related", 1, []);
+var lvl1activity7 = new _Activity.default("running", _running.default, "google.co.uk/related", ["sports"]);
 exports.lvl1activity7 = lvl1activity7;
-var lvl1activity8 = new _Activity.default("rock climbing", _rockClimbing.default, "google.co.uk/related", 1, []);
+var lvl1activity8 = new _Activity.default("rock climbing", _rockClimbing.default, "google.co.uk/related", ["sports", "outdoors"]);
 exports.lvl1activity8 = lvl1activity8;
-var lvl1activity9 = new _Activity.default("road trip", _roadTrip.default, "google.co.uk/related", 1, []);
+var lvl1activity9 = new _Activity.default("road trip", _roadTrip.default, "google.co.uk/related", ["outdoors", "educational"]);
 exports.lvl1activity9 = lvl1activity9;
-var lvl1activity10 = new _Activity.default("canoeing", _canoeing.default, "google.co.uk/related", 1, []);
+var lvl1activity10 = new _Activity.default("canoeing", _canoeing.default, "google.co.uk/related", ["sports", "outdoors"]);
 exports.lvl1activity10 = lvl1activity10;
-var lvl1activity11 = new _Activity.default("indoor climbing", _indoorClimbing.default, "google.co.uk/related", 1, []);
+var lvl1activity11 = new _Activity.default("indoor climbing", _indoorClimbing.default, "google.co.uk/related", ["sports", "indoors"]);
 exports.lvl1activity11 = lvl1activity11;
-var lvl1activity12 = new _Activity.default("bouldering", _bouldering.default, "google.co.uk/related", 1, []);
+var lvl1activity12 = new _Activity.default("bouldering", _bouldering.default, "google.co.uk/related", ["sports", "indoors"]);
 exports.lvl1activity12 = lvl1activity12;
-var lvl1activity13 = new _Activity.default("tennis", _tennis.default, "google.co.uk/related", 1, []); // kids high chill
+var lvl1activity13 = new _Activity.default("tennis", _tennis.default, "google.co.uk/related", ["sports"]); // kids high chill
 
 exports.lvl1activity13 = lvl1activity13;
-var kidsLvl3activity1 = new _Activity.default("hboring1", _boring.default, "google.co.uk/related", 1, []);
+var kidsLvl3activity1 = new _Activity.default("drawing", _drawing2.default, "google.co.uk/related", ["creative", "educational"]);
 exports.kidsLvl3activity1 = kidsLvl3activity1;
-var kidsLvl3activity2 = new _Activity.default("hboring2", _boring.default, "google.co.uk/related", 1, []);
+var kidsLvl3activity2 = new _Activity.default("try new food", _food.default, "google.co.uk/related", ["self care"]);
 exports.kidsLvl3activity2 = kidsLvl3activity2;
-var kidsLvl3activity3 = new _Activity.default("hboring3", _boring.default, "google.co.uk/related", 1, []);
+var kidsLvl3activity3 = new _Activity.default("guitar", _guitar.default, "google.co.uk/related", ["music", "educational"]);
 exports.kidsLvl3activity3 = kidsLvl3activity3;
-var kidsLvl3activity4 = new _Activity.default("hboring1", _boring.default, "google.co.uk/related", 1, []);
+var kidsLvl3activity4 = new _Activity.default("new hairstyle", _hairstyle.default, "google.co.uk/related", ["self care"]);
 exports.kidsLvl3activity4 = kidsLvl3activity4;
-var kidsLvl3activity5 = new _Activity.default("hboring2", _boring.default, "google.co.uk/related", 1, []);
+var kidsLvl3activity5 = new _Activity.default("painting", _painting2.default, "google.co.uk/related", ["creative"]);
 exports.kidsLvl3activity5 = kidsLvl3activity5;
-var kidsLvl3activity6 = new _Activity.default("hboring3", _boring.default, "google.co.uk/related", 1, []);
+var kidsLvl3activity6 = new _Activity.default("photography", _photography.default, "google.co.uk/related", ["creative", "educational"]);
 exports.kidsLvl3activity6 = kidsLvl3activity6;
-var kidsLvl3activity7 = new _Activity.default("hboring1", _boring.default, "google.co.uk/related", 1, []);
+var kidsLvl3activity7 = new _Activity.default("read a story", _story.default, "google.co.uk/related", ["creative", "educational"]); // export let kidsLvl3activity8 = new Activity("", Image, "google.co.uk/related", 1, []);
+// kids medium chill
+
 exports.kidsLvl3activity7 = kidsLvl3activity7;
-var kidsLvl3activity8 = new _Activity.default("hboring2", _boring.default, "google.co.uk/related", 1, []); // kids medium chill
-
-exports.kidsLvl3activity8 = kidsLvl3activity8;
-var kidsLvl2activity1 = new _Activity.default("mboring1", _boring.default, "google.co.uk/related", 1, []);
+var kidsLvl2activity1 = new _Activity.default("baking", _baking.default, "google.co.uk/related", ["educational", "indoors"]);
 exports.kidsLvl2activity1 = kidsLvl2activity1;
-var kidsLvl2activity2 = new _Activity.default("mboring2", _boring.default, "google.co.uk/related", 1, []);
+var kidsLvl2activity2 = new _Activity.default("explore nature", _exploreNature.default, "google.co.uk/related", ["outdoors", "self care"]);
 exports.kidsLvl2activity2 = kidsLvl2activity2;
-var kidsLvl2activity3 = new _Activity.default("mboring3", _boring.default, "google.co.uk/related", 1, []);
+var kidsLvl2activity3 = new _Activity.default("fancy dress", _fancyDress.default, "google.co.uk/related", ["creative"]);
 exports.kidsLvl2activity3 = kidsLvl2activity3;
-var kidsLvl2activity4 = new _Activity.default("mboring1", _boring.default, "google.co.uk/related", 1, []);
+var kidsLvl2activity4 = new _Activity.default("gardening", _gardening.default, "google.co.uk/related", ["outdoors", "self care"]);
 exports.kidsLvl2activity4 = kidsLvl2activity4;
-var kidsLvl2activity5 = new _Activity.default("mboring2", _boring.default, "google.co.uk/related", 1, []);
+var kidsLvl2activity5 = new _Activity.default("play with a pet", _pet.default, "google.co.uk/related", []);
 exports.kidsLvl2activity5 = kidsLvl2activity5;
-var kidsLvl2activity6 = new _Activity.default("mboring3", _boring.default, "google.co.uk/related", 1, []);
+var kidsLvl2activity6 = new _Activity.default("science experiment", _scienceExperiment.default, "google.co.uk/related", ["educational"]);
 exports.kidsLvl2activity6 = kidsLvl2activity6;
-var kidsLvl2activity7 = new _Activity.default("mboring1", _boring.default, "google.co.uk/related", 1, []);
-exports.kidsLvl2activity7 = kidsLvl2activity7;
-var kidsLvl2activity8 = new _Activity.default("mboring2", _boring.default, "google.co.uk/related", 1, []);
-exports.kidsLvl2activity8 = kidsLvl2activity8;
-var kidsLvl2activity9 = new _Activity.default("mboring3", _boring.default, "google.co.uk/related", 1, []);
-exports.kidsLvl2activity9 = kidsLvl2activity9;
-var kidsLvl2activity10 = new _Activity.default("mboring3", _boring.default, "google.co.uk/related", 1, []); // kids low chill
+var kidsLvl2activity7 = new _Activity.default("find your superpower", _superPower.default, "google.co.uk/related", ["creative"]); // export let kidsLvl2activity8 = new Activity("", Image, "google.co.uk/related", 1, []);
+// export let kidsLvl2activity9 = new Activity("", Image, "google.co.uk/related", 1, []);
+// export let kidsLvl2activity10 = new Activity("", Image, "google.co.uk/related", 1, []);
+// kids low chill
 
-exports.kidsLvl2activity10 = kidsLvl2activity10;
-var kidsLvl1activity1 = new _Activity.default("lboring1", _boring.default, "google.co.uk/related", 1, []);
+exports.kidsLvl2activity7 = kidsLvl2activity7;
+var kidsLvl1activity1 = new _Activity.default("adventure park", _adventurePark.default, "google.co.uk/related", ["outdoors"]);
 exports.kidsLvl1activity1 = kidsLvl1activity1;
-var kidsLvl1activity2 = new _Activity.default("lboring2", _boring.default, "google.co.uk/related", 1, []);
+var kidsLvl1activity2 = new _Activity.default("beach adventure", _beachAdventure.default, "google.co.uk/related", ["outdoors"]);
 exports.kidsLvl1activity2 = kidsLvl1activity2;
-var kidsLvl1activity3 = new _Activity.default("lboring3", _boring.default, "google.co.uk/related", 1, []);
+var kidsLvl1activity3 = new _Activity.default("beach sports", _beachSports.default, "google.co.uk/related", ["outdoors", "sports"]);
 exports.kidsLvl1activity3 = kidsLvl1activity3;
-var kidsLvl1activity4 = new _Activity.default("lboring1", _boring.default, "google.co.uk/related", 1, []);
+var kidsLvl1activity4 = new _Activity.default("bike adventure", _bikeAdventure.default, "google.co.uk/related", ["outdoors", "sports"]);
 exports.kidsLvl1activity4 = kidsLvl1activity4;
-var kidsLvl1activity5 = new _Activity.default("lboring2", _boring.default, "google.co.uk/related", 1, []);
+var kidsLvl1activity5 = new _Activity.default("bouldering", _bouldering2.default, "google.co.uk/related", ["sports"]);
 exports.kidsLvl1activity5 = kidsLvl1activity5;
-var kidsLvl1activity6 = new _Activity.default("lboring3", _boring.default, "google.co.uk/related", 1, []);
+var kidsLvl1activity6 = new _Activity.default("dance class", _danceClass.default, "google.co.uk/related", ["sports", "social"]);
 exports.kidsLvl1activity6 = kidsLvl1activity6;
-var kidsLvl1activity7 = new _Activity.default("lboring1", _boring.default, "google.co.uk/related", 1, []);
+var kidsLvl1activity7 = new _Activity.default("football", _football.default, "google.co.uk/related", ["sports", "outdoors"]);
 exports.kidsLvl1activity7 = kidsLvl1activity7;
-var kidsLvl1activity8 = new _Activity.default("lboring2", _boring.default, "google.co.uk/related", 1, []);
+var kidsLvl1activity8 = new _Activity.default("ice hockey", _iceHockey.default, "google.co.uk/related", ["sports"]);
 exports.kidsLvl1activity8 = kidsLvl1activity8;
-var kidsLvl1activity9 = new _Activity.default("lboring3", _boring.default, "google.co.uk/related", 1, []);
+var kidsLvl1activity9 = new _Activity.default("ice skating", _iceSkating.default, "google.co.uk/related", ["sports"]);
 exports.kidsLvl1activity9 = kidsLvl1activity9;
-var kidsLvl1activity10 = new _Activity.default("lboring1", _boring.default, "google.co.uk/related", 1, []);
+var kidsLvl1activity10 = new _Activity.default("outdoor pool", _outdoorPool.default, "google.co.uk/related", ["outdoors", "sports"]);
 exports.kidsLvl1activity10 = kidsLvl1activity10;
-var kidsLvl1activity11 = new _Activity.default("lboring2", _boring.default, "google.co.uk/related", 1, []);
+var kidsLvl1activity11 = new _Activity.default("skateboarding", _skateboarding.default, "google.co.uk/related", ["sports"]);
 exports.kidsLvl1activity11 = kidsLvl1activity11;
-var kidsLvl1activity12 = new _Activity.default("lboring3", _boring.default, "google.co.uk/related", 1, []);
+var kidsLvl1activity12 = new _Activity.default("swimming", _swimming.default, "google.co.uk/related", ["sports"]); // export let kidsLvl1activity13 = new Activity("", Image, "google.co.uk/related", 1, []);
+
 exports.kidsLvl1activity12 = kidsLvl1activity12;
-var kidsLvl1activity13 = new _Activity.default("lboring3", _boring.default, "google.co.uk/related", 1, []);
-exports.kidsLvl1activity13 = kidsLvl1activity13;
 var arr1 = [lvl1activity1, lvl1activity2, lvl1activity3, lvl1activity4, lvl1activity5, lvl1activity6, lvl1activity7, lvl1activity8, lvl1activity9, lvl1activity10, lvl1activity11, lvl1activity12, lvl1activity13];
 exports.arr1 = arr1;
 var arr2 = [lvl2activity1, lvl2activity2, lvl2activity3, lvl2activity4, lvl2activity5, lvl2activity6, lvl2activity7, lvl2activity8, lvl2activity9, lvl2activity10];
@@ -11442,14 +11543,20 @@ var chillLevelArr = ["LOW", "MEDIUM", "HIGH"];
 exports.chillLevelArr = chillLevelArr;
 var allArrs = [arr1, arr2, arr3];
 exports.allArrs = allArrs;
-var kidsArr1 = [kidsLvl1activity1, kidsLvl1activity2, kidsLvl1activity3, kidsLvl1activity4, kidsLvl1activity5, kidsLvl1activity6, kidsLvl1activity7, kidsLvl1activity8, kidsLvl1activity9, kidsLvl1activity10, kidsLvl1activity11, kidsLvl1activity12, kidsLvl1activity13];
+var kidsArr1 = [kidsLvl1activity1, kidsLvl1activity2, kidsLvl1activity3, kidsLvl1activity4, kidsLvl1activity5, kidsLvl1activity6, kidsLvl1activity7, kidsLvl1activity8, kidsLvl1activity9, kidsLvl1activity10, kidsLvl1activity11, kidsLvl1activity12];
 exports.kidsArr1 = kidsArr1;
-var kidsArr2 = [kidsLvl2activity1, kidsLvl2activity2, kidsLvl2activity3, kidsLvl2activity4, kidsLvl2activity5, kidsLvl2activity6, kidsLvl2activity7, kidsLvl2activity8, kidsLvl2activity9, kidsLvl2activity10];
+var kidsArr2 = [kidsLvl2activity1, kidsLvl2activity2, kidsLvl2activity3, kidsLvl2activity4, kidsLvl2activity5, kidsLvl2activity6, kidsLvl2activity7];
 exports.kidsArr2 = kidsArr2;
-var kidsArr3 = [kidsLvl3activity1, kidsLvl3activity2, kidsLvl3activity3, kidsLvl3activity4, kidsLvl3activity5, kidsLvl3activity6, kidsLvl3activity7, kidsLvl3activity8];
+var kidsArr3 = [kidsLvl3activity1, kidsLvl3activity2, kidsLvl3activity3, kidsLvl3activity4, kidsLvl3activity5, kidsLvl3activity6, kidsLvl3activity7];
 exports.kidsArr3 = kidsArr3;
 var allKidsArrs = [kidsArr1, kidsArr2, kidsArr3];
 exports.allKidsArrs = allKidsArrs;
+var backgroundImg = document.querySelector(".background-image");
+var kidsButton = document.querySelector(".kids");
+kidsButton.addEventListener("click", _changingScreen.default);
+kidsButton.addEventListener("click", function () {
+  setTimeout(kidsToggle, 1000);
+});
 
 function kidsToggle() {
   if (allArrs !== allKidsArrs) {
@@ -11463,17 +11570,8 @@ function kidsToggle() {
 
   (0, _levelChange.refresh)();
   (0, _updateCentralContainer.default)();
-}
-
-var backgroundImg = document.querySelector(".background-image");
-var kidsButton = document.querySelector(".kids");
-kidsButton.addEventListener("click", function () {
-  return kidsToggle();
-});
-kidsButton.addEventListener("click", function () {
-  return (0, _loadingScreen.default)();
-});
-},{"./Activity.js":"js/Activity.js","./loadingScreen.js":"js/loadingScreen.js","../imgs/meditate.jpg":"imgs/meditate.jpg","../imgs/sleep.jpg":"imgs/sleep.jpg","../imgs/read.jpg":"imgs/read.jpg","../imgs/theatre.jpg":"imgs/theatre.jpg","../imgs/stargazing.jpg":"imgs/stargazing.jpg","../imgs/library.jpg":"imgs/library.jpg","../imgs/painting.jpg":"imgs/painting.jpg","../imgs/drawing.jpg":"imgs/drawing.jpg","../imgs/outdoor-concert.jpg":"imgs/outdoor-concert.jpg","../imgs/plan-a-trip.jpg":"imgs/plan-a-trip.jpg","../imgs/golf.jpg":"imgs/golf.jpg","../imgs/botanical-garden.jpg":"imgs/botanical-garden.jpg","../imgs/exhibition-opening.jpg":"imgs/exhibition-opening.jpg","../imgs/art-fair.jpg":"imgs/art-fair.jpg","../imgs/art-class.jpg":"imgs/art-class.jpg","../imgs/museum-late.jpg":"imgs/museum-late.jpg","../imgs/museum.jpg":"imgs/museum.jpg","../imgs/camping.jpg":"imgs/camping.jpg","../imgs/boxing.jpg":"imgs/boxing.jpg","../imgs/beach.jpg":"imgs/beach.jpg","../imgs/tabletennis.jpg":"imgs/tabletennis.jpg","../imgs/gym.jpg":"imgs/gym.jpg","../imgs/hiking.jpg":"imgs/hiking.jpg","../imgs/basketball.jpg":"imgs/basketball.jpg","../imgs/running.jpg":"imgs/running.jpg","../imgs/rock-climbing.jpg":"imgs/rock-climbing.jpg","../imgs/road-trip.jpg":"imgs/road-trip.jpg","../imgs/canoeing.jpg":"imgs/canoeing.jpg","../imgs/indoor-climbing.jpg":"imgs/indoor-climbing.jpg","../imgs/bouldering.jpg":"imgs/bouldering.jpg","../imgs/tennis.jpg":"imgs/tennis.jpg","../imgs/boring.jpg":"imgs/boring.jpg","../imgs/kidsImgs/kids-bg.jpg":"imgs/kidsImgs/kids-bg.jpg","./updateCentralContainer.js":"js/updateCentralContainer.js","./levelChange.js":"js/levelChange.js","../imgs/astronomy.jpg":"imgs/astronomy.jpg"}],"js/levelChange.js":[function(require,module,exports) {
+} // () => setTimeout(kidsToggle(), 5000));
+},{"./Activity.js":"js/Activity.js","./changingScreen.js":"js/changingScreen.js","../imgs/meditate.jpg":"imgs/meditate.jpg","../imgs/sleep.jpg":"imgs/sleep.jpg","../imgs/read.jpg":"imgs/read.jpg","../imgs/theatre.jpg":"imgs/theatre.jpg","../imgs/stargazing.jpg":"imgs/stargazing.jpg","../imgs/library.jpg":"imgs/library.jpg","../imgs/painting.jpg":"imgs/painting.jpg","../imgs/drawing.jpg":"imgs/drawing.jpg","../imgs/outdoor-concert.jpg":"imgs/outdoor-concert.jpg","../imgs/plan-a-trip.jpg":"imgs/plan-a-trip.jpg","../imgs/golf.jpg":"imgs/golf.jpg","../imgs/botanical-garden.jpg":"imgs/botanical-garden.jpg","../imgs/exhibition-opening.jpg":"imgs/exhibition-opening.jpg","../imgs/art-fair.jpg":"imgs/art-fair.jpg","../imgs/art-class.jpg":"imgs/art-class.jpg","../imgs/museum-late.jpg":"imgs/museum-late.jpg","../imgs/museum.jpg":"imgs/museum.jpg","../imgs/camping.jpg":"imgs/camping.jpg","../imgs/boxing.jpg":"imgs/boxing.jpg","../imgs/beach.jpg":"imgs/beach.jpg","../imgs/tabletennis.jpg":"imgs/tabletennis.jpg","../imgs/gym.jpg":"imgs/gym.jpg","../imgs/hiking.jpg":"imgs/hiking.jpg","../imgs/basketball.jpg":"imgs/basketball.jpg","../imgs/running.jpg":"imgs/running.jpg","../imgs/rock-climbing.jpg":"imgs/rock-climbing.jpg","../imgs/road-trip.jpg":"imgs/road-trip.jpg","../imgs/canoeing.jpg":"imgs/canoeing.jpg","../imgs/indoor-climbing.jpg":"imgs/indoor-climbing.jpg","../imgs/bouldering.jpg":"imgs/bouldering.jpg","../imgs/tennis.jpg":"imgs/tennis.jpg","../imgs/kidsImgs/drawing.jpg":"imgs/kidsImgs/drawing.jpg","../imgs/kidsImgs/food.jpg":"imgs/kidsImgs/food.jpg","../imgs/kidsImgs/guitar.jpg":"imgs/kidsImgs/guitar.jpg","../imgs/kidsImgs/hairstyle.jpg":"imgs/kidsImgs/hairstyle.jpg","../imgs/kidsImgs/painting.jpg":"imgs/kidsImgs/painting.jpg","../imgs/kidsImgs/photography.jpg":"imgs/kidsImgs/photography.jpg","../imgs/kidsImgs/story.jpg":"imgs/kidsImgs/story.jpg","../imgs/kidsImgs/baking.jpg":"imgs/kidsImgs/baking.jpg","../imgs/kidsImgs/explore-nature.jpg":"imgs/kidsImgs/explore-nature.jpg","../imgs/kidsImgs/fancy-dress.jpg":"imgs/kidsImgs/fancy-dress.jpg","../imgs/kidsImgs/gardening.jpg":"imgs/kidsImgs/gardening.jpg","../imgs/kidsImgs/pet.jpg":"imgs/kidsImgs/pet.jpg","../imgs/kidsImgs/science-experiment.jpg":"imgs/kidsImgs/science-experiment.jpg","../imgs/kidsImgs/super-power.jpg":"imgs/kidsImgs/super-power.jpg","../imgs/kidsImgs/adventure-park.jpg":"imgs/kidsImgs/adventure-park.jpg","../imgs/kidsImgs/beach-adventure.jpg":"imgs/kidsImgs/beach-adventure.jpg","../imgs/kidsImgs/beach-sports.jpg":"imgs/kidsImgs/beach-sports.jpg","../imgs/kidsImgs/bike-adventure.jpg":"imgs/kidsImgs/bike-adventure.jpg","../imgs/kidsImgs/bouldering.jpg":"imgs/kidsImgs/bouldering.jpg","../imgs/kidsImgs/dance-class.jpg":"imgs/kidsImgs/dance-class.jpg","../imgs/kidsImgs/football.jpg":"imgs/kidsImgs/football.jpg","../imgs/kidsImgs/ice-hockey.jpg":"imgs/kidsImgs/ice-hockey.jpg","../imgs/kidsImgs/ice-skating.jpg":"imgs/kidsImgs/ice-skating.jpg","../imgs/kidsImgs/outdoor-pool.jpg":"imgs/kidsImgs/outdoor-pool.jpg","../imgs/kidsImgs/skateboarding.jpg":"imgs/kidsImgs/skateboarding.jpg","../imgs/kidsImgs/swimming.jpg":"imgs/kidsImgs/swimming.jpg","../imgs/kidsImgs/kids-bg.jpg":"imgs/kidsImgs/kids-bg.jpg","./updateCentralContainer.js":"js/updateCentralContainer.js","./levelChange.js":"js/levelChange.js","../imgs/astronomy.jpg":"imgs/astronomy.jpg"}],"js/levelChange.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -11622,7 +11720,37 @@ function fillBottomBoxes() {
     bottomImgs.splice(num, 1);
   });
 }
-},{"./index.js":"js/index.js","../imgs/meditate.jpg":"imgs/meditate.jpg","../imgs/sleep.jpg":"imgs/sleep.jpg","../imgs/read.jpg":"imgs/read.jpg","../imgs/theatre.jpg":"imgs/theatre.jpg","../imgs/stargazing.jpg":"imgs/stargazing.jpg","../imgs/library.jpg":"imgs/library.jpg","../imgs/hiking.jpg":"imgs/hiking.jpg"}],"js/nav.js":[function(require,module,exports) {
+},{"./index.js":"js/index.js","../imgs/meditate.jpg":"imgs/meditate.jpg","../imgs/sleep.jpg":"imgs/sleep.jpg","../imgs/read.jpg":"imgs/read.jpg","../imgs/theatre.jpg":"imgs/theatre.jpg","../imgs/stargazing.jpg":"imgs/stargazing.jpg","../imgs/library.jpg":"imgs/library.jpg","../imgs/hiking.jpg":"imgs/hiking.jpg"}],"js/loadingScreen.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = loadingScreen;
+
+var _gsap = require("gsap");
+
+function loadingScreen() {
+  console.log('changing screen');
+  var tl = new _gsap.TimelineMax();
+  tl.from(".notflix", 1.5, {
+    y: "100%",
+    opacity: 1
+  }).to(".notflix", 1, {
+    scale: 1.2,
+    ease: Power2.easeInOut,
+    transformOrigin: "center",
+    repeat: 3,
+    yoyo: true
+  }).to(".notflix", 1.5, {
+    y: "100%",
+    opacity: 0
+  }).to(".preloader", 1.5, {
+    y: "110%",
+    ease: Power2.easeInOut
+  }, "-=1.5");
+}
+},{"gsap":"node_modules/gsap/index.js"}],"js/nav.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -11750,7 +11878,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63726" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61397" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

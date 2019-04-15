@@ -36,12 +36,17 @@ button,
   cursor: pointer;
 }
 
-#preloader {
+.preloader, .changing {
   @include displayFlex(center, center, null);
   @include posWidHei(absolute, 100%, 100%);
   z-index: 1;
   background-color: #141414;
   overflow: hidden;
+}
+
+// only visible when loading new page
+.changing {
+  z-index: -10;
 }
 
 @import "./_topContainer";

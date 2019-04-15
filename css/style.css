@@ -59,7 +59,7 @@ button,
   cursor: pointer;
 }
 
-#preloader {
+.preloader, .changing {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -75,6 +75,10 @@ button,
   z-index: 1;
   background-color: #141414;
   overflow: hidden;
+}
+
+.changing {
+  z-index: -10;
 }
 
 .background-image {
