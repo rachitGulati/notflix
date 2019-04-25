@@ -123,11 +123,13 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.justifyAlignSelf = exports.lineHeight = exports.letterSpacing = exports.colours = exports.fontVariant = exports.fontStyle = exports.fontWeight = exports.vws = exports.fonts = void 0;
+exports.justifyAlignSelf = exports.lineHeight = exports.letterSpacing = exports.colours = exports.fontVariant = exports.fontStyle = exports.fontWeight = exports.vwsMobile = exports.vws = exports.fonts = void 0;
 var fonts = ["Roboto", "Helvetica", "Raleway", "Chonburi", "Inconsolata", "Anton", "Josefin Sans", "Lobster", "Pacifico", "Nova Flat"];
 exports.fonts = fonts;
 var vws = ["3vw", "4vw", "5vw", "6vw"];
 exports.vws = vws;
+var vwsMobile = ["9vw", "10vw", "11vw", "12vw"];
+exports.vwsMobile = vwsMobile;
 var fontWeight = ["normal", "bold"];
 exports.fontWeight = fontWeight;
 var fontStyle = ["normal", "italic"];
@@ -11670,7 +11672,13 @@ function updateCentralContainer() {
   // Choose a random font from the fonts array
 
   name.style.fontFamily = fontsStyling.fonts[Math.floor(Math.random() * fontsStyling.fonts.length)];
-  name.style.fontSize = fontsStyling.vws[Math.floor(Math.random() * fontsStyling.vws.length)];
+
+  if (window.innerWidth < 400) {
+    name.style.fontSize = fontsStyling.vwsMobile[Math.floor(Math.random() * fontsStyling.vwsMobile.length)];
+  } else {
+    name.style.fontSize = fontsStyling.vws[Math.floor(Math.random() * fontsStyling.vws.length)];
+  }
+
   name.style.fontWeight = fontsStyling.fontWeight[Math.floor(Math.random() * fontsStyling.fontWeight.length)];
   name.style.fontStyle = fontsStyling.fontStyle[Math.floor(Math.random() * fontsStyling.fontStyle.length)];
   name.style.fontVariant = fontsStyling.fontVariant[Math.floor(Math.random() * fontsStyling.fontVariant.length)];
@@ -11879,7 +11887,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54106" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62023" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

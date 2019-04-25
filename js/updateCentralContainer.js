@@ -33,7 +33,11 @@ export default function updateCentralContainer() {
 
 	// Choose a random font from the fonts array
 	name.style.fontFamily = fontsStyling.fonts[Math.floor(Math.random() * fontsStyling.fonts.length)];
-	name.style.fontSize = fontsStyling.vws[Math.floor(Math.random() * fontsStyling.vws.length)];
+	if (window.innerWidth < 400) {
+		name.style.fontSize = fontsStyling.vwsMobile[Math.floor(Math.random() * fontsStyling.vwsMobile.length)];
+	} else {
+		name.style.fontSize = fontsStyling.vws[Math.floor(Math.random() * fontsStyling.vws.length)];
+	}
 	name.style.fontWeight = fontsStyling.fontWeight[Math.floor(Math.random() * fontsStyling.fontWeight.length)];
 	name.style.fontStyle = fontsStyling.fontStyle[Math.floor(Math.random() * fontsStyling.fontStyle.length)];
 	name.style.fontVariant = fontsStyling.fontVariant[Math.floor(Math.random() * fontsStyling.fontVariant.length)];

@@ -38,6 +38,8 @@
 
       .bottom-container {
           @include displayGrid(null, 'left-container right-container', null, 1fr 1fr);
+          height: 13vh;
+          margin-top: 13px;
       }
 
       .logo {
@@ -72,6 +74,10 @@
       .kids {
           right: 25px;
           margin-top: 4%;
+      }
+
+      .background-image {
+        height: 40%;
       }
   }
 

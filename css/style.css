@@ -2,6 +2,7 @@
   position: fixed;
   width: 0;
   height: 100%;
+  font-size: 2em;
   z-index: 1;
   top: 0;
   left: 0;
@@ -42,6 +43,17 @@
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+}
+
+.red {
+  color: red;
+}
+
+a.website {
+  text-decoration: none;
+  font-size: 1em;
+  padding: 0px;
+  padding-top: 10px;
 }
 
 body {
@@ -134,10 +146,11 @@ button,
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: tag-line;
-  font-size: 5vw;
+  font-size: 4vw;
   -ms-flex-item-align: end;
       -ms-grid-row-align: end;
       align-self: end;
+  margin-bottom: 15px;
 }
 
 .learn-more-btn {
@@ -480,6 +493,8 @@ button,
         grid-template-areas: "left-container right-container";
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
+    height: 13vh;
+    margin-top: 13px;
   }
   .logo {
     font-size: 6.5vw;
@@ -506,6 +521,9 @@ button,
   .kids {
     right: 25px;
     margin-top: 4%;
+  }
+  .background-image {
+    height: 40%;
   }
 }
 

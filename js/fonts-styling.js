@@ -3,6 +3,7 @@ export let fonts = ["Roboto", "Helvetica", "Raleway", "Chonburi", "Inconsolata",
 ];
 
 export let vws = ["3vw", "4vw", "5vw", "6vw"];
+export let vwsMobile = ["9vw", "10vw", "11vw", "12vw"];
 export let fontWeight = ["normal", "bold"];
 export let fontStyle = ["normal", "italic"];
 export let fontVariant = ["normal", "small-caps"];

@@ -1,5 +1,6 @@
   .side-nav {
     @include posWidHei(fixed, 0, 100%);
+    font-size: 2em;
     z-index: 1;
     top: 0;
     left: 0;
@@ -33,4 +34,15 @@
       font-size: 36px;
       margin-left: 50px;
     }
+  }
+
+  .red {
+    color: red;
+  }
+
+  a.website {
+    text-decoration: none;
+    font-size: 1em;
+    padding: 0px;
+    padding-top: 10px;
   }
