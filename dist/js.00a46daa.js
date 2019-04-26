@@ -152,6 +152,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = shuffle;
 
+// excuted when we reach the end of the activities array + it needs refreshing
 function shuffle(array) {
   var currentIndex = array.length;
   var temporaryValue, randomIndex; // While there remain elements to shuffle...
@@ -11074,8 +11075,12 @@ exports.default = changingScreen;
 
 var _gsap = require("gsap");
 
+// when kids/main button clicked
+// loading screen fades in
+// notflix sign pulsates
+// notflix slides down and fades out
+// same time, loading screen slides down + application appears
 function changingScreen() {
-  console.log('changing screen');
   var tlChanging = new _gsap.TimelineMax();
   tlChanging.set(".changing", {
     zIndex: 10
@@ -11107,42 +11112,7 @@ function changingScreen() {
   tlChanging.set(".notflixCha", {
     clearProps: "all"
   });
-} // import { TimelineMax } from "gsap";
-// export default function loadingScreen() {
-// 	console.log('loading screen');
-// 	let tl = new TimelineMax();
-// 	tl.set("#preloader", {
-// 			css: {zIndex:1, opacity:1}
-// 		})
-// 	.set(".notflix", {
-// 		css: {zIndex: 1, opacity:1}
-// 	})
-// 	.from(".notflix", 1.5, {
-// 		y: "100%",
-// 		opacity: 1
-// 	})
-// 		.to(".notflix", 1, {
-// 			scale: 1.2, 
-// 			ease: Power2.easeInOut, 
-// 			transformOrigin:"center",
-// 			repeat:3, 
-// 			yoyo:true
-// 		})
-// 		.to(".notflix", 1.5, {
-// 			y: "100%",
-// 			opacity: 0
-// 		})
-// 		.to("#preloader", 1.5, {
-// 			y:"110%",
-// 			ease: Power2.easeInOut,
-// 			opacity: 0,
-// 		}, "-=1.5")
-// 		.set("#preloader", {
-// 			css: {zIndex:-1}
-// 		})
-// 		.set("#preloader", {clearProps:"transform"})
-// 		// .set(".notflix", {clearProps:"y"});
-// }
+}
 },{"gsap":"node_modules/gsap/index.js"}],"imgs/meditate.jpg":[function(require,module,exports) {
 module.exports = "/meditate.1d029eb0.jpg";
 },{}],"imgs/sleep.jpg":[function(require,module,exports) {
@@ -11558,7 +11528,11 @@ var kidsButton = document.querySelector(".kids");
 kidsButton.addEventListener("click", _changingScreen.default);
 kidsButton.addEventListener("click", function () {
   setTimeout(kidsToggle, 1000);
-});
+}); // when the kids/main button is clicked:
+// change the background image + button word,
+// swap the activities to the kids activities [array]
+// reset the current chill level
+// run the application
 
 function kidsToggle() {
   if (allArrs !== allKidsArrs) {
@@ -11573,7 +11547,7 @@ function kidsToggle() {
 
   (0, _levelChange.refresh)();
   (0, _updateCentralContainer.default)();
-} // () => setTimeout(kidsToggle(), 5000));
+}
 },{"./Activity.js":"js/Activity.js","./changingScreen.js":"js/changingScreen.js","../imgs/meditate.jpg":"imgs/meditate.jpg","../imgs/sleep.jpg":"imgs/sleep.jpg","../imgs/read.jpg":"imgs/read.jpg","../imgs/theatre.jpg":"imgs/theatre.jpg","../imgs/stargazing.jpg":"imgs/stargazing.jpg","../imgs/library.jpg":"imgs/library.jpg","../imgs/painting.jpg":"imgs/painting.jpg","../imgs/drawing.jpg":"imgs/drawing.jpg","../imgs/outdoor-concert.jpg":"imgs/outdoor-concert.jpg","../imgs/plan-a-trip.jpg":"imgs/plan-a-trip.jpg","../imgs/golf.jpg":"imgs/golf.jpg","../imgs/botanical-garden.jpg":"imgs/botanical-garden.jpg","../imgs/exhibition-opening.jpg":"imgs/exhibition-opening.jpg","../imgs/art-fair.jpg":"imgs/art-fair.jpg","../imgs/art-class.jpg":"imgs/art-class.jpg","../imgs/museum-late.jpg":"imgs/museum-late.jpg","../imgs/museum.jpg":"imgs/museum.jpg","../imgs/camping.jpg":"imgs/camping.jpg","../imgs/boxing.jpg":"imgs/boxing.jpg","../imgs/beach.jpg":"imgs/beach.jpg","../imgs/tabletennis.jpg":"imgs/tabletennis.jpg","../imgs/gym.jpg":"imgs/gym.jpg","../imgs/hiking.jpg":"imgs/hiking.jpg","../imgs/basketball.jpg":"imgs/basketball.jpg","../imgs/running.jpg":"imgs/running.jpg","../imgs/rock-climbing.jpg":"imgs/rock-climbing.jpg","../imgs/road-trip.jpg":"imgs/road-trip.jpg","../imgs/canoeing.jpg":"imgs/canoeing.jpg","../imgs/indoor-climbing.jpg":"imgs/indoor-climbing.jpg","../imgs/bouldering.jpg":"imgs/bouldering.jpg","../imgs/tennis.jpg":"imgs/tennis.jpg","../imgs/kidsImgs/drawing.jpg":"imgs/kidsImgs/drawing.jpg","../imgs/kidsImgs/food.jpg":"imgs/kidsImgs/food.jpg","../imgs/kidsImgs/guitar.jpg":"imgs/kidsImgs/guitar.jpg","../imgs/kidsImgs/hairstyle.jpg":"imgs/kidsImgs/hairstyle.jpg","../imgs/kidsImgs/painting.jpg":"imgs/kidsImgs/painting.jpg","../imgs/kidsImgs/photography.jpg":"imgs/kidsImgs/photography.jpg","../imgs/kidsImgs/story.jpg":"imgs/kidsImgs/story.jpg","../imgs/kidsImgs/baking.jpg":"imgs/kidsImgs/baking.jpg","../imgs/kidsImgs/explore-nature.jpg":"imgs/kidsImgs/explore-nature.jpg","../imgs/kidsImgs/fancy-dress.jpg":"imgs/kidsImgs/fancy-dress.jpg","../imgs/kidsImgs/gardening.jpg":"imgs/kidsImgs/gardening.jpg","../imgs/kidsImgs/pet.jpg":"imgs/kidsImgs/pet.jpg","../imgs/kidsImgs/science-experiment.jpg":"imgs/kidsImgs/science-experiment.jpg","../imgs/kidsImgs/super-power.jpg":"imgs/kidsImgs/super-power.jpg","../imgs/kidsImgs/adventure-park.jpg":"imgs/kidsImgs/adventure-park.jpg","../imgs/kidsImgs/beach-adventure.jpg":"imgs/kidsImgs/beach-adventure.jpg","../imgs/kidsImgs/beach-sports.jpg":"imgs/kidsImgs/beach-sports.jpg","../imgs/kidsImgs/bike-adventure.jpg":"imgs/kidsImgs/bike-adventure.jpg","../imgs/kidsImgs/bouldering.jpg":"imgs/kidsImgs/bouldering.jpg","../imgs/kidsImgs/dance-class.jpg":"imgs/kidsImgs/dance-class.jpg","../imgs/kidsImgs/football.jpg":"imgs/kidsImgs/football.jpg","../imgs/kidsImgs/ice-hockey.jpg":"imgs/kidsImgs/ice-hockey.jpg","../imgs/kidsImgs/ice-skating.jpg":"imgs/kidsImgs/ice-skating.jpg","../imgs/kidsImgs/outdoor-pool.jpg":"imgs/kidsImgs/outdoor-pool.jpg","../imgs/kidsImgs/skateboarding.jpg":"imgs/kidsImgs/skateboarding.jpg","../imgs/kidsImgs/swimming.jpg":"imgs/kidsImgs/swimming.jpg","../imgs/kidsImgs/kids-bg.jpg":"imgs/kidsImgs/kids-bg.jpg","./updateCentralContainer.js":"js/updateCentralContainer.js","./levelChange.js":"js/levelChange.js","../imgs/bg-image.jpg":"imgs/bg-image.jpg"}],"js/levelChange.js":[function(require,module,exports) {
 "use strict";
 
@@ -11591,36 +11565,35 @@ var _index = require("./index.js");
 
 var currentArrLevel = 1;
 exports.currentArrLevel = currentArrLevel;
-var currentArr = _activities.allArrs[1];
+var currentArr = _activities.allArrs[1]; // reset the current chill level
+
 exports.currentArr = currentArr;
 
 function refresh() {
-  console.log('refresh for kids');
   exports.currentArrLevel = currentArrLevel = 1;
   exports.currentArr = currentArr = _activities.allArrs[1];
-  console.log(currentArr);
 
   _index.chillLevelWord.forEach(function (clw) {
     return clw.innerHTML = "".concat(_activities.chillLevelArr[currentArrLevel]);
   });
-}
+} // increase current chill level, executed when user clicks up arrow 
+
 
 function levelUp() {
   if (currentArrLevel < 2) {
     exports.currentArrLevel = currentArrLevel = currentArrLevel + 1;
-    console.log(currentArr);
     exports.currentArr = currentArr = _activities.allArrs[currentArrLevel];
 
     _index.chillLevelWord.forEach(function (clw) {
       return clw.innerHTML = "".concat(_activities.chillLevelArr[currentArrLevel]);
     });
   }
-}
+} // decrease current chill level, executed when user clicks down arrow 
+
 
 function levelDown() {
   if (currentArrLevel > 0) {
     exports.currentArrLevel = currentArrLevel = currentArrLevel - 1;
-    console.log(currentArr);
     exports.currentArr = currentArr = _activities.allArrs[currentArrLevel];
 
     _index.chillLevelWord.forEach(function (clw) {
@@ -11646,32 +11619,32 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
-// import Activity from "./Activity.js";
-// import * as activities from "./activities.js";
-var img = document.querySelector(".img"); // let arr1 = [activities.lvl1activity1, activities.lvl1activity2, activities.lvl1activity3, activities.lvl1activity4, activities.lvl1activity5, activities.lvl1activity6];
-
+var img = document.querySelector(".img");
 var x = 0;
 var name = document.querySelector(".name");
 var activityInfoA = document.querySelector(".activity-info-a");
-var categories = document.querySelector(".categories");
+var categories = document.querySelector(".categories"); // executed when user hits the refresh button
+// 1. checks if we have reached the end of the array, if so, shuffle the array and start again
+// 2. activity img, name + google link changed
+// 3. Choose a random font from the fonts array, repeat for all other characteristics
+// 4. Take categoires, style w/ string replace + add to innerHTML
 
 function updateCentralContainer() {
-  console.log(x); // if we have reached the end of the array, shuffle the array and start again
-
+  // 1.
   if (x >= _levelChange.currentArr.length) {
     x = 0;
     (0, _shuffle.default)(_levelChange.currentArr);
-  }
+  } // 2.
+
 
   img.style.background = "url('".concat(_levelChange.currentArr[x].media, "')");
   img.style.backgroundSize = "cover";
   name.innerHTML = _levelChange.currentArr[x].name;
   var str = name.innerHTML;
   str = str.replace(/ /g, "+");
-  activityInfoA.setAttribute("href", "https://www.google.com/search?q=".concat(str, "+near+me")); // var rand = myArray[Math.floor(Math.random() * myArray.length)];
-  // Choose a random font from the fonts array
+  activityInfoA.setAttribute("href", "https://www.google.com/search?q=".concat(str, "+near+me")); // 3.
 
-  name.style.fontFamily = fontsStyling.fonts[Math.floor(Math.random() * fontsStyling.fonts.length)];
+  name.style.fontFamily = fontsStyling.fonts[Math.floor(Math.random() * fontsStyling.fonts.length)]; // (responsive font size)
 
   if (window.innerWidth < 400) {
     name.style.fontSize = fontsStyling.vwsMobile[Math.floor(Math.random() * fontsStyling.vwsMobile.length)];
@@ -11686,7 +11659,8 @@ function updateCentralContainer() {
   name.style.letterSpacing = fontsStyling.letterSpacing[Math.floor(Math.random() * fontsStyling.letterSpacing.length)];
   name.style.lineHeight = fontsStyling.lineHeight[Math.floor(Math.random() * fontsStyling.lineHeight.length)];
   name.style.justifySelf = fontsStyling.justifyAlignSelf[Math.floor(Math.random() * fontsStyling.justifyAlignSelf.length)];
-  name.style.alignSelf = fontsStyling.justifyAlignSelf[Math.floor(Math.random() * fontsStyling.justifyAlignSelf.length)];
+  name.style.alignSelf = fontsStyling.justifyAlignSelf[Math.floor(Math.random() * fontsStyling.justifyAlignSelf.length)]; // 4.
+
   categories.innerHTML = _levelChange.currentArr[x].categories.toString().replace(/,/g, " ⸰ ");
   x++;
 }
@@ -11739,8 +11713,12 @@ exports.default = loadingScreen;
 
 var _gsap = require("gsap");
 
+// on application load
+// loading screen fades in
+// notflix sign pulsates
+// notflix slides down and fades out
+// same time, loading screen slides down + application appears
 function loadingScreen() {
-  console.log('changing screen');
   var tl = new _gsap.TimelineMax();
   tl.from(".notflix", 1.5, {
     y: "100%",
@@ -11768,23 +11746,20 @@ Object.defineProperty(exports, "__esModule", {
 exports.openNav = openNav;
 exports.closeNav = closeNav;
 
-/* Set the width of the side navigation to 250px */
+// Navigation media queries
 function openNav() {
   if (window.matchMedia("(max-width: 500px)").matches) {
-    document.getElementById("side-nav").style.width = "100%"; // document.querySelector("side-nav-p").style.width = "70vh";
-
+    document.getElementById("side-nav").style.width = "100%";
     document.querySelectorAll(".side-nav-p").forEach(function (x) {
       return x.style.width = "275px";
     });
   } else if (window.matchMedia("(max-width: 850px)").matches) {
-    document.getElementById("side-nav").style.width = "100%"; // document.querySelector("side-nav-p").style.width = "70vh";
-
+    document.getElementById("side-nav").style.width = "100%";
     document.querySelectorAll(".side-nav-p").forEach(function (x) {
       return x.style.width = "450px";
     });
   } else if (window.matchMedia("(max-width: 1100px)").matches) {
-    document.getElementById("side-nav").style.width = "45%"; // document.querySelector("side-nav-p").style.width = "70vh";
-
+    document.getElementById("side-nav").style.width = "45%";
     document.querySelectorAll(".side-nav-p").forEach(function (x) {
       return x.style.width = "300px";
     });
@@ -11794,8 +11769,7 @@ function openNav() {
       return x.style.width = "350px";
     });
   }
-}
-/* Set the width of the side navigation to 0 */
+} // Set the width of the side navigation to 0 
 
 
 function closeNav() {
@@ -11821,35 +11795,33 @@ var _nav = require("./nav.js");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var leftContainer = document.querySelector(".left-container");
-var centralContainer = document.querySelector(".central-container");
-var rightContainer = document.querySelector(".right-container");
-var categories = document.querySelector(".categories");
 var up = document.querySelectorAll(".up");
 exports.up = up;
 var down = document.querySelectorAll(".down");
 exports.down = down;
-var chillLevel = document.querySelector(".chill-level");
 var chillLevelWord = document.querySelectorAll(".chill-level-amount");
 exports.chillLevelWord = chillLevelWord;
 var emptyBoxBottom = document.querySelectorAll(".empty-box-bottom");
 exports.emptyBoxBottom = emptyBoxBottom;
 var refresh = document.querySelectorAll(".refresh");
-var tagLine = document.querySelector(".tag-line");
-var activityInfo = document.querySelector(".activity-info");
 var body = document.getElementsByTagName("BODY")[0];
 var closeBtn = document.querySelector(".closebtn");
-var openBtn = document.querySelector(".learn-more-btn"); // on page load execute the loading screen, fill the activities container with an activity and fill up the bottom boxes.
+var openBtn = document.querySelector(".learn-more-btn"); // on page load execute the loading screen, 
+// fill the activities container with an activity and fill up the bottom boxes.
 
 body.addEventListener("load", (0, _updateCentralContainer.default)());
 body.addEventListener("load", (0, _fillBottomBoxes.default)());
-body.addEventListener("load", (0, _loadingScreen.default)());
+body.addEventListener("load", (0, _loadingScreen.default)()); // navigation bar open and close
+
 openBtn.addEventListener("click", function () {
   return (0, _nav.openNav)();
 });
 closeBtn.addEventListener("click", function () {
   return (0, _nav.closeNav)();
-});
+}); // clicking refresh button updates the activity
+// clicking up arrow increases the chill level
+// clicking down arrow decreases the chill level
+
 refresh.forEach(function (refresh) {
   return refresh.addEventListener("click", _updateCentralContainer.default);
 });
@@ -11887,7 +11859,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62023" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49638" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

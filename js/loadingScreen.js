@@ -1,7 +1,12 @@
 import { TimelineMax } from "gsap";
 
+// on application load
+// loading screen fades in
+// notflix sign pulsates
+// notflix slides down and fades out
+// same time, loading screen slides down + application appears
+
 export default function loadingScreen() {
-	console.log('changing screen');
 	let tl = new TimelineMax();
 	tl.from(".notflix", 1.5, {
 		y: "100%",

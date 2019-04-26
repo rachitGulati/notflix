@@ -186,7 +186,11 @@ kidsButton.addEventListener("click", function() {
 });
 
 
-
+// when the kids/main button is clicked:
+// change the background image + button word,
+// swap the activities to the kids activities [array]
+// reset the current chill level
+// run the application
 function kidsToggle() {
     if(allArrs !== allKidsArrs) {
         allArrs = allKidsArrs;
@@ -199,11 +203,7 @@ function kidsToggle() {
         kidsButton.innerHTML = "kids";
     }
     refresh();
-
     updateCentralContainer();
 }
 
-
-
-// () => setTimeout(kidsToggle(), 5000));
 

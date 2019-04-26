@@ -1,3 +1,5 @@
+// excuted when we reach the end of the activities array + it needs refreshing
+
 export default function shuffle(array) {
 
 	var currentIndex = array.length;

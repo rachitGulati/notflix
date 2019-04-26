@@ -1,38 +1,38 @@
-// import Activity from "./Activity.js";
-// import * as activities from "./activities.js";
 import * as fontsStyling from "./fonts-styling.js";
 import shuffle from "./shuffle.js";
 import { currentArr } from "./levelChange.js";
 
 let img = document.querySelector(".img");
-// let arr1 = [activities.lvl1activity1, activities.lvl1activity2, activities.lvl1activity3, activities.lvl1activity4, activities.lvl1activity5, activities.lvl1activity6];
 let x = 0;
 let name = document.querySelector(".name");
 let activityInfoA = document.querySelector(".activity-info-a");
 let categories = document.querySelector(".categories");
 
+
+// executed when user hits the refresh button
+// 1. checks if we have reached the end of the array, if so, shuffle the array and start again
+// 2. activity img, name + google link changed
+// 3. Choose a random font from the fonts array, repeat for all other characteristics
+// 4. Take categoires, style w/ string replace + add to innerHTML
+
 export default function updateCentralContainer() {
-	console.log(x)
-	// if we have reached the end of the array, shuffle the array and start again
+	// 1.
 	if (x >= currentArr.length) {
 		x = 0;
 		shuffle(currentArr);
-		
 	}
+
+	// 2.
 	img.style.background = `url('${currentArr[x].media}')`;
 	img.style.backgroundSize = "cover";
 	name.innerHTML = currentArr[x].name;
-  
 	let str = name.innerHTML;
 	str = str.replace(/ /g, "+");
 	activityInfoA.setAttribute("href", `https://www.google.com/search?q=${str}+near+me`);
 
-
-
-	// var rand = myArray[Math.floor(Math.random() * myArray.length)];
-
-	// Choose a random font from the fonts array
+	// 3.
 	name.style.fontFamily = fontsStyling.fonts[Math.floor(Math.random() * fontsStyling.fonts.length)];
+	// (responsive font size)
 	if (window.innerWidth < 400) {
 		name.style.fontSize = fontsStyling.vwsMobile[Math.floor(Math.random() * fontsStyling.vwsMobile.length)];
 	} else {
@@ -47,6 +47,7 @@ export default function updateCentralContainer() {
 	name.style.justifySelf = fontsStyling.justifyAlignSelf[Math.floor(Math.random() * fontsStyling.justifyAlignSelf.length)];
 	name.style.alignSelf = fontsStyling.justifyAlignSelf[Math.floor(Math.random() * fontsStyling.justifyAlignSelf.length)];
 
+	// 4.
 	categories.innerHTML = currentArr[x].categories.toString().replace(/,/g, " ⸰ ");
 	x++;
 
