@@ -28,7 +28,7 @@ import boxingImage from "../imgs/boxing.jpg";
 import surfingImage from "../imgs/beach.jpg";
 import tableTennisImage from "../imgs/tabletennis.jpg";
 import gymImage from "../imgs/gym.jpg";
-import hikingImage from "../imgs/hiking.jpg";
+import hikingImage from "../imgs/hiking.jpeg";
 import basketballImage from "../imgs/basketball.jpg";
 import runningImage from "../imgs/running.jpg";
 import rockClimbingImage from "../imgs/rock-climbing.jpg";
@@ -49,7 +49,7 @@ import storyImage from "../imgs/kidsImgs/story.jpg";
 // import Image from "../imgs/kidsImgs/.jpg";
 
 // kids medium chill
-import bakingImage from "../imgs/kidsImgs/baking.jpg";
+import bakingImage from "baking.9bc41ac9.jpg";
 import exploreNatureImage from "../imgs/kidsImgs/explore-nature.jpg";
 import fancyDressImage from "../imgs/kidsImgs/fancy-dress.jpg";
 import gardeningImage from "../imgs/kidsImgs/gardening.jpg";
