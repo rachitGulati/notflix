@@ -11,7 +11,7 @@
   },
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html --out-dir public"
+    "build": "parcel build index.html --public-url /Notflix"
   },
   "repository": {
     "type": "git",
