@@ -49,6 +49,11 @@ button,
   z-index: -10;
 }
 
+/* remove zoom on double tap */ 
+.disable-dbl-tap-zoom {
+  touch-action: manipulation;
+}
+
 @import "./_topContainer";
 @import "./_mainContainer.scss";
 @import "./_bottomContainer";

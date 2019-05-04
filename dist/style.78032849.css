@@ -19,6 +19,8 @@
 .side-nav > p {
   margin: auto;
   margin-top: 100px;
+  width: 700px;
+  color: #f6f6f6;
 }
 
 .side-nav a {
@@ -43,6 +45,10 @@
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+}
+
+.side-nav span {
+  margin: none;
 }
 
 .red {
@@ -91,6 +97,12 @@ button,
 
 .changing {
   z-index: -10;
+}
+
+/* remove zoom on double tap */
+.disable-dbl-tap-zoom {
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
 }
 
 .background-image {
