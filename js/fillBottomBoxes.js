@@ -5,7 +5,7 @@ import readingImage from "../imgs/read.jpg";
 import theatreImage from "../imgs/theatre.jpg";
 import stargazingImage from "../imgs/stargazing.jpg";
 import libraryImage from "../imgs/library.jpg";
-import hikingImage from "../imgs/hiking.jpg";
+import hikingImage from "../imgs/hiking.jpeg";
 
 let bottomImgs = [meditatingImage, sleepingImage, readingImage, theatreImage, stargazingImage, libraryImage, hikingImage];
 let num;
