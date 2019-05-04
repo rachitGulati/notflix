@@ -32,123 +32,123 @@ var t=arguments[3];function e(t){return(e="function"==typeof Symbol&&"symbol"==t
 },{"./TweenLite.js":"sU2v","./TimelineLite.js":"Rh1e","./TimelineMax.js":"c5lM","./TweenMax.js":"8LSc","./CSSPlugin.js":"KE4Q","./AttrPlugin.js":"Lwey","./RoundPropsPlugin.js":"gZZs","./DirectionalRotationPlugin.js":"3BYZ","./BezierPlugin.js":"JjQl","./EasePack.js":"K9um"}],"6Fes":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=a;var e=require("gsap");function a(){var a=new e.TimelineMax;a.set(".changing",{zIndex:10}),a.from(".changing",.3,{opacity:0}).to(".changing",.3,{opacity:1}),a.from(".notflixCha",1.5,{y:"100%"},"-0.5").to(".notflixCha",1,{scale:1.2,ease:Power2.easeInOut,transformOrigin:"center",repeat:3,yoyo:!0}).to(".notflixCha",1.5,{y:"100%",opacity:0}).to(".changing",1.5,{y:"110%",ease:Power2.easeInOut},"-=1.5"),a.set(".changing",{clearProps:"all"}),a.set(".notflixCha",{clearProps:"all"})}
 },{"gsap":"f8Z0"}],"MfgB":[function(require,module,exports) {
-module.exports="/Notflix/meditate.54015a84.jpg";
+module.exports="/notflix/meditate.54015a84.jpg";
 },{}],"shqF":[function(require,module,exports) {
-module.exports="/Notflix/sleep.707f5424.jpg";
+module.exports="/notflix/sleep.707f5424.jpg";
 },{}],"+2G0":[function(require,module,exports) {
-module.exports="/Notflix/read.84c07662.jpg";
+module.exports="/notflix/read.84c07662.jpg";
 },{}],"bRaB":[function(require,module,exports) {
-module.exports="/Notflix/theatre.169508d9.jpg";
+module.exports="/notflix/theatre.169508d9.jpg";
 },{}],"SYso":[function(require,module,exports) {
-module.exports="/Notflix/stargazing.0d722939.jpg";
+module.exports="/notflix/stargazing.0d722939.jpg";
 },{}],"bhUb":[function(require,module,exports) {
-module.exports="/Notflix/library.6e82ffba.jpg";
+module.exports="/notflix/library.6e82ffba.jpg";
 },{}],"J+4c":[function(require,module,exports) {
-module.exports="/Notflix/painting.db84cfe3.jpg";
+module.exports="/notflix/painting.db84cfe3.jpg";
 },{}],"2xD7":[function(require,module,exports) {
-module.exports="/Notflix/drawing.98405cdc.jpg";
+module.exports="/notflix/drawing.98405cdc.jpg";
 },{}],"8Lbn":[function(require,module,exports) {
-module.exports="/Notflix/outdoor-concert.a72a83e4.jpg";
+module.exports="/notflix/outdoor-concert.a72a83e4.jpg";
 },{}],"18Jv":[function(require,module,exports) {
-module.exports="/Notflix/plan-a-trip.54ca4ae1.jpg";
+module.exports="/notflix/plan-a-trip.54ca4ae1.jpg";
 },{}],"rCYt":[function(require,module,exports) {
-module.exports="/Notflix/golf.39c3d023.jpg";
+module.exports="/notflix/golf.39c3d023.jpg";
 },{}],"Zymv":[function(require,module,exports) {
-module.exports="/Notflix/botanical-garden.90026f5a.jpg";
+module.exports="/notflix/botanical-garden.90026f5a.jpg";
 },{}],"qeKr":[function(require,module,exports) {
-module.exports="/Notflix/exhibition-opening.41afeaa4.jpg";
+module.exports="/notflix/exhibition-opening.41afeaa4.jpg";
 },{}],"uk/Y":[function(require,module,exports) {
-module.exports="/Notflix/art-fair.3db28ab5.jpg";
+module.exports="/notflix/art-fair.3db28ab5.jpg";
 },{}],"f9kj":[function(require,module,exports) {
-module.exports="/Notflix/art-class.898c20d2.jpg";
+module.exports="/notflix/art-class.898c20d2.jpg";
 },{}],"w8fg":[function(require,module,exports) {
-module.exports="/Notflix/museum-late.fa004b70.jpg";
+module.exports="/notflix/museum-late.fa004b70.jpg";
 },{}],"9WNi":[function(require,module,exports) {
-module.exports="/Notflix/museum.fd427a2f.jpg";
+module.exports="/notflix/museum.fd427a2f.jpg";
 },{}],"WIWx":[function(require,module,exports) {
-module.exports="/Notflix/camping.6fbfe09b.jpg";
+module.exports="/notflix/camping.6fbfe09b.jpg";
 },{}],"XzW+":[function(require,module,exports) {
-module.exports="/Notflix/boxing.fdee94df.jpg";
+module.exports="/notflix/boxing.fdee94df.jpg";
 },{}],"2la2":[function(require,module,exports) {
-module.exports="/Notflix/beach.5b39cedb.jpg";
+module.exports="/notflix/beach.5b39cedb.jpg";
 },{}],"PUYM":[function(require,module,exports) {
-module.exports="/Notflix/tabletennis.eea1d0da.jpg";
+module.exports="/notflix/tabletennis.eea1d0da.jpg";
 },{}],"owsk":[function(require,module,exports) {
-module.exports="/Notflix/gym.f4b56278.jpg";
+module.exports="/notflix/gym.f4b56278.jpg";
 },{}],"Tu5w":[function(require,module,exports) {
-module.exports="/Notflix/hiking.86da964a.jpg";
+module.exports="/notflix/hiking.86da964a.jpg";
 },{}],"3uWB":[function(require,module,exports) {
-module.exports="/Notflix/basketball.f51b4fcd.jpg";
+module.exports="/notflix/basketball.f51b4fcd.jpg";
 },{}],"n0Bx":[function(require,module,exports) {
-module.exports="/Notflix/running.82c5bc4b.jpg";
+module.exports="/notflix/running.82c5bc4b.jpg";
 },{}],"ueVb":[function(require,module,exports) {
-module.exports="/Notflix/rock-climbing.78033e09.jpg";
+module.exports="/notflix/rock-climbing.78033e09.jpg";
 },{}],"HN0Y":[function(require,module,exports) {
-module.exports="/Notflix/road-trip.e3475b13.jpg";
+module.exports="/notflix/road-trip.e3475b13.jpg";
 },{}],"V+re":[function(require,module,exports) {
-module.exports="/Notflix/canoeing.8448e136.jpg";
+module.exports="/notflix/canoeing.8448e136.jpg";
 },{}],"dwQg":[function(require,module,exports) {
-module.exports="/Notflix/indoor-climbing.7c79736a.jpg";
+module.exports="/notflix/indoor-climbing.7c79736a.jpg";
 },{}],"SRTV":[function(require,module,exports) {
-module.exports="/Notflix/bouldering.21d196fd.jpg";
+module.exports="/notflix/bouldering.21d196fd.jpg";
 },{}],"E7fS":[function(require,module,exports) {
-module.exports="/Notflix/tennis.05fac297.jpg";
+module.exports="/notflix/tennis.05fac297.jpg";
 },{}],"2NLU":[function(require,module,exports) {
-module.exports="/Notflix/drawing.633c25a7.jpg";
+module.exports="/notflix/drawing.633c25a7.jpg";
 },{}],"k8Hs":[function(require,module,exports) {
-module.exports="/Notflix/food.7b2eea4e.jpg";
+module.exports="/notflix/food.7b2eea4e.jpg";
 },{}],"tyGT":[function(require,module,exports) {
-module.exports="/Notflix/guitar.868a4349.jpg";
+module.exports="/notflix/guitar.868a4349.jpg";
 },{}],"UCJp":[function(require,module,exports) {
-module.exports="/Notflix/hairstyle.9f557414.jpg";
+module.exports="/notflix/hairstyle.9f557414.jpg";
 },{}],"xq53":[function(require,module,exports) {
-module.exports="/Notflix/painting.193c5d4f.jpg";
+module.exports="/notflix/painting.193c5d4f.jpg";
 },{}],"ekE9":[function(require,module,exports) {
-module.exports="/Notflix/photography.82efe5db.jpg";
+module.exports="/notflix/photography.82efe5db.jpg";
 },{}],"4j6U":[function(require,module,exports) {
-module.exports="/Notflix/story.ad2b8678.jpg";
+module.exports="/notflix/story.ad2b8678.jpg";
 },{}],"ByB+":[function(require,module,exports) {
-module.exports="/Notflix/baking.9bc41ac9.jpg";
+module.exports="/notflix/baking.9bc41ac9.jpg";
 },{}],"2dg1":[function(require,module,exports) {
-module.exports="/Notflix/explore-nature.37fc4b85.jpg";
+module.exports="/notflix/explore-nature.37fc4b85.jpg";
 },{}],"+LsO":[function(require,module,exports) {
-module.exports="/Notflix/fancy-dress.e5792f12.jpg";
+module.exports="/notflix/fancy-dress.e5792f12.jpg";
 },{}],"+4xI":[function(require,module,exports) {
-module.exports="/Notflix/gardening.a6524914.jpg";
+module.exports="/notflix/gardening.a6524914.jpg";
 },{}],"/oQh":[function(require,module,exports) {
-module.exports="/Notflix/pet.cf9bcebe.jpg";
+module.exports="/notflix/pet.cf9bcebe.jpg";
 },{}],"ptf0":[function(require,module,exports) {
-module.exports="/Notflix/science-experiment.f6e7f0c8.jpg";
+module.exports="/notflix/science-experiment.f6e7f0c8.jpg";
 },{}],"caIy":[function(require,module,exports) {
-module.exports="/Notflix/super-power.d4060f5c.jpg";
+module.exports="/notflix/super-power.d4060f5c.jpg";
 },{}],"TVTR":[function(require,module,exports) {
-module.exports="/Notflix/adventure-park.eb2ecb82.jpg";
+module.exports="/notflix/adventure-park.eb2ecb82.jpg";
 },{}],"/InT":[function(require,module,exports) {
-module.exports="/Notflix/beach-adventure.6cb1a520.jpg";
+module.exports="/notflix/beach-adventure.6cb1a520.jpg";
 },{}],"LpL8":[function(require,module,exports) {
-module.exports="/Notflix/beach-sports.e1ceb0f7.jpg";
+module.exports="/notflix/beach-sports.e1ceb0f7.jpg";
 },{}],"KEuZ":[function(require,module,exports) {
-module.exports="/Notflix/bike-adventure.b765bf28.jpg";
+module.exports="/notflix/bike-adventure.b765bf28.jpg";
 },{}],"MTD1":[function(require,module,exports) {
-module.exports="/Notflix/bouldering.901454b2.jpg";
+module.exports="/notflix/bouldering.901454b2.jpg";
 },{}],"KK40":[function(require,module,exports) {
-module.exports="/Notflix/dance-class.9c29bc3f.jpg";
+module.exports="/notflix/dance-class.9c29bc3f.jpg";
 },{}],"uYwh":[function(require,module,exports) {
-module.exports="/Notflix/football.8a9ee297.jpg";
+module.exports="/notflix/football.8a9ee297.jpg";
 },{}],"EKV+":[function(require,module,exports) {
-module.exports="/Notflix/ice-hockey.e48becec.jpg";
+module.exports="/notflix/ice-hockey.e48becec.jpg";
 },{}],"WKVJ":[function(require,module,exports) {
-module.exports="/Notflix/ice-skating.b2e9e38c.jpg";
+module.exports="/notflix/ice-skating.b2e9e38c.jpg";
 },{}],"kp5I":[function(require,module,exports) {
-module.exports="/Notflix/outdoor-pool.7b848434.jpg";
+module.exports="/notflix/outdoor-pool.7b848434.jpg";
 },{}],"egOF":[function(require,module,exports) {
-module.exports="/Notflix/skateboarding.5e526416.jpg";
+module.exports="/notflix/skateboarding.5e526416.jpg";
 },{}],"0EBM":[function(require,module,exports) {
-module.exports="/Notflix/swimming.2026509a.jpg";
+module.exports="/notflix/swimming.2026509a.jpg";
 },{}],"jNed":[function(require,module,exports) {
-module.exports="/Notflix/kids-bg.29e1c432.jpg";
+module.exports="/notflix/kids-bg.29e1c432.jpg";
 },{}],"NE13":[function(require,module,exports) {
-module.exports="/Notflix/bg-image.d8943b39.jpg";
+module.exports="/notflix/bg-image.d8943b39.jpg";
 },{}],"3OOb":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.allKidsArrs=exports.kidsArr3=exports.kidsArr2=exports.kidsArr1=exports.allArrs=exports.chillLevelArr=exports.arr3=exports.arr2=exports.arr1=exports.kidsLvl1activity12=exports.kidsLvl1activity11=exports.kidsLvl1activity10=exports.kidsLvl1activity9=exports.kidsLvl1activity8=exports.kidsLvl1activity7=exports.kidsLvl1activity6=exports.kidsLvl1activity5=exports.kidsLvl1activity4=exports.kidsLvl1activity3=exports.kidsLvl1activity2=exports.kidsLvl1activity1=exports.kidsLvl2activity7=exports.kidsLvl2activity6=exports.kidsLvl2activity5=exports.kidsLvl2activity4=exports.kidsLvl2activity3=exports.kidsLvl2activity2=exports.kidsLvl2activity1=exports.kidsLvl3activity7=exports.kidsLvl3activity6=exports.kidsLvl3activity5=exports.kidsLvl3activity4=exports.kidsLvl3activity3=exports.kidsLvl3activity2=exports.kidsLvl3activity1=exports.lvl1activity13=exports.lvl1activity12=exports.lvl1activity11=exports.lvl1activity10=exports.lvl1activity9=exports.lvl1activity8=exports.lvl1activity7=exports.lvl1activity6=exports.lvl1activity5=exports.lvl1activity4=exports.lvl1activity3=exports.lvl1activity2=exports.lvl1activity1=exports.lvl2activity10=exports.lvl2activity9=exports.lvl2activity8=exports.lvl2activity7=exports.lvl2activity6=exports.lvl2activity5=exports.lvl2activity4=exports.lvl2activity3=exports.lvl2activity2=exports.lvl2activity1=exports.lvl3activity8=exports.lvl3activity7=exports.lvl3activity6=exports.lvl3activity5=exports.lvl3activity4=exports.lvl3activity3=exports.lvl3activity2=exports.lvl3activity1=void 0;var e=ge(require("./Activity.js")),t=ge(require("./changingScreen.js")),r=ge(require("../imgs/meditate.jpg")),i=ge(require("../imgs/sleep.jpg")),a=ge(require("../imgs/read.jpg")),l=ge(require("../imgs/theatre.jpg")),o=ge(require("../imgs/stargazing.jpg")),s=ge(require("../imgs/library.jpg")),d=ge(require("../imgs/painting.jpg")),g=ge(require("../imgs/drawing.jpg")),u=ge(require("../imgs/outdoor-concert.jpg")),v=ge(require("../imgs/plan-a-trip.jpg")),c=ge(require("../imgs/golf.jpg")),p=ge(require("../imgs/botanical-garden.jpg")),n=ge(require("../imgs/exhibition-opening.jpg")),k=ge(require("../imgs/art-fair.jpg")),f=ge(require("../imgs/art-class.jpg")),x=ge(require("../imgs/museum-late.jpg")),y=ge(require("../imgs/museum.jpg")),m=ge(require("../imgs/camping.jpg")),w=ge(require("../imgs/boxing.jpg")),q=ge(require("../imgs/beach.jpg")),j=ge(require("../imgs/tabletennis.jpg")),L=ge(require("../imgs/gym.jpg")),b=ge(require("../imgs/hiking.jpg")),I=ge(require("../imgs/basketball.jpg")),h=ge(require("../imgs/running.jpg")),A=ge(require("../imgs/rock-climbing.jpg")),M=ge(require("../imgs/road-trip.jpg")),H=ge(require("../imgs/canoeing.jpg")),_=ge(require("../imgs/indoor-climbing.jpg")),C=ge(require("../imgs/bouldering.jpg")),E=ge(require("../imgs/tennis.jpg")),S=ge(require("../imgs/kidsImgs/drawing.jpg")),T=ge(require("../imgs/kidsImgs/food.jpg")),z=ge(require("../imgs/kidsImgs/guitar.jpg")),K=ge(require("../imgs/kidsImgs/hairstyle.jpg")),O=ge(require("../imgs/kidsImgs/painting.jpg")),D=ge(require("../imgs/kidsImgs/photography.jpg")),G=ge(require("../imgs/kidsImgs/story.jpg")),P=ge(require("../imgs/kidsImgs/baking.jpg")),U=ge(require("../imgs/kidsImgs/explore-nature.jpg")),W=ge(require("../imgs/kidsImgs/fancy-dress.jpg")),B=ge(require("../imgs/kidsImgs/gardening.jpg")),F=ge(require("../imgs/kidsImgs/pet.jpg")),J=ge(require("../imgs/kidsImgs/science-experiment.jpg")),N=ge(require("../imgs/kidsImgs/super-power.jpg")),Q=ge(require("../imgs/kidsImgs/adventure-park.jpg")),R=ge(require("../imgs/kidsImgs/beach-adventure.jpg")),V=ge(require("../imgs/kidsImgs/beach-sports.jpg")),X=ge(require("../imgs/kidsImgs/bike-adventure.jpg")),Y=ge(require("../imgs/kidsImgs/bouldering.jpg")),Z=ge(require("../imgs/kidsImgs/dance-class.jpg")),$=ge(require("../imgs/kidsImgs/football.jpg")),ee=ge(require("../imgs/kidsImgs/ice-hockey.jpg")),te=ge(require("../imgs/kidsImgs/ice-skating.jpg")),re=ge(require("../imgs/kidsImgs/outdoor-pool.jpg")),ie=ge(require("../imgs/kidsImgs/skateboarding.jpg")),ae=ge(require("../imgs/kidsImgs/swimming.jpg")),le=ge(require("../imgs/kidsImgs/kids-bg.jpg")),oe=ge(require("./updateCentralContainer.js")),se=require("./levelChange.js"),de=ge(require("../imgs/bg-image.jpg"));function ge(e){return e&&e.__esModule?e:{default:e}}var ue=new e.default("meditating",r.default,"google.co.uk/related",["self care"]);exports.lvl3activity1=ue;var ve=new e.default("sleeping",i.default,"google.co.uk/related",["pillow sports","self care"]);exports.lvl3activity2=ve;var ce=new e.default("reading",a.default,"google.co.uk/related",["educational"]);exports.lvl3activity3=ce;var pe=new e.default("theatre",l.default,"google.co.uk/related",["indoors","educational"]);exports.lvl3activity4=pe;var ne=new e.default("stargazing",o.default,"google.co.uk/related",["outdoors","educational"]);exports.lvl3activity5=ne;var ke=new e.default("library",s.default,"google.co.uk/related",["educational","indoors"]);exports.lvl3activity6=ke;var fe=new e.default("painting",d.default,"google.co.uk/related",["educational","self care"]);exports.lvl3activity7=fe;var xe=new e.default("drawing",g.default,"google.co.uk/related",["educational","self care"]);exports.lvl3activity8=xe;var ye=new e.default("outdoor concert",u.default,"google.co.uk/related",["outdoors"]);exports.lvl2activity1=ye;var me=new e.default("plan a trip",v.default,"google.co.uk/related",[]);exports.lvl2activity2=me;var we=new e.default("golf",c.default,"google.co.uk/related",["sports","outdoors"]);exports.lvl2activity3=we;var qe=new e.default("botanical garden",p.default,"google.co.uk/related",["outdoors","self care","educational"]);exports.lvl2activity4=qe;var je=new e.default("exhibition opening",n.default,"google.co.uk/related",["creative","social"]);exports.lvl2activity5=je;var Le=new e.default("art fair",k.default,"google.co.uk/related",["creative"]);exports.lvl2activity6=Le;var be=new e.default("art class",f.default,"google.co.uk/related",["creative","educational"]);exports.lvl2activity7=be;var Ie=new e.default("museum late",x.default,"google.co.uk/related",["educational"]);exports.lvl2activity8=Ie;var he=new e.default("museum",y.default,"google.co.uk/related",["educational"]);exports.lvl2activity9=he;var Ae=new e.default("camping",m.default,"google.co.uk/related",["outdoors"]);exports.lvl2activity10=Ae;var Me=new e.default("boxing",w.default,"google.co.uk/related",["sports"]);exports.lvl1activity1=Me;var He=new e.default("surfing",q.default,"google.co.uk/related",["sports","outdoors"]);exports.lvl1activity2=He;var _e=new e.default("table tennis",j.default,"google.co.uk/related",["sports","social"]);exports.lvl1activity3=_e;var Ce=new e.default("gym",L.default,"google.co.uk/related",["sports","self care"]);exports.lvl1activity4=Ce;var Ee=new e.default("hiking",b.default,"google.co.uk/related",["sports","sports"]);exports.lvl1activity5=Ee;var Se=new e.default("basketball",I.default,"google.co.uk/related",["sports"]);exports.lvl1activity6=Se;var Te=new e.default("running",h.default,"google.co.uk/related",["sports"]);exports.lvl1activity7=Te;var ze=new e.default("rock climbing",A.default,"google.co.uk/related",["sports","outdoors"]);exports.lvl1activity8=ze;var Ke=new e.default("road trip",M.default,"google.co.uk/related",["outdoors","educational"]);exports.lvl1activity9=Ke;var Oe=new e.default("canoeing",H.default,"google.co.uk/related",["sports","outdoors"]);exports.lvl1activity10=Oe;var De=new e.default("indoor climbing",_.default,"google.co.uk/related",["sports","indoors"]);exports.lvl1activity11=De;var Ge=new e.default("bouldering",C.default,"google.co.uk/related",["sports","indoors"]);exports.lvl1activity12=Ge;var Pe=new e.default("tennis",E.default,"google.co.uk/related",["sports"]);exports.lvl1activity13=Pe;var Ue=new e.default("drawing",S.default,"google.co.uk/related",["creative","educational"]);exports.kidsLvl3activity1=Ue;var We=new e.default("try new food",T.default,"google.co.uk/related",["self care"]);exports.kidsLvl3activity2=We;var Be=new e.default("guitar",z.default,"google.co.uk/related",["music","educational"]);exports.kidsLvl3activity3=Be;var Fe=new e.default("new hairstyle",K.default,"google.co.uk/related",["self care"]);exports.kidsLvl3activity4=Fe;var Je=new e.default("painting",O.default,"google.co.uk/related",["creative"]);exports.kidsLvl3activity5=Je;var Ne=new e.default("photography",D.default,"google.co.uk/related",["creative","educational"]);exports.kidsLvl3activity6=Ne;var Qe=new e.default("read a story",G.default,"google.co.uk/related",["creative","educational"]);exports.kidsLvl3activity7=Qe;var Re=new e.default("baking",P.default,"google.co.uk/related",["educational","indoors"]);exports.kidsLvl2activity1=Re;var Ve=new e.default("explore nature",U.default,"google.co.uk/related",["outdoors","self care"]);exports.kidsLvl2activity2=Ve;var Xe=new e.default("fancy dress",W.default,"google.co.uk/related",["creative"]);exports.kidsLvl2activity3=Xe;var Ye=new e.default("gardening",B.default,"google.co.uk/related",["outdoors","self care"]);exports.kidsLvl2activity4=Ye;var Ze=new e.default("play with a pet",F.default,"google.co.uk/related",[]);exports.kidsLvl2activity5=Ze;var $e=new e.default("science experiment",J.default,"google.co.uk/related",["educational"]);exports.kidsLvl2activity6=$e;var et=new e.default("find your superpower",N.default,"google.co.uk/related",["creative"]);exports.kidsLvl2activity7=et;var tt=new e.default("adventure park",Q.default,"google.co.uk/related",["outdoors"]);exports.kidsLvl1activity1=tt;var rt=new e.default("beach adventure",R.default,"google.co.uk/related",["outdoors"]);exports.kidsLvl1activity2=rt;var it=new e.default("beach sports",V.default,"google.co.uk/related",["outdoors","sports"]);exports.kidsLvl1activity3=it;var at=new e.default("bike adventure",X.default,"google.co.uk/related",["outdoors","sports"]);exports.kidsLvl1activity4=at;var lt=new e.default("bouldering",Y.default,"google.co.uk/related",["sports"]);exports.kidsLvl1activity5=lt;var ot=new e.default("dance class",Z.default,"google.co.uk/related",["sports","social"]);exports.kidsLvl1activity6=ot;var st=new e.default("football",$.default,"google.co.uk/related",["sports","outdoors"]);exports.kidsLvl1activity7=st;var dt=new e.default("ice hockey",ee.default,"google.co.uk/related",["sports"]);exports.kidsLvl1activity8=dt;var gt=new e.default("ice skating",te.default,"google.co.uk/related",["sports"]);exports.kidsLvl1activity9=gt;var ut=new e.default("outdoor pool",re.default,"google.co.uk/related",["outdoors","sports"]);exports.kidsLvl1activity10=ut;var vt=new e.default("skateboarding",ie.default,"google.co.uk/related",["sports"]);exports.kidsLvl1activity11=vt;var ct=new e.default("swimming",ae.default,"google.co.uk/related",["sports"]);exports.kidsLvl1activity12=ct;var pt=[Me,He,_e,Ce,Ee,Se,Te,ze,Ke,Oe,De,Ge,Pe];exports.arr1=pt;var nt=[ye,me,we,qe,je,Le,be,Ie,he,Ae];exports.arr2=nt;var kt=[ue,ve,ce,pe,ne,ke,fe,xe];exports.arr3=kt;var ft=["LOW","MEDIUM","HIGH"];exports.chillLevelArr=ft;var xt=[pt,nt,kt];exports.allArrs=xt;var yt=[tt,rt,it,at,lt,ot,st,dt,gt,ut,vt,ct];exports.kidsArr1=yt;var mt=[Re,Ve,Xe,Ye,Ze,$e,et];exports.kidsArr2=mt;var wt=[Ue,We,Be,Fe,Je,Ne,Qe];exports.kidsArr3=wt;var qt=[yt,mt,wt];exports.allKidsArrs=qt;var jt=document.querySelector(".background-image"),Lt=document.querySelector(".kids");function bt(){xt!==qt?(exports.allArrs=xt=qt,jt.style.backgroundImage="url(".concat(le.default,")"),Lt.innerHTML="main"):(exports.allArrs=xt=[pt,nt,kt],jt.style.backgroundImage="url(".concat(de.default,")"),Lt.innerHTML="kids"),(0,se.refresh)(),(0,oe.default)()}Lt.addEventListener("click",t.default),Lt.addEventListener("click",function(){setTimeout(bt,1e3)});
 },{"./Activity.js":"gXz2","./changingScreen.js":"6Fes","../imgs/meditate.jpg":"MfgB","../imgs/sleep.jpg":"shqF","../imgs/read.jpg":"+2G0","../imgs/theatre.jpg":"bRaB","../imgs/stargazing.jpg":"SYso","../imgs/library.jpg":"bhUb","../imgs/painting.jpg":"J+4c","../imgs/drawing.jpg":"2xD7","../imgs/outdoor-concert.jpg":"8Lbn","../imgs/plan-a-trip.jpg":"18Jv","../imgs/golf.jpg":"rCYt","../imgs/botanical-garden.jpg":"Zymv","../imgs/exhibition-opening.jpg":"qeKr","../imgs/art-fair.jpg":"uk/Y","../imgs/art-class.jpg":"f9kj","../imgs/museum-late.jpg":"w8fg","../imgs/museum.jpg":"9WNi","../imgs/camping.jpg":"WIWx","../imgs/boxing.jpg":"XzW+","../imgs/beach.jpg":"2la2","../imgs/tabletennis.jpg":"PUYM","../imgs/gym.jpg":"owsk","../imgs/hiking.jpg":"Tu5w","../imgs/basketball.jpg":"3uWB","../imgs/running.jpg":"n0Bx","../imgs/rock-climbing.jpg":"ueVb","../imgs/road-trip.jpg":"HN0Y","../imgs/canoeing.jpg":"V+re","../imgs/indoor-climbing.jpg":"dwQg","../imgs/bouldering.jpg":"SRTV","../imgs/tennis.jpg":"E7fS","../imgs/kidsImgs/drawing.jpg":"2NLU","../imgs/kidsImgs/food.jpg":"k8Hs","../imgs/kidsImgs/guitar.jpg":"tyGT","../imgs/kidsImgs/hairstyle.jpg":"UCJp","../imgs/kidsImgs/painting.jpg":"xq53","../imgs/kidsImgs/photography.jpg":"ekE9","../imgs/kidsImgs/story.jpg":"4j6U","../imgs/kidsImgs/baking.jpg":"ByB+","../imgs/kidsImgs/explore-nature.jpg":"2dg1","../imgs/kidsImgs/fancy-dress.jpg":"+LsO","../imgs/kidsImgs/gardening.jpg":"+4xI","../imgs/kidsImgs/pet.jpg":"/oQh","../imgs/kidsImgs/science-experiment.jpg":"ptf0","../imgs/kidsImgs/super-power.jpg":"caIy","../imgs/kidsImgs/adventure-park.jpg":"TVTR","../imgs/kidsImgs/beach-adventure.jpg":"/InT","../imgs/kidsImgs/beach-sports.jpg":"LpL8","../imgs/kidsImgs/bike-adventure.jpg":"KEuZ","../imgs/kidsImgs/bouldering.jpg":"MTD1","../imgs/kidsImgs/dance-class.jpg":"KK40","../imgs/kidsImgs/football.jpg":"uYwh","../imgs/kidsImgs/ice-hockey.jpg":"EKV+","../imgs/kidsImgs/ice-skating.jpg":"WKVJ","../imgs/kidsImgs/outdoor-pool.jpg":"kp5I","../imgs/kidsImgs/skateboarding.jpg":"egOF","../imgs/kidsImgs/swimming.jpg":"0EBM","../imgs/kidsImgs/kids-bg.jpg":"jNed","./updateCentralContainer.js":"/YJZ","./levelChange.js":"Nuwy","../imgs/bg-image.jpg":"NE13"}],"Nuwy":[function(require,module,exports) {
@@ -164,4 +164,4 @@ module.exports="/Notflix/bg-image.d8943b39.jpg";
 },{}],"QvaY":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.emptyBoxBottom=exports.chillLevelWord=exports.down=exports.up=void 0;var e=l(require("./updateCentralContainer.js")),t=require("./levelChange.js"),r=l(require("./fillBottomBoxes.js")),o=l(require("./loadingScreen.js")),n=require("./nav.js");function l(e){return e&&e.__esModule?e:{default:e}}var u=document.querySelectorAll(".up");exports.up=u;var d=document.querySelectorAll(".down");exports.down=d;var c=document.querySelectorAll(".chill-level-amount");exports.chillLevelWord=c;var a=document.querySelectorAll(".empty-box-bottom");exports.emptyBoxBottom=a;var i=document.querySelectorAll(".refresh"),s=document.getElementsByTagName("BODY")[0],v=document.querySelector(".closebtn"),m=document.querySelector(".learn-more-btn");s.addEventListener("load",(0,e.default)()),s.addEventListener("load",(0,r.default)()),s.addEventListener("load",(0,o.default)()),m.addEventListener("click",function(){return(0,n.openNav)()}),v.addEventListener("click",function(){return(0,n.closeNav)()}),i.forEach(function(t){return t.addEventListener("click",e.default)}),u.forEach(function(e){return e.addEventListener("click",t.levelUp)}),d.forEach(function(e){return e.addEventListener("click",t.levelDown)});
 },{"./updateCentralContainer.js":"/YJZ","./levelChange.js":"Nuwy","./fillBottomBoxes.js":"lVyI","./loadingScreen.js":"df2y","./nav.js":"Axxy"}]},{},["QvaY"], null)
-//# sourceMappingURL=/Notflix/js.3ca35a06.js.map
+//# sourceMappingURL=/notflix/js.3ca35a06.js.map
