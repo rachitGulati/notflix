@@ -2,7 +2,8 @@ import Activity from "./Activity.js";
 import changingScreen from "./changingScreen.js";
 
 // high chill
-import meditatingImage from "../imgs/meditate.jpg";
+var meditatingImage = require('../imgs/meditate.jpg');
+// import meditatingImage from "../imgs/meditate.jpg";
 import sleepingImage from "../imgs/sleep.jpg";
 import readingImage from "../imgs/read.jpg";
 import theatreImage from "../imgs/theatre.jpg";
