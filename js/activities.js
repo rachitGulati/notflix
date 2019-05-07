@@ -2,41 +2,41 @@ import Activity from "./Activity.js";
 import changingScreen from "./changingScreen.js";
 
 // high chill
-import meditatingImage from "../imgs/meditate.jpg";
-import sleepingImage from "../imgs/sleep.jpg";
-import readingImage from "../imgs/read.jpg";
-import theatreImage from "../imgs/theatre.jpg";
-import stargazingImage from "../imgs/stargazing.jpg";
-import libraryImage from "../imgs/library.jpg";
-import paintingImage from "../imgs/painting.jpg";
-import drawingImage from "../imgs/drawing.jpg";
+import meditatingImage from "../imgs/mainImgs/meditate.jpg";
+import sleepingImage from "../imgs/mainImgs/sleep.jpg";
+import readingImage from "../imgs/mainImgs/read.jpg";
+import theatreImage from "../imgs/mainImgs/theatre.jpg";
+import stargazingImage from "../imgs/mainImgs/stargazing.jpg";
+import libraryImage from "../imgs/mainImgs/library.jpg";
+import paintingImage from "../imgs/mainImgs/painting.jpg";
+import drawingImage from "../imgs/mainImgs/drawing.jpg";
 
 // medium chill
-import outdoorConcertImage from "../imgs/outdoor-concert.jpg";
-import planATripImage from "../imgs/plan-a-trip.jpg";
-import golfImage from "../imgs/golf.jpg";
-import botanicalGardenImage from "../imgs/botanical-garden.jpg";
-import exhibitionOpeningImage from "../imgs/exhibition-opening.jpg";
-import artFairImage from "../imgs/art-fair.jpg";
-import artClassImage from "../imgs/art-class.jpg";
-import museumLateImage from "../imgs/museum-late.jpg";
-import museumImage from "../imgs/museum.jpg";
-import campingImage from "../imgs/camping.jpg";
+import outdoorConcertImage from "../imgs/mainImgs/outdoor-concert.jpg";
+import planATripImage from "../imgs/mainImgs/plan-a-trip.jpg";
+import golfImage from "../imgs/mainImgs/golf.jpg";
+import botanicalGardenImage from "../imgs/mainImgs/botanical-garden.jpg";
+import exhibitionOpeningImage from "../imgs/mainImgs/exhibition-opening.jpg";
+import artFairImage from "../imgs/mainImgs/art-fair.jpg";
+import artClassImage from "../imgs/mainImgs/art-class.jpg";
+import museumLateImage from "../imgs/mainImgs/museum-late.jpg";
+import museumImage from "../imgs/mainImgs/museum.jpg";
+import campingImage from "../imgs/mainImgs/camping.jpg";
 
 // low chill
-import boxingImage from "../imgs/boxing.jpg";
-import surfingImage from "../imgs/beach.jpg";
-import tableTennisImage from "../imgs/tabletennis.jpg";
-import gymImage from "../imgs/gym.jpg";
-import hikingImage from "../imgs/hiking.jpeg";
-import basketballImage from "../imgs/basketball.jpg";
-import runningImage from "../imgs/running.jpg";
-import rockClimbingImage from "../imgs/rock-climbing.jpg";
-import roadTripImage from "../imgs/road-trip.jpg";
-import canoeingImage from "../imgs/canoeing.jpg";
-import indoorClimbingImage from "../imgs/indoor-climbing.jpg";
-import boulderingImage from "../imgs/bouldering.jpg";
-import tennisImage from "../imgs/tennis.jpg";
+import boxingImage from "../imgs/mainImgs/boxing.jpg";
+import surfingImage from "../imgs/mainImgs/beach.jpg";
+import tableTennisImage from "../imgs/mainImgs/tabletennis.jpg";
+import gymImage from "../imgs/mainImgs/gym.jpg";
+import hikingImage from "../imgs/mainImgs/hiking.jpeg";
+import basketballImage from "../imgs/mainImgs/basketball.jpg";
+import runningImage from "../imgs/mainImgs/running.jpg";
+import rockClimbingImage from "../imgs/mainImgs/rock-climbing.jpg";
+import roadTripImage from "../imgs/mainImgs/road-trip.jpg";
+import canoeingImage from "../imgs/mainImgs/canoeing.jpg";
+import indoorClimbingImage from "../imgs/mainImgs/indoor-climbing.jpg";
+import boulderingImage from "../imgs/mainImgs/bouldering.jpg";
+import tennisImage from "../imgs/mainImgs/tennis.jpg";
 
 // kids high chill
 import kidsDrawingImage from "../imgs/kidsImgs/drawing.jpg";
