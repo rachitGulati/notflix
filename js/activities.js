@@ -80,7 +80,6 @@ import kidsBgImage from "../imgs/kidsImgs/kids-bg.jpg"
 
 import updateCentralContainer from "./updateCentralContainer.js";
 import { refresh } from "./levelChange.js";
-
 // background image
 import bgImage from "../imgs/bg-image.jpg";
 
