@@ -1,11 +1,11 @@
 import { emptyBoxBottom } from "./index.js";
-import meditatingImage from "../imgs/meditate.jpg";
-import sleepingImage from "../imgs/sleep.jpg";
-import readingImage from "../imgs/read.jpg";
-import theatreImage from "../imgs/theatre.jpg";
-import stargazingImage from "../imgs/stargazing.jpg";
-import libraryImage from "../imgs/library.jpg";
-import hikingImage from "../imgs/hiking.jpeg";
+import meditatingImage from "../imgs/mainImgs/meditate.jpg";
+import sleepingImage from "../imgs/mainImgs/sleep.jpg";
+import readingImage from "../imgs/mainImgs/read.jpg";
+import theatreImage from "../imgs/mainImgs/theatre.jpg";
+import stargazingImage from "../imgs/mainImgs/stargazing.jpg";
+import libraryImage from "../imgs/mainImgs/library.jpg";
+import hikingImage from "../imgs/mainImgs/hiking.jpeg";
 
 let bottomImgs = [meditatingImage, sleepingImage, readingImage, theatreImage, stargazingImage, libraryImage, hikingImage];
 let num;
