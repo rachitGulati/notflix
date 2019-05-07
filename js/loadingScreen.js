@@ -1,4 +1,4 @@
-import { TimelineMax } from "./gsap";
+import { TimelineMax } from "gsap";
 
 // on application load
 // loading screen fades in
