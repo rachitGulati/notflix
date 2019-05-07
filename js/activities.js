@@ -49,7 +49,7 @@ import storyImage from "../imgs/kidsImgs/story.jpg";
 // import Image from "../imgs/kidsImgs/.jpg";
 
 // kids medium chill
-import bakingImage from "baking.9bc41ac9.jpg";
+import bakingImage from "../imgs/kidsImgs/baking-image.jpg";
 import exploreNatureImage from "../imgs/kidsImgs/explore-nature.jpg";
 import fancyDressImage from "../imgs/kidsImgs/fancy-dress.jpg";
 import gardeningImage from "../imgs/kidsImgs/gardening.jpg";
